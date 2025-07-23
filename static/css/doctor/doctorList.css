@@ -6,6 +6,22 @@ body, html{
     overscroll-behavior-x: none;
 }
 
+
+audio, canvas, embed, iframe, img, object, svg, video {
+    display: block;
+}
+
+button, input, optgroup, select, textarea
+{
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    opacity: 1;
+    background-color: #0000;
+    border-radius: 0;
+}
 *{
     box-sizing: border-box;
     font-family: inherit;
@@ -279,8 +295,9 @@ div.side-bar-container{
 }
 
 div.kakao-map{
-    background-image: url("../images/temp.png");
     width: 100%;
+    /* background-color: #000; */
+    background-image: url("../../images/temp.png");
     height: 100%;
 }
 
@@ -325,3 +342,199 @@ div.warn-modal {
 div#content-wrap span{
     display: block;
 }
+div.mail-send-modal{
+    display: flex;
+    /* display: none; */
+    position: fixed;
+    flex-direction: column;
+    inset: 0px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #8586898a;
+}
+
+/* 나중에 게시글 작성 부분 */
+div.mail-modal{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #e5e8eb;
+}
+div.mail-title-wrap{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+div.mail-title-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label.mail-title-content{
+    color: #333d4b;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+span.text-warn{
+    color: #b0b8c1;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 100%;
+    display: flex;
+    gap: 4px;
+}
+
+span.text-warn::before{
+    content: "0";
+    color: #333d4b;
+}
+div.main-title-input-wrap{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+input.mail-title-input-content{
+    padding-inline: 16px;
+    border-radius: 12px;
+    border: 1px solid #f2f4f6;
+    background-color: #f9fafb;
+    color: #333d4b;
+    min-height: 48px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+    outline: none;
+}
+/* 경고 표시 */
+input.warn{
+    border: 1px solid #e42939;
+}
+
+div.mail-modal hr.line-hr{
+    width: 100%;
+    height: 1px;
+    background: #fff;
+}
+
+
+hr.content-hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+hr.input-btn-list-bottom{
+    margin: 0;
+    border: 0;
+}
+
+div.mail-content-container{
+    display: flex;
+    flex-direction: column;
+}
+div.mail-content-wrap{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+div.mail-content-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+label.content-text{
+    color: #333d4b;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%
+}
+
+div.mail-content-input-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+div.mail-content-input-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    border: 1px solid #f2f4f6;
+}
+div.input-btn-list-wrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+}
+label.img-btn{
+    display: flex;
+    padding: 8px;
+    cursor: pointer;
+}
+input#create-question-image{
+    display: none;
+}
+button.input-style-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+div.input-textarea-container{
+    padding: 14px 16px;
+    border-radius: 0 0 12px 12px;
+    background-color: #f9fafb;
+}
+div.input-textarea{
+    color: #333d4b;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
+    outline: none;
+    height: 252px;
+    overflow-y: auto;
+    position: relative;
+}
+
+div.input-textarea-container .input-textarea p{
+    min-height: 22.5px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22.5px;
+}
+
+div.input-textarea-container .input-textarea p.is-editor-empty:first-of-type::before {
+    background-color: #f9fafb;
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #b0b8c1;
+    line-height: 150%;
+}
+div.ProseMirror{
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    white-space: break-spaces;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+}
+/* 나중에 게시글 작성 부분 */
