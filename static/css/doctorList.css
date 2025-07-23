@@ -1,0 +1,235 @@
+body, html{
+    text-size-adjust: none;
+    height: 100%;
+    overscroll-behavior-x: none;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: inherit;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+
+menu, ol, ul {
+    list-style: none;
+}
+
+*, ::backdrop, :after, :before {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: #000;
+    overscroll-behavior-y: none;
+    font-family: Pretendard Variable;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 1172px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 60px;
+    padding-bottom: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1172px;
+    min-height: 100vh;
+}
+
+div.mainContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+button {
+    background: inherit;
+    box-shadow: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    font-size: 16px;
+    overflow: visible;
+}
+
+ul.coachMarkContainer{
+    display: flex;
+    gap: 20px;
+}
+
+li span.btnContent{
+    font-size: 32px;
+    line-height: 130%;
+    font-weight: 700;
+    color: #B0B8C1;
+}
+
+li span.active{
+    font-size: 32px;
+    line-height: 130%;
+    font-weight: 700;
+    color: #191F28;
+}
+
+div.contentWrapper{
+    display: flex;
+    gap: 16px;
+}
+div.contentListContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+ul.contentList{
+    display: flex
+;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 804px;
+}
+
+
+div.contentInfo{
+    display: flex;
+    gap: 16px;
+    padding: 32px 40px 32px 32px;
+    border: 1px solid rgb(229, 232, 235);
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(224, 230, 240, 0.2) 0px 4px 8px 0px;
+}
+
+div.contentInfo img.contentInfoImg{
+    border-radius: 16px;
+    object-fit: cover;
+}
+div.contentInfoText{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+div.typeUserWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+div.departTreatment {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+
+div.departTreatmentWrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+div.departTreatmentWrap span, div.infoContainer span {
+        font-size: 14px;
+        line-height: 150%;
+        font-weight: 400;
+        color: rgb(51, 61, 75);
+}
+
+div.departTreatmentWrap span svg, div.infoContainer span svg{
+    margin-left: 25px;
+}
+
+div.departTreatmentWrap span:last-child, div.infoContainer span:last-child {
+    margin-left: 25px;
+}
+
+div.departTreatmentWrap span:first-child, div.infoContainer span:first-child {
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 700;
+    color: rgb(51, 61, 75);
+}
+
+div.infoContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+div.doctorInfo{
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+}
+
+div.doctorInfo span{
+    font-size: 22px;
+    line-height: 150%;
+    font-weight: 500;
+}
+
+div.iconBtnWrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.iconContainer{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+span.greeting{
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 500;
+    color: rgb(51, 61, 75);
+}
+span.greeting strong{
+    font-weight: 700;
+}
+
+div.btnWrap{
+    display: flex;
+    gap: 16px;
+}
+
+button.btnshape{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 42px;
+    padding: 0 10px;
+    border-radius: 8px;
+    background-color: #1731e9;
+    gap: 4px;
+    color: #fff;
+    width: 109px;
+}
+button.btnshape span{
+    color: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+    width: max-content;
+}
