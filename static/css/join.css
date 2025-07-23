@@ -1,0 +1,19 @@
+*, :after, :before {
+    box-sizing: border-box;
+    font-family: inherit;
+    line-height: inherit;
+}
+div.h8f519 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0px auto;
+}
+
+div.1n28uzs-top {
+    display: none;
+}
+
