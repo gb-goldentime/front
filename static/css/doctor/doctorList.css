@@ -1,3 +1,5 @@
+/* @charset "utf-8"; */
+
 body, html{
     text-size-adjust: none;
     height: 100%;
@@ -49,7 +51,7 @@ main {
     min-height: 100vh;
 }
 
-div.mainContainer{
+div.main-container{
     display: flex;
     flex-direction: column;
     gap: 26px;
@@ -65,12 +67,12 @@ button {
     overflow: visible;
 }
 
-ul.coachMarkContainer{
+ul.coach-mark-container{
     display: flex;
     gap: 20px;
 }
 
-li span.btnContent{
+li span.btn-content{
     font-size: 32px;
     line-height: 130%;
     font-weight: 700;
@@ -84,22 +86,19 @@ li span.active{
     color: #191F28;
 }
 
-div.contentWrapper{
+div.content-wrapper{
     display: flex;
     gap: 16px;
 }
-div.contentListContainer{
+div.content-list-container{
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 100%;
 }
 
-ul.contentList{
-    display: flex
-;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
+ul.content-list{
+    display: flex;
     flex-direction: column;
     gap: 16px;
     width: 100%;
@@ -107,7 +106,7 @@ ul.contentList{
 }
 
 
-div.contentInfo{
+div.content-info{
     display: flex;
     gap: 16px;
     padding: 32px 40px 32px 32px;
@@ -117,23 +116,23 @@ div.contentInfo{
     box-shadow: rgba(224, 230, 240, 0.2) 0px 4px 8px 0px;
 }
 
-div.contentInfo img.contentInfoImg{
+div.content-info img.content-info-img{
     border-radius: 16px;
     object-fit: cover;
 }
-div.contentInfoText{
+div.content-info-text{
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 100%;
 }
-div.typeUserWrapper{
+div.type-user-wrapper{
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-div.departTreatment {
+div.depart-treatment {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -141,59 +140,61 @@ div.departTreatment {
 
 
 
-div.departTreatmentWrap {
+div.depart-treatment-wrap {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-div.departTreatmentWrap span, div.infoContainer span {
+div.depart-treatment-wrap span, div.info-container span {
         font-size: 14px;
         line-height: 150%;
         font-weight: 400;
         color: rgb(51, 61, 75);
 }
 
-div.departTreatmentWrap span svg, div.infoContainer span svg{
-    margin-left: 25px;
+
+
+div.depart-treatment-wrap span:last-child, div.info-container span.second{
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 700;
+    color: rgb(107, 118, 132);
+    /* margin-left: 25px; */
 }
 
-div.departTreatmentWrap span:last-child, div.infoContainer span:last-child {
-    margin-left: 25px;
-}
-
-div.departTreatmentWrap span:first-child, div.infoContainer span:first-child {
+div.depart-treatment-wrap span:first-child, div.info-container span.first{
     font-size: 14px;
     line-height: 150%;
     font-weight: 700;
     color: rgb(51, 61, 75);
 }
 
-div.infoContainer{
+div.info-container{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
 }
-div.doctorInfo{
+div.doctor-info{
     display: flex;
     -ms-flex-align: center;
     align-items: center;
     gap: 8px;
 }
 
-div.doctorInfo span{
+div.doctor-info span{
     font-size: 22px;
     line-height: 150%;
     font-weight: 500;
 }
 
-div.iconBtnWrap{
+div.icon-btn-wrap{
     display: flex;
     justify-content: space-between;
 }
 
-div.iconContainer{
+div.icon-container{
     display: flex;
     align-items: center;
     gap: 4px;
@@ -208,7 +209,7 @@ span.greeting strong{
     font-weight: 700;
 }
 
-div.btnWrap{
+div.btn-wrap{
     display: flex;
     gap: 16px;
 }
@@ -232,4 +233,95 @@ button.btnshape span{
     font-weight: 500;
     line-height: 100%;
     width: max-content;
+}
+
+
+
+button.btnshape img{
+    margin-bottom: 2px;
+    width: 13px;
+    height: 13px;
+}
+
+button.mail-send-btn img{
+    margin-bottom: 2px;
+    width: 20px;
+    height: 22px;
+}
+
+button.interest-btn.active{
+    background-color: #10b981;
+}
+
+span.first::after{
+    content: "";
+    font-size: 9px;
+    border: 1px solid rgb(107, 118, 132);
+    margin: 0px 10px 0px 10px;
+    vertical-align: 3px;
+}
+span.detail-address{
+    margin-left: 26px;
+}
+
+div.doctor-info, div.hospital-info{
+    cursor: pointer;
+}
+div.side-bar-container{
+    position: sticky;
+    top: 84px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 320px;
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+div.kakao-map{
+    background-image: url("../images/temp.png");
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@keyframes popUp {
+    from {scale: 0;}
+    to {scale: 1;}
+}
+
+@keyframes popDown {
+    from {scale: 1;}
+    to {scale: 0;}
+}
+
+div.modal {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    inset: 0px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #8586898a;
+}
+
+div.warn-modal {
+    box-sizing: border-box;
+    position: unset;
+    width: 288px;
+    margin: 20vh 0px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(33 35 41 / 12%) 0px 2px 12px;
+    border-radius: 8px;
+}
+
+div.warn-modal {
+    padding: 24px;
+}
+
+div#content-wrap span{
+    display: block;
 }
