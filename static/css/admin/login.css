@@ -1,0 +1,162 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+:root {
+    view-transition-name: root;
+}
+
+body{
+    font-family: Arial, NotoSansKr, Noto Sans, sans-serif;
+    letter-spacing: -.3px;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    display: block;
+}
+/* 부트페이 아이디 변경 */
+body .bootpay {
+    height: 100%;
+}
+/* 부트페이 아이디 변경 */
+.bootpay {
+    background-color: #f5f5f5;
+    display: flex;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.boot-notify-container{
+    padding: 20px 20px 0 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 340px;
+    z-index: 1051;
+}
+
+.popup-manager {
+    background-color: gray;
+    height: 0;
+    left: 50%;
+    overflow: visible;
+    position: fixed;
+    top: 10%;
+    transform: translate(-50%);
+    z-index: 1041;
+}
+.login-container full-window{
+    background-color: #f5f5f5;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.login-container.horizontal-center{
+    height: 100%;
+    margin: 0 auto;
+    max-width: 520px;
+    padding: 2rem 0;
+}
+
+.login-container.horizontal-center.vertical-center{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.login-container.login-inner{
+    max-width: 520px;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.comp-icon{
+    display: inline-block;
+}
+
+.login-container.login-inner.login-logo.bootpay-logo{
+    margin-bottom: 12px;
+    width: 160px;
+}
+
+.login-container .login-inner .login-logo .bootpay-logo svg{
+    display: inline-block;
+    width: 100%;
+}
+
+svg{
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.login-container .login-inner .login-box{
+    border-radius: 20px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+    margin: 28px auto 0;
+    padding: 50px 40px;
+    width: 520px;
+}
+
+.login-container .login-inner .center-box{
+    background-color: #fff;
+}
+
+.login-box .box-title{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.roboto{
+    font-family: Roboto, Arial, NotoSansKr, Noto Sans, sans-serif;
+}
+
+.text-primary{
+    color: #507cf3 !important;
+}
+
+.box-subtitle{
+    color: #8b9298;
+    font-size: 15px;
+    margin-bottom: 36px;
+}
+
+.form-group{
+    margin-bottom: 1rem;
+}
+
+input.form-control.h65{
+    font-size: 15px;
+    height: 65px;
+    padding: 22px 20px;
+    border-radius: 10px;
+}
+
+input.from-control{
+    border: 1px solid #ededed;
+}
+
+.form-control{
+    background-clip: padding-box;
+    background-color: #fff;
+    color: #495057;
+    display: block;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 100%;
+}
