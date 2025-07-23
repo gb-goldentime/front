@@ -8,6 +8,9 @@
     box-sizing: border-box;
     font-family: inherit;
     line-height: inherit;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -30,6 +33,18 @@ button {
     font-size: 16px;
     overflow: visible;
     appearance: button;
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    opacity: 1;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    text-rendering: auto;
+    padding-block: 1px;
+    padding-inline: 6px;
 }
 
 .main-layout-wrapper {
@@ -84,7 +99,7 @@ button {
     scrollbar-width: none;
 }
 
-.mypage-category-wrap{
+.mypage-category-wrap {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -154,6 +169,7 @@ button {
 }
 
 .mypage-main-basicinfo-email-wrap {
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: justify;
@@ -162,19 +178,26 @@ button {
 }
 
 .mypage-main-basicinfo-email-wrapper {
+    width: 142.67px;
+    height: 52px;
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.mypage-main-basicinfo-email-key {
+.mypage-main-basicinfo-key-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.mypage-main-basicinfo-key {
     font-size: 16px;
     line-height: 150%;
     font-weight: 700;
     color: #191F28;
 }
 
-.mypage-main-basicinfo-email-value {
+.mypage-main-basicinfo-value {
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
@@ -229,16 +252,4 @@ button {
     display: flex;
     flex-direction: column;
     gap: 4px;
-}
-
-.mypage-main-basicinfo-phone-key {
-    display: flex;
-    gap: 8px;
-}
-
-.mypage-main-basicinfo-phone-value {
-    font-size: 16px;
-    line-height: 150%;
-    font-weight: 700;
-    color: #191F28;
 }
