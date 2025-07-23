@@ -16,7 +16,6 @@ document.querySelector("div.modal").addEventListener("click", (e) => {
             "popDown 0.5s";
         setTimeout(() => {
             document.querySelector("div.modal").style.display = "none";
-            buttonsCheck = true;
         }, 450);
     }
 });
@@ -33,12 +32,30 @@ buttons.forEach((button) => {
         buttonsCheck = false;
 
         if (e.target.classList[2] === "active") {
-            message = `해당 의사를 나의 관심 의사로 등록 했습니다.`;
-            showWarnModal(message);
-        } else {
             message = `나의 관심 의사에서 취소했습니다.`;
             showWarnModal(message);
+        } else {
+            message = `해당 의사를 나의 관심 의사로 <br>등록 했습니다.`;
+            showWarnModal(message);
         }
+
+        setTimeout(() => {
+            buttonsCheck = true;
+        }, 2000);
     });
-    // console.log(buttonsCheck);
 });
+
+const mailButtons = document.querySelectorAll("button.interest-btn");
+
+mailButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {});
+});
+
+const showMailModal = () => {
+    modalCheck = false;
+    document.querySelector("div.warn-modal").style.animation = "popUp 0.5s";
+    document.querySelector("div.modal").style.display = "flex";
+    setTimeout(() => {
+        modalCheck = true;
+    }, 500);
+};
