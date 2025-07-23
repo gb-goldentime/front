@@ -1,0 +1,58 @@
+css-1ytrwya
+= whole-body
+css-1qt9awq
+= main-layout-wrapper
+css-t5ziy1
+= mypage-title-container
+css-mq1lnh
+= mypage-title-wrapper
+css-1wg7vrh
+= mypage-title
+css-jf047c
+= mypage-body-container
+css-1swwfyb
+= mypage-category-container
+css-yd8sa2
+= mypage-category-wrap
+css-18v8w16
+= mypage-category-blue-wrapper
+css-b2o4wb
+= mypage-category-blue
+css-7lz7ga
+= mypage-category-black-wrapper
+css-zr68s3
+= mypage-category-black
+css-1dbyev1
+= mypage-main-container
+css-1yapytl
+= mypage-main-basicinfo-wrap
+css-gfxdb4
+= mypage-main-basicinfo
+css-1rmcoop
+= mypage-main-basicinfo-wrapper
+css-3ukwes
+= mypage-main-basicinfo-email-container
+css-1bntj9o
+= mypage-main-basicinfo-email-wrap
+css-1idyfpw
+= mypage-main-basicinfo-email-wrapper
+css-1e4ecus
+= mypage-main-basicinfo-key-wrapper
+css-n1tvpm
+= mypage-main-basicinfo-email-key
+css-19g1zwj
+= mypage-main-basicinfo-email-value
+css-1b77mil
+= mypage-main-basicinfo-email-button
+css-15h2tnj 
+= mypage-main-basicinfo-email-button-name
+css-1ydx8ep
+= mypage-main-basicinfo-line
+css-3ukwes
+= mypage-main-basicinfo-phone-container
+css-1bntj9o
+= mypage-main-basicinfo-phone-wrap
+css-1idyfpw
+= mypage-main-basicinfo-phone-wrapper
+css-n1tvpm
+= mypage-main-basicinfo-phone-value
