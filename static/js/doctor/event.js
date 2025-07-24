@@ -194,5 +194,6 @@ inputFileBtn.addEventListener("change", (e) => {
 
 cancelBtn.addEventListener("click", (e) => {
     inputFileBtn.value = "";
+    document.getElementsByClassName("thumbnail-wrap")[0].remove();
     cancelBtn.style.display = "none";
 });
