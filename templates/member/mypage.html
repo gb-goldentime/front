@@ -16,82 +16,149 @@
             </div>
             <div class ="mypage-body-container">
                 <div width="320" class="mypage-category-container";>
-                    <aside class="mypage-category-wrap">
+                    <!-- 카테고리 누르면 해당 페이지로 넘어가면서 카테고리 색 바뀌는 이벤트 -->
+                    <aside class="mypage-category-wrapper">
                         <a class ="mypage-category-wrap-blue" href="">
                             <span class ="mypage-category-blue">계정 관리</span>
                         </a>
                         <a class = "mypage-category-wrap-black">
-                            <span class = "mypage-category-black">알림 설정</span>
+                            <span class = "mypage-category-black">쪽지함</span>
+                        </a>
+                        <a class = "mypage-category-wrap-black">
+                            <span class = "mypage-category-black">내 작성글 목록</span>
+                        </a>
+                        <a class = "mypage-category-wrap-black">
+                            <span class = "mypage-category-black">진료 신청 기록</span>
+                        </a>
+                        <a class = "mypage-category-wrap-black">
+                            <span class = "mypage-category-black">내 관심 전문가</span>
+                        </a>
+                        <a class = "mypage-category-wrap-black">
+                            <span class = "mypage-category-black">나의 문의글</span>
                         </a>
                     </aside>
                 </div>
                 <div class ="mypage-main-container">
-                    <div class = "mypage-main-basicinfo-wrap">
-                        <span class = "mypage-main-basicinfo">기본 정보</span>
-                        <div class="mypage-main-basicinfo-wrapper">
-                            <div class="mypage-main-basicinfo-container">
-                                <div class="mypage-main-basicinfo-wrap-wrap">
-                                    <div class="mypage-main-basicinfo-wrapper-wrapper">
-                                        <div class="mypage-main-basicinfo-key-wrapper">
-                                            <span class="mypage-main-basicinfo-key">이메일</span>
+                    <div class = "mypage-main-wrap">
+                        <span class = "mypage-main-info-title">기본 정보</span>
+                        <div class="mypage-main-content-container">
+                            <div class="mypage-main-key-container">
+                                <div class="mypage-main-content-wrapper">
+                                    <div class="mypage-main-wrapper-wrapper">
+                                        <div class="mypage-main-key-wrapper">
+                                            <span class="mypage-main-key">이메일</span>
                                         </div>
-                                        <span class="mypage-main-basicinfo-value">이메일@주소.형식</span>
+                                        <span class="mypage-main-value">이메일@주소.형식</span>
                                     </div>
-                                <button class="mypage-main-basicinfo-email-button" color ="grey" height="54">
-                                    <span class="mypage-main-basicinfo-email-button-name">변경</span>
-                                </button>
+                                    <!-- 버튼 클릭 시 이메일 변경 창 생성 -->
+                                    <button class="mypage-main-button" color ="grey" height="54">
+                                        <span class="mypage-main-button-name">변경</span>
+                                    </button>
                                 </div>
                             </div>
-                            <hr class="mypage-main-basicinfo-line">
-                            <div class="mypage-main-basicinfo-container">
-                                <div class="mypage-main-basicinfo-wrap-wrap">
-                                    <div class="mypage-main-basicinfo-wrapper-wrapper">
-                                        <div class="mypage-main-basicinfo-phone-key">
-                                                <span class="mypage-main-basicinfo-key">휴대폰 번호</span>
-                                            </div>
-                                            <span class="mypage-main-basicinfo-value">+821012345678</span>
+                            <hr class="mypage-main-content-line">
+                            <div class="mypage-main-key-container">
+                                <div class="mypage-main-content-wrapper">
+                                    <div class="mypage-main-wrapper-wrapper">
+                                        <div class="mypage-main-key-wrapper">
+                                            <span class="mypage-main-key">휴대폰 번호</span>
+                                        </div>
+                                        <span class="mypage-main-value">+821012345678</span>
                                     </div>
-                                    <button class="mypage-main-basicinfo-button" color ="grey" height="54">
-                                        <span class="mypage-main-basicinfo-button-name">변경</span>
+                                    <button class="mypage-main-button" color ="grey" height="54">
+                                        <!-- 휴대폰 번호 인증 이벤트 -->
+                                        <span class="mypage-main-button-name">변경</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class = "mypage-main-basicinfo-wrap">
-                        <span class = "mypage-main-basicinfo">기본 정보</span>
-                        <div class="mypage-main-basicinfo-wrapper">
-                            <div class="mypage-main-basicinfo-container">
-                                <div class="mypage-main-basicinfo-wrap-wrap">
-                                    <div class="mypage-main-basicinfo-wrapper-wrapper">
-                                        <div class="mypage-main-basicinfo-key-wrapper">
-                                            <span class="mypage-main-basicinfo-key">이메일</span>
+                    <div class = "mypage-main-wrap">
+                        <span class = "mypage-main-info-title">보안 설정</span>
+                        <div class="mypage-main-content-container">
+                            <div class="mypage-main-key-container">
+                                <div class="mypage-main-content-wrapper">
+                                    <div class="mypage-main-wrapper-wrapper">
+                                        <div class="mypage-main-key-wrapper">
+                                            <span class="mypage-main-key">비밀번호</span>
                                         </div>
-                                        <span class="mypage-main-basicinfo-value">이메일@주소.형식</span>
+                                        <span class="mypage-main-value"></span>
                                     </div>
-                                <button class="mypage-main-basicinfo-email-button" color ="grey" height="54">
-                                    <span class="mypage-main-basicinfo-email-button-name">변경</span>
-                                </button>
-                                </div>
-                            </div>
-                            <hr class="mypage-main-basicinfo-line">
-                            <div class="mypage-main-basicinfo-container">
-                                <div class="mypage-main-basicinfo-wrap-wrap">
-                                    <div class="mypage-main-basicinfo-wrapper-wrapper">
-                                        <div class="mypage-main-basicinfo-phone-key">
-                                                <span class="mypage-main-basicinfo-key">휴대폰 번호</span>
-                                            </div>
-                                            <span class="mypage-main-basicinfo-value">+821012345678</span>
-                                    </div>
-                                    <button class="mypage-main-basicinfo-button" color ="grey" height="54">
-                                        <span class="mypage-main-basicinfo-button-name">변경</span>
+                                    <!-- 버튼 클릭 시 이메일 인증 이벤트 -> 확인 시 새로운 비밀번호 입력 -->                                    
+                                    <button class="mypage-main-button" color ="grey" height="54">
+                                        <span class="mypage-main-button-name">변경</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class = "mypage-main-wrap">
+                        <span class = "mypage-main-info-title">연동 되어있는 SNS 계정</span>
+                        <div class="mypage-main-content-container">
+                            <div class="mypage-main-key-container">
+                                <div class="mypage-main-content-wrapper">
+                                    <div class="mypage-main-wrapper-wrapper">
+                                        <div class="mypage-main-key-wrapper">
+                                            <img alt="카카오" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="https://media.a-ha.io/aha-qna/images/common/icons/mark/logo-kakao-color.svg" style="color: transparent;">
+                                            <span class="mypage-main-key">카카오</span>
+                                        </div>
+                                        <span class="mypage-main-value"></span>
+                                    </div>
+                                <div class = "mypage-button-group">
+                                    <button class="mypage-main-button-on" color ="blue" height="54">
+                                    <!-- 버튼 클릭 시 카카오 연동 이벤트 ---? -->
+                                        <span class="mypage-main-button-name">연동하기</span>
+                                    </button>
+                                    <!-- 경고 팝업 이벤트 -->
+                                    <button class="mypage-main-button" color ="grey" height="54">
+                                        <span class="mypage-main-button-name">연동 해제</span>
+                                    </button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "mypage-main-wrap">
+                        <div class="mypage-main-content-container">
+                            <div class="mypage-main-key-container">
+                                <div class="mypage-main-content-wrapper">
+                                    <div class="mypage-main-wrapper-wrapper">
+                                        <div class="mypage-main-key-wrapper">
+                                            <img alt="로그아웃" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color:transparent" src="https://media.a-ha.io/aha-qna/images/common/icons/object-and-tool/lock-keyhole-filled.svg">
+                                            <span class="mypage-main-key">로그아웃</span>
+                                        </div>
+                                        <span class="mypage-main-value"></span>
+                                    </div>
+                                    <!-- 버튼 클릭 시 바로 로그아웃 이벤트-->
+                                    <button class="mypage-main-button" color ="grey" height="54">
+                                        <span class="mypage-main-button-name">로그아웃</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "mypage-main-wrap">
+                        <div class="mypage-main-content-container">
+                            <div class="mypage-main-key-container">
+                                <div class="mypage-main-content-wrapper">
+                                    <div class="mypage-main-wrapper-wrapper">
+                                        <div class="mypage-main-key-wrapper">
+                                            <img alt="탈퇴" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color:transparent" src="https://media.a-ha.io/aha-qna/images/common/icons/math/minus-circle-line.svg">
+                                            <span class="mypage-main-key">탈퇴</span>
+                                        </div>
+                                        <span class="mypage-main-value"></span>
+                                    </div>
+                                    <!-- 버튼 클릭 시 탈퇴 사유 입력 -> "탈퇴합니다" 기입 -> 버튼 눌러서 탈퇴 -->
+                                    <button class="mypage-main-button" color ="grey" height="54">
+                                        <span class="mypage-main-button-name">회원 탈퇴</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                                            
         </main>
-    </div>
-    
+    </div>   
 </body>
 </html>
