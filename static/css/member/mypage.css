@@ -8,6 +8,9 @@
     box-sizing: border-box;
     font-family: inherit;
     line-height: inherit;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -30,6 +33,18 @@ button {
     font-size: 16px;
     overflow: visible;
     appearance: button;
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    opacity: 1;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    text-rendering: auto;
+    padding-block: 1px;
+    padding-inline: 6px;
 }
 
 .main-layout-wrapper {
@@ -84,7 +99,7 @@ button {
     scrollbar-width: none;
 }
 
-.mypage-category-wrap{
+.mypage-category-wrap {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -147,13 +162,14 @@ button {
     gap: 32px;
 }
 
-.mypage-main-basicinfo-email-container {
+.mypage-main-basicinfo-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
 .mypage-main-basicinfo-email-wrap {
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: justify;
@@ -161,27 +177,42 @@ button {
     width: 100%;
 }
 
+<<<<<<< HEAD
+.mypage-main-basicinfo-wrapper-wrapper {
+=======
 .mypage-main-basicinfo-email-wrapper {
+    width: 142.67px;
+    height: 52px;
+>>>>>>> 043297d47889f6fbff27d0b804d991d1196abd39
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
+.mypage-main-basicinfo-key-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+<<<<<<< HEAD
 .mypage-main-basicinfo-email-key {
+=======
+.mypage-main-basicinfo-key {
+>>>>>>> 043297d47889f6fbff27d0b804d991d1196abd39
     font-size: 16px;
     line-height: 150%;
     font-weight: 700;
     color: #191F28;
 }
 
-.mypage-main-basicinfo-email-value {
+.mypage-main-basicinfo-value {
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
     color: #6B7684;
 }
 
-.mypage-main-basicinfo-email-button {
+.mypage-main-basicinfo-button {
     display: flex;
     gap: 8px;
     align-items: center;
@@ -197,7 +228,7 @@ button {
     padding: 0 36px;
 }
 
-.mypage-main-basicinfo-email-button-name {
+.mypage-main-basicinfo-button-name {
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
@@ -210,6 +241,8 @@ button {
     border: 0;
     background: #E5E8EB;
 }
+<<<<<<< HEAD
+=======
 
 .mypage-main-basicinfo-phone-container {
     display: flex;
@@ -230,15 +263,4 @@ button {
     flex-direction: column;
     gap: 4px;
 }
-
-.mypage-main-basicinfo-phone-key {
-    display: flex;
-    gap: 8px;
-}
-
-.mypage-main-basicinfo-phone-value {
-    font-size: 16px;
-    line-height: 150%;
-    font-weight: 700;
-    color: #191F28;
-}
+>>>>>>> 043297d47889f6fbff27d0b804d991d1196abd39

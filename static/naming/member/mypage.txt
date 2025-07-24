@@ -31,17 +31,17 @@ css-gfxdb4
 css-1rmcoop
 = mypage-main-basicinfo-wrapper
 css-3ukwes
-= mypage-main-basicinfo-email-container
+= mypage-main-basicinfo-container
 css-1bntj9o
-= mypage-main-basicinfo-email-wrap
+= mypage-main-basicinfo-wrap-wrap
 css-1idyfpw
-= mypage-main-basicinfo-email-wrapper
+= mypage-main-basicinfo-wrapper-wrapper
 css-1e4ecus
 = mypage-main-basicinfo-key-wrapper
 css-n1tvpm
 = mypage-main-basicinfo-email-key
 css-19g1zwj
-= mypage-main-basicinfo-email-value
+= mypage-main-basicinfo-value
 css-1b77mil
 = mypage-main-basicinfo-email-button
 css-15h2tnj 
