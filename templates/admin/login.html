@@ -4,13 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>부트페이 관리자</title>
-    <link rel="stylesheet" href="../../static/css/admin/login.css">
+    <link rel="stylesheet" href="/static/css/admin/login.css">
+    <link rel="stylesheet" href="/static/css/admin/font.css"> 
 </head>
 <body>
     <div class="bootpay">
-        <div class="boot-notify-container"></div>
+                <!-- 이메일 모달창 -->
+                <div id="email-test" style="display: none;"><div class="boot-alert"> 
+                    <div class="alert-inner animate__animated animate__fadeIn animate__faster raise">
+                        <div class="header">
+                            <h3 class="alert-title">알림</h3>
+                        </div>
+                        <div class="body">이메일 형식에 맞게 입력해주세요.</div> 
+                        <div class="footer">
+                            <div class="button-if layout-xs-row">
+                                <a href="" id="boot-alert-success-button" class="alert-button success-btn full-alert-button bootpay-color bootpay-theme-color">확인</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> </div>
+                    <!-- 비밀번호 모달창 -->
+                        <div id="password-test"style="display: none;"><div class="boot-alert"> 
+                    <div class="alert-inner animate__animated animate__fadeIn animate__faster raise">
+                        <div class="header">
+                            <h3 class="alert-title">알림</h3>
+                        </div>
+                        <div class="body">비밀번호를 입력해주세요.</div>
+                        <div class="footer">
+                            <div class="button-if layout-xs-row">
+                                <a href="" id="boot-alert-success-button" class="alert-button success-btn full-alert-button bootpay-color bootpay-theme-color">확인</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> </div>
+                    <!-- 이메일 형식은맞으나 정보가없거나 비밀번호 다를시  id="password-test"display:inline-->
+                        <div id="password-error-test" style="display: none;"><div class="boot-alert"> 
+                    <div class="alert-inner animate__animated animate__fadeIn animate__faster raise">
+                        <div class="header">
+                            <h3 class="alert-title">알림</h3>
+                        </div>
+                        <div class="body">가입된 회원정보가 없거나 비밀번호가 잘못 입력되었습니다.</div>
+                        <div class="footer">
+                            <div class="button-if layout-xs-row">
+                                <a href="" id="boot-alert-success-button" class="alert-button success-btn full-alert-button bootpay-color bootpay-theme-color">확인</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> </div>
+        <div id="boot-notify-container"></div>
         <div class="popup-manager" style="width: 0px;"></div>
-        <div class="bootpay-main" class>
+        <div class="bootpay-main">
             <div class="login-container full-window">
                 <div class="horizontal-center">
                     <div class="login-inner vertical-center">
@@ -20,49 +63,47 @@
                             </span>
                             <div class="subtitle text-center text-grey">모든 PG의 결제시나리오를 한 줄로 연동하세요
                             </div>
-                            <div class="login-box center-box">
-                                <div class="box-title roboto">
-                                    <span class="text-primary">LOG</span>
-                                    IN
-                                </div>
-                                <div class="box-subtitle">부트페이 관리자에 로그인하세요</div>
-                                <div class="form-group">
-                                    <!-- 이벤트 -->
-                                    <input class="form-control h65" placeholder="이메일 계정을 입력해주세요" name="bootpay" value>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control h65" type="password" placeholder="패스워드를 입력해주세요" name="bootpay" value>
-                                </div>
-                                <div class="form-group form-boot-check">
-                                    <div class="boot-check d-flex align-items-center undefined">
-                                        <div class="boot-check-box" tabindex="0" style="width: 20px; height: 20px;">
-                                            <i class="mdi mdi-check" style="display: none;"></i>
-                                        </div>
-                                        <div class= boot-check-content flex-grow-1>자동로그인</div>
+                            
                                     </div>
-                                </div>
-                                <div class="btn-wrapper">
-                                    <button class="btn btn-primary btn-login h65 btn-block">로그인</button>
-                                </div>
-                                <div class="link-wrapper text-center">
-                                    <a href="">비밀번호 찾기</a>
-                                    |
-                                    <a href="">새로운 계정 만들기</a>
+                                    <div class="login-box center-box">
+                                        <div class="box-title roboto">
+                                            <span class="text-primary">LOG</span>IN
+                                            
+                                        </div>
+                                        <div class="box-subtitle">부트페이 관리자에 로그인하세요</div>
+                                        <div class="form-group">
+                                            <input id="email-input" class="form-control h65" placeholder="이메일 계정을 입력해주세요" name="bootpay" value="">
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="password-input" class="form-control h65" type="password" placeholder="패스워드를 입력해주세요" name="bootpay" value="">
+                                        </div>
+                                        <!-- 체크박스 클릭 작동 이벤트 -->
+                                        <div class="form-group form-boot-check">
+                                            <label>
+                                                <input type="checkbox" id="auto-checkbox">
+                                                <div class="boot-check d-flex align-items-center undefined">
+                                                <div class="boot-check-box" tabindex="0" style="width: 20px; height: 20px;">
+                                                    <i class="mdi mdi-check" id="check-icon"></i>
+                                                </div>
+                                                <div class= "boot-check-content flex-grow-1">자동로그인</div>
+                                                </div>
+                                            </label>
+                                                    <div class="link-wrapper text-center">
+                                                    </div>
+                                                </div>
+                                                <div class="btn-wrapper">
+                                            </div>
+                                                <button id="login-button" class="btn btn-primary btn-login h65 btn-block">로그인</button>
+                                        <a class="boot-link link-find-pw" href="">비밀번호 찾기</a>|
+                                        
+                                        <a class="boot-link link-join" href="">새로운 계정 만들기</a>
                                 </div>
                                 <div class="divider"></div>
-                                <div class="trial-title">
-                                    부트페이의 
-                                    <span class="text-primary">놀라운 관리자를 미리 체험</span>
-                                    해보세요
-                                </div>
-                                <button class="btn btn-dark h65 btn-login btn-block">관리자 체험하기
-                                </button>
+                                <div class="trial-title"></div>
                                 <div class="legacy mt-3">
                                     <div class="row">
                                         <div class="col-6"></div>
-                                        <div class="col-6 text-right">
-                                            <a href=""></a>
-                                        </div>
+                                        <div class="col-6 text-right"></div>
                                     </div>
                                 </div>
                             </div>
@@ -85,4 +126,5 @@
         </div>
     </div>
 </body>
+<script src="/static/js/admin/login.js"></script>
 </html>
