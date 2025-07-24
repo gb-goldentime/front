@@ -204,6 +204,14 @@ const fileCheck = new Array(3).fill(false);
 inputFileBtn.addEventListener("click", (e) => {
     fileImgList.length = 0;
     fileCheck.fill(false);
+    const lis = Array.from(
+        document.getElementsByClassName("thumbnail-list-content")
+    );
+    lis.forEach((li) => {
+        console.log(1);
+        li.remove();
+        console.log(2);
+    });
 });
 
 inputFileBtn.addEventListener("change", (e) => {
@@ -217,6 +225,7 @@ inputFileBtn.addEventListener("change", (e) => {
         const divTag = document.createElement("div");
         reader.readAsDataURL(file);
         divBtn.id = "file-cancel-btn";
+        liTag.classList.add("thumbnail-list-content");
         divBtn.dataset.position = cnt;
         imgTag.classList.add("thumbnail");
         divTag.classList.add(`cancel-btn-${cnt++}`);
@@ -239,6 +248,7 @@ inputFileBtn.addEventListener("change", (e) => {
 
             // 취소 버튼 누르면 썸네일 삭제하기
             divTag.addEventListener("click", (e) => {
+                console.log(e.target.parentElement.parentElement);
                 fileCheck[e.target.dataset.position] = true;
                 e.target.parentElement.parentElement.remove();
             });
@@ -269,6 +279,8 @@ mailSendCancleBtn.addEventListener("click", (e) => {
     mailModalInput.value = "";
     doctorSearchInput.value = "";
     doctorSearchInput.disabled = false;
+    fileImgList.length = 0;
+    fileCheck.fill(false);
     if (label.classList[2]) {
         label.classList.remove("inactive");
         svg.classList.add("inactive");
