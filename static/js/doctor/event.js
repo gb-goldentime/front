@@ -240,7 +240,7 @@ inputFileBtn.addEventListener("change", (e) => {
             // 취소 버튼 누르면 썸네일 삭제하기
             divTag.addEventListener("click", (e) => {
                 fileCheck[e.target.dataset.position] = true;
-                // e.target.parentElement.parentElement.remove();
+                e.target.parentElement.parentElement.remove();
             });
         });
     });
