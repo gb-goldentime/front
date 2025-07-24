@@ -403,6 +403,16 @@ categoryModalOpenBtn.addEventListener("click", (e) => {
     categoryModal.style.display = "flex";
 });
 
+// 쪽지 작성부분 텍스트 영역 포커스
+const textareaTag = document.getElementById("mailContent");
+const textareaTagWrap = document.querySelector(".mail-content-input-container");
+textareaTag.addEventListener("focus", (e) => {
+    textareaTagWrap.style.borderColor = "black";
+});
+textareaTag.addEventListener("blur", (e) => {
+    textareaTagWrap.style.borderColor = "#f2f4f6";
+});
+
 /**************** */
 /*
 let itemIndex = 0;
