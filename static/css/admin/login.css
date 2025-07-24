@@ -1,6 +1,13 @@
 *, :after, :before {
     box-sizing: border-box;
 }
+link {
+    display: none;
+}
+
+meta {
+    display: none;
+}
 
 :root {
     --blue: #007bff;
@@ -36,28 +43,40 @@
 body{
     font-family: Arial, NotoSansKr, Noto Sans, sans-serif;
     letter-spacing: -.3px;
+    background-color: #f5f5f5;
     color: #212529;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    text-align: center;
+    margin: 0;
+    text-align: left;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    padding: 0;
+    height: 100%;
+    display: block;
 }
 
 html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: sans-serif;
+    line-height: 1.15;
+    height: 100%;
+    min-height: 100vh;
     display: block;
 }
-/* 부트페이 아이디 변경 */
-body .bootpay {
+
+body #bootpay {
     height: 100%;
 }
-/* 부트페이 아이디 변경 */
-.bootpay {
+
+#bootpay {
     background-color: #f5f5f5;
     display: flex;
 }
 
-.bootpay.bootpay-main {
+#bootpay #bootpay-main {
     flex: 1 1;
     overflow-y: auto;
 }
@@ -109,7 +128,7 @@ div {
     top: 0;
 }
 
-.login-container.horizontal-center{
+.horizontal-center{
     height: 100%;
     margin: 0 auto;
     max-width: 520px;
@@ -128,7 +147,7 @@ div {
 }
 
 .text-center{
-    text-align: center;
+    text-align: center !important;
 }
 
 .comp-icon{
@@ -146,6 +165,12 @@ div {
     width: 100%;
 }
 
+
+svg{
+    overflow: hidden;
+    vertical-align: middle;
+}
+
 svg.icon-img {
     width: 300px;
     height: 28px;
@@ -153,11 +178,18 @@ svg.icon-img {
     margin: 0 auto;
 }
 
-
-svg{
-    overflow: hidden;
-    vertical-align: middle;
+svg:not(:root) {
+    overflow-clip-margin: content-box;
 }
+
+.text-center {
+    text-align: left;
+}
+
+.subtitle .text-center .text-grey{
+    text-align: center !important;
+}
+
 
 .login-container .login-inner .login-box{
     border-radius: 20px;
@@ -168,6 +200,11 @@ svg{
 }
 
 .login-container .login-inner .center-box{
+    border-radius: 20px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+    margin: 28px auto 0;
+    padding: 50px 40px;
+    width: 520px;
     background-color: #fff;
 }
 
@@ -184,6 +221,18 @@ svg{
     color: #507cf3 !important;
 }
 
+.login-container .login-inner .login-logo .subtitle {
+    color: #8b9298;
+    font-size: 17px;
+}
+
+.login-container .login-inner .login-box .box-subtitle {
+    color: #8b9298;
+    font-size: 15px;
+    margin-bottom: 36px;
+}
+
+
 .box-subtitle{
     color: #8b9298;
     font-size: 15px;
@@ -195,15 +244,24 @@ svg{
 }
 
 
-input.form-control.h65{
+input .form-control h65{
     font-size: 15px;
     height: 65px;
     padding: 22px 20px;
-    border-radius: 10px;
 }
 
 input.form-control{
     border: 1px solid #ededed;
+}
+
+input.form-control.h65 {
+    font-size: 15px;
+    height: 65px;
+    padding: 22px 20px;
+}
+
+.login-container .login-inner input.form-control.h65 {
+    border-radius: 10px;
 }
 
 .form-control{
@@ -212,10 +270,28 @@ input.form-control{
     color: #495057;
     display: block;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 5.5;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     width: 100%;
 }
+
+input{
+    font-family: inherit;
+    margin: 0;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
 .login-container .login-inner .login-box .form-boot-check {
     margin: 20px 0;
 }
@@ -224,11 +300,10 @@ input.form-control{
     color: #afb7ba;
     font-size: 13px;
 }
+
 element.style {
     width: 20px;
     height: 20px;
-    bottom: 90px !important;
-    right: 24px !important;
 }
 
 .login-container .login-inner .login-box .boot-check .boot-check-box {
@@ -248,11 +323,11 @@ element.style {
     display: flex !important;
 }
 .boot-check .boot-check-box {
+    border: 1px solid #edeff0;
+    border-radius: 3px;
     margin-right: 6px;
     position: relative;
     text-align: center;
-    border: 1px solid #edeff0;
-    border-radius: 3px;
 }
 
 .boot-check .boot-check-box i {
@@ -271,12 +346,9 @@ element.style {
     user-select: none;
   }
   
-  
-  .boot-check-box.checked i {
-    opacity: 1;
-  }
-  
-  
+  i {
+    font-style: italic;
+}
 
 
 .flex-grow-1 {
@@ -313,13 +385,13 @@ button.btn{
 }
 
 .btn{
+    border: 1px solid transparent;
     line-height: 1.5;
-    padding: .375rem .75rem 12px;
+    padding: .375rem .75rem;
     text-align: center;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    border: 1px solid transparent;
-    user-select: none;
 }
+
 button{
     appearance: auto;
     text-rendering: auto;
@@ -344,10 +416,13 @@ button{
     border-image: initial;
 }
 
-
 .login-container .login-inner .link-wrapper {
     color: #8b9298;
     margin-top: 20px;
+}
+
+.text-center {
+    text-align: center !important;
 }
 
 .login-container .login-inner a.boot-link {
@@ -365,6 +440,7 @@ a{
 a:-webkit-any-link {
     cursor: pointer;
 }
+
 
 .login-container .login-inner .divider {
     border-bottom: 1px solid #ededed;
@@ -561,3 +637,17 @@ button.close {
     flex-wrap: wrap;
     justify-content: flex-end;
 }
+
+
+.mdi-check:before {
+    content: "\F012C";
+}
+
+.mdi:before{
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font: normal normal normal 24px / 1 Material Design Icons;
+    font-size: inherit;
+    line-height: inherit;
+    text-rendering: auto;
+} 

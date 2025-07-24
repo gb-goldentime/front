@@ -1,6 +1,9 @@
-const check = document.querySelectorAll(".boot-check-box");
-check.forEach((box) => {
-    box.addEventListener("click", () => {
-        box.classList.toggle("checked");
-    });
+const checkbox = document.querySelector("input[type=checkbox]");
+const autoCheckbox = document.getElementById("auto-checkbox");
+
+checkbox.addEventListener("click", (e) => {
+    if(e.target.checked){
+        const value = e.target.value
+        auto-checkbox = value ? 
+    }
 });
