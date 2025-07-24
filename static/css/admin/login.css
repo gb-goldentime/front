@@ -637,6 +637,7 @@ button.close {
     justify-content: flex-end;
 }
 
+/* 체크박스 이미지 작동 */
 .mdi::before{
     content: "\F012C";
     -webkit-font-smoothing: antialiased;
@@ -659,17 +660,113 @@ button.close {
     display: none;
 }
 
-
-
-#email-test {
-    display: flex;
+/* 모달창 css */
+.boot-alert {
+    background-color: rgba(0, 0, 0, .7);
+    bottom: 0;
+    display: block;
+    left: 0;
+    padding: 1em;
     position: fixed;
-    flex-direction: column;
-    inset: 0px;
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
+    right: 0;
     text-align: center;
-    background-color: #8586898a;
+    top: 0;
+    white-space: nowrap;
+    z-index: 200000;
 }
 
+.boot-alert:before {
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.boot-alert .alert-inner.raise {
+    animation: raise .1s ease-in-out;
+}
+
+.boot-alert .alert-inner {
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 500px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.header {
+    background-color: #fff;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 2rem 2rem 0;
+    text-align: left;
+    white-space: nowrap;
+    word-break: break-all;
+}
+
+h3.alert-title {
+    color: #37394e;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+h3{
+    display: block;
+    line-height: 1.2;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.boot-alert .alert-inner>.body {
+    background-color: #fff;
+    box-shadow: none;
+    color: #828797;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: -1px;
+    outline: none;
+    padding: 1.5rem 2rem;
+    text-align: left;
+    white-space: pre-line;
+    word-break: break-all;
+}
+
+.boot-alert .alert-inner>.footer {
+    background-color: #eff0f6;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top: 1px solid #fff;
+    box-shadow: none;
+    outline: none;
+    overflow: hidden;
+    padding: 1rem 2rem;
+    text-align: right;
+    width: 100%;
+}
+
+.boot-alert{
+    white-space: nowrap;
+}
+
+.boot-alert .alert-inner>.footer a.alert-button {
+    border: 0;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 120px;
+    padding: .75rem 2rem;
+    text-align: center;
+}
+
+.boot-alert .alert-inner>.footer a.success-btn {
+    background-color: #507cf3;
+    color: #fff;
+}
