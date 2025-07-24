@@ -652,9 +652,24 @@ button.close {
 }
 
 #check-icon.active{
-    display: inline-block;
+    display: block;
 }
 
 #check-icon{
     display: none;
 }
+
+
+
+#email-test {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    inset: 0px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #8586898a;
+}
+

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/static/css/admin/font.css"> 
 </head>
 <body>
-
     <div class="bootpay">
                 <!-- 이메일 모달창 -->
                 <div id="email-test" style="display: none;"><div class="boot-alert"> 
@@ -39,7 +38,7 @@
                         </div>
                     </div> </div>
                     <!-- 이메일 형식은맞으나 정보가없거나 비밀번호 다를시  id="password-test"display:inline-->
-                        <div id="password-test" style="display: none;"><div class="boot-alert"> 
+                        <div id="password-error-test" style="display: none;"><div class="boot-alert"> 
                     <div class="alert-inner animate__animated animate__fadeIn animate__faster raise">
                         <div class="header">
                             <h3 class="alert-title">알림</h3>
@@ -52,7 +51,7 @@
                             </div>
                         </div>
                     </div> </div>
-        <div class="boot-notify-container"></div>
+        <div id="boot-notify-container"></div>
         <div class="popup-manager" style="width: 0px;"></div>
         <div class="bootpay-main">
             <div class="login-container full-window">
@@ -73,12 +72,12 @@
                                         </div>
                                         <div class="box-subtitle">부트페이 관리자에 로그인하세요</div>
                                         <div class="form-group">
-                                            <input class="form-control h65" placeholder="이메일 계정을 입력해주세요" name="bootpay" value="">
+                                            <input id="email-input" class="form-control h65" placeholder="이메일 계정을 입력해주세요" name="bootpay" value="">
                                         </div>
                                         <div class="form-group">
-                                            <input class="form-control h65" type="password" placeholder="패스워드를 입력해주세요" name="bootpay" value="">
+                                            <input id="password-input" class="form-control h65" type="password" placeholder="패스워드를 입력해주세요" name="bootpay" value="">
                                         </div>
-                                        <!-- 체크박스 클릭 -->
+                                        <!-- 체크박스 클릭 이벤트 -->
                                         <div class="form-group form-boot-check">
                                             <label>
                                                 <input type="checkbox" id="auto-checkbox">
@@ -94,7 +93,7 @@
                                                 </div>
                                             </div>
                                             <div class="btn-wrapper">
-                                                <button class="btn btn-primary btn-login h65 btn-block" id="">로그인</button>
+                                                <button id="login-button" class="btn btn-primary btn-login h65 btn-block">로그인</button>
                                         <a class="boot-link link-find-pw" href="">비밀번호 찾기</a>|
                                         
                                         <a class="boot-link link-join" href="">새로운 계정 만들기</a>
@@ -127,5 +126,5 @@
         </div>
     </div>
 </body>
-<script src="../../static/js/admin/login.js"></script>
+<script src="/static/js/admin/login.js"></script>
 </html>

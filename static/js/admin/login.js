@@ -13,5 +13,5 @@ const passwordinput = document.getElementById("password-input");
 const emailmodal = document.getElementById("email-test");
 const passwordmodal = document.getElementById("password-test");
 loginbutton.addEventListener("click", (e) => {
-    emailmodal.style.display = "inline";
+    emailmodal.style.display = "flex";
 });
