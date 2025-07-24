@@ -8,9 +8,17 @@ const slide = document.querySelector(".search-layout");
 const doctorRemoveBtn = document.querySelector(
     "div.mail-doctor-search-wrap button"
 );
+const mailSendBtns = document.querySelectorAll(".mail-send-btn");
 const inputFileBtn = document.getElementById("create-question-image");
 const fileCancel = document.getElementById("file-cancel-btn");
 const cancelBtn = document.getElementsByClassName("cancel-btn")[0];
+const checkBoxDiv = document.querySelector(".label-check-box");
+const mailSendModal = document.querySelector(".mail-send-modal");
+const mailSendCancleBtn = document.querySelector(".mail-send-cancle-btn");
+const label = document.querySelector(".checkbox-label");
+const svg = document.querySelector(".checkbox-svg");
+const sendBtn = document.querySelector(".mail-send-btn-check");
+
 let check = false;
 console.log(cancelBtn);
 const doctorAddBtns = document.querySelectorAll(
@@ -104,6 +112,7 @@ mailModalInput.forEach((mailInput) => {
     });
 });
 
+// 임시로 특정 단어 입력
 mailModalInput[0].addEventListener("keyup", (e) => {
     if (e.target.value === "A") {
         e.target.style.borderColor = "red";
@@ -126,9 +135,11 @@ mailModalInput[0].addEventListener("keyup", (e) => {
 //     });
 // });
 
+// 의사 추가 버튼들 슬라이드 열리면 좀 기달려 주기
 doctorAddBtns.forEach((doctorAddbtn) => {
     doctorAddbtn.addEventListener("click", (e) => {
         // 의사 이름 셋팅 및 상태 처리
+        console.log(doctorAddbtn);
         doctorSearchInput.value = "의사이름";
         doctorSearchInput.disabled = true;
         setTimeout(() => {
@@ -157,18 +168,14 @@ doctorAddBtns.forEach((doctorAddbtn) => {
     });
 });
 
+// 의사 이름 선택했으면 엑스표시 삭제 해주기
 doctorRemoveBtn.addEventListener("click", (e) => {
     doctorSearchInput.value = "";
     doctorSearchInput.disabled = false;
     doctorRemoveBtn.style.display = "none";
 });
 
-document.querySelector("body").addEventListener("click", (e) => {
-    console.log(e.target);
-});
-// const inputFileBtn = document.getElementById("create-question-image");
-// const fileCancel
-
+// 이미지 파일 부분입니다.
 inputFileBtn.addEventListener("change", (e) => {
     const [file] = e.target.files;
     console.log(file);
@@ -194,5 +201,47 @@ inputFileBtn.addEventListener("change", (e) => {
 
 cancelBtn.addEventListener("click", (e) => {
     inputFileBtn.value = "";
+    document.getElementsByClassName("thumbnail-wrap")[0].remove();
     cancelBtn.style.display = "none";
+});
+
+checkBoxDiv.addEventListener("click", (e) => {
+    console.log(svg);
+    if (svg.classList[2]) {
+        svg.classList.remove("inactive");
+        label.classList.add("inactive");
+        checkBoxDiv.style.boxShadow =
+            "rgb(126, 165, 242) 0px 0px 0px 2px inset";
+        sendBtn.disabled = false;
+    } else {
+        label.classList.remove("inactive");
+        svg.classList.add("inactive");
+        checkBoxDiv.removeAttribute("style");
+        sendBtn.disabled = true;
+    }
+});
+mailSendCancleBtn.addEventListener("click", (e) => {
+    mailSendModal.style.display = "none";
+    mailModalInput.value = "";
+    doctorSearchInput.value = "";
+    doctorSearchInput.disabled = false;
+    if (label.classList[2]) {
+        label.classList.remove("inactive");
+        svg.classList.add("inactive");
+        checkBoxDiv.removeAttribute("style");
+        sendBtn.disabled = true;
+    }
+    doctorRemoveBtn.style.display = "none";
+    if (document.getElementsByClassName("thumbnail-wrap")[0]) {
+        inputFileBtn.value = "";
+        document.getElementsByClassName("thumbnail-wrap")[0].remove();
+        cancelBtn.style.display = "none";
+    }
+    // console.log(document.getElementsByClassName("thumbnail-wrap")[0]);
+});
+
+mailSendBtns.forEach((mailSendBtn) => {
+    mailSendBtn.addEventListener("click", (e) => {
+        mailSendModal.style.display = "flex";
+    });
 });
