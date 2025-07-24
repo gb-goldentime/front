@@ -194,12 +194,11 @@ div.info-container{
 }
 div.doctor-info{
     display: flex;
-    -ms-flex-align: center;
     align-items: center;
     gap: 8px;
 }
 
-div.doctor-info span{
+div.doctor-info span:first-child{
     font-size: 22px;
     line-height: 150%;
     font-weight: 500;
@@ -399,7 +398,7 @@ span.text-warn::before{
     content: "0";
     color: #333d4b;
 }
-div.main-title-input-wrap{
+div.main-title-input-wrap,div.doctor-search-wrap{
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -536,5 +535,130 @@ div.ProseMirror{
     white-space: break-spaces;
     font-variant-ligatures: none;
     font-feature-settings: "liga" 0;
+}
+
+div.receive-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+div.receive-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+
+}
+
+div.receive-wrap span:first-child{
+    color: #333d4b;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%;
+}
+div.receive-wrap span:last-child{
+    color: #8b95a1;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 100%;
+}
+input.doctor-input-content{
+    padding-inline: 16px;
+    border-radius: 12px;
+    border: 1px solid #f2f4f6;
+    background-color: #f9fafb;
+    color: #333d4b;
+    min-height: 48px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+    outline: none;
+}
+
+
+div.search-layout {
+    border-radius: 12px;
+    width: 100%;
+    opacity: 1;
+    height: 0px;
+    background-color: #f9fafb;
+    transition: all 0.15s;
+    overflow:auto;
+    max-height: 200px;
+    scrollbar-width: none;
+    overflow-y: auto;
+}
+ul.mail-search-doctor-name-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-height: 200px;
+}
+
+div.mail-doctor-info  span.first{
+    margin-left: 10px;
+    font-weight: 900;
+    cursor: unset;
+}
+
+div.mail-doctor-info  span.second{
+    font-size: 15px;
+    font-weight: 400;
+    cursor: unset;
+}
+
+ul.mail-search-doctor-name-list li a.link-click div.content-info{
+    height: 53px;
+    padding: 11px 40px 14px 32px;
+    z-index: 1000;
+    position: static;
+}
+
+
+div.mail-doctor-search-wrap{
+    position: relative;
+}
+div.mail-doctor-search-wrap button{
+    position: absolute;
+    display: none;
+    top: -6px;
+    bottom: 5px;
+    right: 17px;
+}
+
+div.thumbnail-wrap{
+    position: relative;
+}
+div.thumbnail-wrap img.thumbnail{
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #0000000d;
+    background-color: #f2f4f6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+div.cancel-btn div#file-cancel-btn{
+    cursor: pointer;
+    background-image: url(../../images/x.png);
+    background-size: 100% 100%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 37px;
+    bottom: 36px;
+}
+div.cancel-btn{
+    display: block;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: #18181c8f;
+
 }
 /* 나중에 게시글 작성 부분 */
