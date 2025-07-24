@@ -15,7 +15,8 @@
 
 a {
     text-decoration: none;
-     color: revert-layer;
+    color: revert-layer;
+    cursor: pointer;
 }
 
 div {
@@ -45,6 +46,14 @@ button {
     text-rendering: auto;
     padding-block: 1px;
     padding-inline: 6px;
+}
+
+img {
+    height: revert-layer;
+    max-width: revert-layer;
+    vertical-align: middle;
+    display: block;
+    overflow: clip;
 }
 
 .main-layout-wrapper {
@@ -99,7 +108,7 @@ button {
     scrollbar-width: none;
 }
 
-.mypage-category-wrap {
+.mypage-category-wrapper {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -139,7 +148,7 @@ button {
     padding-bottom: 80px;
 }
 
-.mypage-main-basicinfo-wrap {
+.mypage-main-wrap {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -149,26 +158,26 @@ button {
     gap: 32px;
 }
 
-.mypage-main-basicinfo {
+.mypage-main-info-title {
     font-size: 20px;
     line-height: 150%;
     font-weight: 700;
     color: #191F28;
 }
 
-.mypage-main-basicinfo-wrapper {
+.mypage-main-content-container {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
-.mypage-main-basicinfo-container {
+.mypage-main-key-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.mypage-main-basicinfo-email-wrap {
+.mypage-main-content-wrapper {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -177,42 +186,37 @@ button {
     width: 100%;
 }
 
-<<<<<<< HEAD
-.mypage-main-basicinfo-wrapper-wrapper {
-=======
-.mypage-main-basicinfo-email-wrapper {
-    width: 142.67px;
-    height: 52px;
->>>>>>> 043297d47889f6fbff27d0b804d991d1196abd39
+.mypage-main-wrapper-wrapper {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.mypage-main-basicinfo-key-wrapper {
+.mypage-main-key-wrapper {
     display: flex;
     gap: 8px;
 }
 
-<<<<<<< HEAD
-.mypage-main-basicinfo-email-key {
-=======
-.mypage-main-basicinfo-key {
->>>>>>> 043297d47889f6fbff27d0b804d991d1196abd39
+.mypage-main-key {
     font-size: 16px;
     line-height: 150%;
     font-weight: 700;
     color: #191F28;
 }
 
-.mypage-main-basicinfo-value {
+.mypage-main-value {
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
     color: #6B7684;
 }
 
-.mypage-main-basicinfo-button {
+.mypage-button-group {
+    flex-direction: column;
+    align-items: center;
+}
+
+.mypage-main-button {
     display: flex;
     gap: 8px;
     align-items: center;
@@ -228,39 +232,35 @@ button {
     padding: 0 36px;
 }
 
-.mypage-main-basicinfo-button-name {
+.mypage-main-button-on {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 54px;
+    min-height: 54px;
+    border-radius: 14px;
+    background: #1731e9;
+    width: fit-content;
+    justify-content: space-between;
+    min-width: 100px;
+    padding: 0 36px;
+    margin-bottom: 10px;
+    color: #F2F4F6;
+}
+
+.mypage-main-button-name {
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
 }
 
-.mypage-main-basicinfo-line {
+.mypage-main-content-line {
     width: 100%;
     height: 1px;
     margin: 0;
     border: 0;
     background: #E5E8EB;
 }
-<<<<<<< HEAD
-=======
 
-.mypage-main-basicinfo-phone-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
 
-.mypage-main-basicinfo-phone-wrap {
-    display: flex;
-    align-items: center;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    width: 100%;
-}
 
-.mypage-main-basicinfo-phone-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
->>>>>>> 043297d47889f6fbff27d0b804d991d1196abd39
