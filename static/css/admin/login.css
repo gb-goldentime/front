@@ -338,10 +338,9 @@ element.style {
 }
 
 .boot-check-box i {
-    opacity: 0;
     transition: opacity 0.3s ease;
     font-size: 18px;
-    color: #507cf3;
+    color: #afb7ba;
     pointer-events: none;
     user-select: none;
   }
@@ -638,12 +637,8 @@ button.close {
     justify-content: flex-end;
 }
 
-
-.mdi-check:before {
+.mdi::before{
     content: "\F012C";
-}
-
-.mdi:before{
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     font: normal normal normal 24px / 1 Material Design Icons;
@@ -651,3 +646,15 @@ button.close {
     line-height: inherit;
     text-rendering: auto;
 } 
+
+#auto-checkbox{
+    display: none;
+}
+
+#check-icon.active{
+    display: inline-block;
+}
+
+#check-icon{
+    display: none;
+}
