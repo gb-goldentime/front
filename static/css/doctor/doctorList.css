@@ -39,6 +39,11 @@ menu, ol, ul {
     margin: 0;
     padding: 0;
 }
+path{
+    clip-rule: evenodd;
+    fill: #b0b8c1;
+    fill-rule: evenodd;
+}
 
 body{
     color: #000;
@@ -87,6 +92,12 @@ ul.coach-mark-container,ul.category-list-wrap{
     display: flex;
     gap: 20px;
 }
+
+header.coach-mark-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 li span.btn-content{
     font-size: 32px;
@@ -295,9 +306,9 @@ div.side-bar-container{
 
 div.kakao-map{
     width: 100%;
-    /* background-color: #000; */
+    margin-top: 62px;
     background-image: url("../../images/temp.png");
-    height: 100%;
+    height: calc(100% - 62px);
 }
 
 
@@ -312,7 +323,7 @@ div.kakao-map{
     to {scale: 0;}
 }
 
-div.modal {
+div.modal ,div.mail-send-modal,div.category-modal{
     display: none;
     position: fixed;
     flex-direction: column;
@@ -340,18 +351,6 @@ div.warn-modal {
 
 div#content-wrap span{
     display: block;
-}
-div.mail-send-modal{
-    /* display: flex; */
-    display: none;
-    position: fixed;
-    flex-direction: column;
-    inset: 0px;
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #8586898a;
 }
 
 /* 나중에 게시글 작성 부분 */
@@ -724,4 +723,254 @@ label.checkbox-label{
 .checkbox-check.inactive{
     display: none;
 }
-/* 나중에 게시글 작성 부분 */
+/* /나중에 게시글 작성 부분 */
+
+/* 위에 카테고리 부분 */
+div.category-list-container{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+    justify-content: space-between;
+}
+button.category-container-modal-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 36px;
+    border-radius: 36px;
+    background-color: #fff;
+    color: #6b7684;
+    padding: 0px 14px 0px 10px;
+    gap: 12px;
+    border: 1px solid #e5e8eb;
+}
+span.check-list{
+    color: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+}
+div.check-list-svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+}
+div.check-list-svg svg{
+    width: 100%;
+    height: 100%;
+    transform: rotate(90deg);
+}
+button.card-list-order-btn{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+span.card-list-btn-text{
+    color: #6b7684;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 100%;
+}
+div.card-list-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px
+}
+div.card-list-icon svg {
+    width: 100%;
+    height: 100%;
+}
+/* /위에 카테고리 부분 */
+
+
+/* 카테고리 모달 부분 */
+div.category-modal-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+    border-radius: 16px;
+    background: rgb(255, 255, 255);
+    font-size: 18px;
+    will-change: transform, opacity;
+    transform: translateY(0px);
+    transition: transform 300ms cubic-bezier(0.465, 0.183, 0.153, 0.946), opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    opacity: 1;
+    pointer-events: auto;
+    max-width: 644px !important;
+    padding: 24px 32px !important;
+}
+div.category-modal-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+span.category-title{
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 700;
+    color: rgb(25, 31, 40);
+    
+}
+
+div.category-btn-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+div.category-btn-container{
+    display: flex;
+    position: relative;
+    width: 100%;
+    overflow-y: auto;
+}
+div.category-btn-container-scroll{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 340px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+div.category-content-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+div.category-content-title{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+span.category-department{
+    font-size: 20px;
+    line-height: 150%;
+    font-weight: 700;
+    color: rgb(25, 31, 40)
+}
+ul.category-list-wrap{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap
+}
+button.category-btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid rgb(229, 232, 235);
+    border-radius: 20px;
+    background-color: rgb(249, 250, 251);
+}
+
+button.category-btn{
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    color: rgb(78, 89, 104);
+}
+div.category-fix-btn-wrap{
+    display: flex;
+    justify-content: end;
+    padding-top: 24px;
+}
+
+button.category-select-btn-del{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 54px;
+    min-height: 54px;
+    border-radius: 14px;
+    max-width: 120px;
+    color: rgb(51, 61, 75);
+}
+
+button.category-select-btn-del:hover{
+    background: rgb(242, 244, 246);
+    color: rgb(51, 61, 75);
+}
+button.category-select-fix-btn{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 54px;
+    min-height: 54px;
+    border-radius: 14px;
+    max-width: 120px;
+    background: rgb(23, 49, 233);
+    color: rgb(255, 255, 255);
+}
+button.category-select-fix-btn:hover{
+    background: rgb(15, 39, 209);
+    color: rgb(232, 240, 249);
+}
+button.category-fix-btn span{
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+}
+
+button.category-btn.checked{
+    color: rgb(86, 130, 239);
+}
+/* /카테고리 모달 부분 */
+
+/* 검색창 부분 */
+div.total-search-container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 16px 0;
+}
+div.total-search-input-wrap{
+    display: flex;
+    width: 600px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #F2F4F6;
+}
+input.total-search-input{
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #333D4B;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+div.total-search-input-wrap:focus-within {
+    border-bottom: 2px solid #5682EF;
+}
+/* /검색창 부분 */
+
+/* 검색 결과 없음 */
+div.no-search-result-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+span.no-search-result-text{
+    color: #6b7684;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 150%;
+    text-align: center;
+    margin-top: 16px;
+}
+/* /검색 결과 없음 */
