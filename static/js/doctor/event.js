@@ -406,6 +406,7 @@ categoryModalOpenBtn.addEventListener("click", (e) => {
 /**************** */
 /*
 let itemIndex = 0;
+// 만약 데이터가 없으면 무한 스크롤 안하기 일단은 주석 처리
 const maxItems = 20; // 총 20개까지만 로딩 나중에 여기에 글 목록 개수 가져오기
 const loadCount = 5; // 한 번에 5개씩
 
