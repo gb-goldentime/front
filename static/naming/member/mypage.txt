@@ -25,34 +25,27 @@ css-zr68s3
 css-1dbyev1
 = mypage-main-container
 css-1yapytl
-= mypage-main-basicinfo-wrap
+= mypage-main-wrap
 css-gfxdb4
-= mypage-main-basicinfo
+= mypage-main-info-title
 css-1rmcoop
-= mypage-main-basicinfo-wrapper
+= mypage-main-content-container
 css-3ukwes
-= mypage-main-basicinfo-container
+= mypage-main-key-container
 css-1bntj9o
-= mypage-main-basicinfo-wrap-wrap
+= mypage-main-content-wrapper
 css-1idyfpw
-= mypage-main-basicinfo-wrapper-wrapper
+= mypage-main-wrapper-wrapper
 css-1e4ecus
-= mypage-main-basicinfo-key-wrapper
+= mypage-main-key-wrapper
 css-n1tvpm
-= mypage-main-basicinfo-email-key
+= mypage-main-key
 css-19g1zwj
-= mypage-main-basicinfo-value
+= mypage-main-value
 css-1b77mil
-= mypage-main-basicinfo-email-button
+= mypage-main-button
 css-15h2tnj 
-= mypage-main-basicinfo-email-button-name
+= mypage-main-button-name
 css-1ydx8ep
-= mypage-main-basicinfo-line
+= mypage-main-line
 css-3ukwes
-= mypage-main-basicinfo-phone-container
-css-1bntj9o
-= mypage-main-basicinfo-phone-wrap
-css-1idyfpw
-= mypage-main-basicinfo-phone-wrapper
-css-n1tvpm
-= mypage-main-basicinfo-phone-value
