@@ -8,6 +8,9 @@
     box-sizing: border-box;
     font-family: inherit;
     line-height: inherit;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -30,6 +33,18 @@ button {
     font-size: 16px;
     overflow: visible;
     appearance: button;
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    opacity: 1;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    text-rendering: auto;
+    padding-block: 1px;
+    padding-inline: 6px;
 }
 
 .main-layout-wrapper {
@@ -162,7 +177,13 @@ button {
     width: 100%;
 }
 
+<<<<<<< HEAD
 .mypage-main-basicinfo-wrapper-wrapper {
+=======
+.mypage-main-basicinfo-email-wrapper {
+    width: 142.67px;
+    height: 52px;
+>>>>>>> 043297d47889f6fbff27d0b804d991d1196abd39
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -173,7 +194,11 @@ button {
     gap: 8px;
 }
 
+<<<<<<< HEAD
 .mypage-main-basicinfo-email-key {
+=======
+.mypage-main-basicinfo-key {
+>>>>>>> 043297d47889f6fbff27d0b804d991d1196abd39
     font-size: 16px;
     line-height: 150%;
     font-weight: 700;
@@ -216,3 +241,26 @@ button {
     border: 0;
     background: #E5E8EB;
 }
+<<<<<<< HEAD
+=======
+
+.mypage-main-basicinfo-phone-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mypage-main-basicinfo-phone-wrap {
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mypage-main-basicinfo-phone-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+>>>>>>> 043297d47889f6fbff27d0b804d991d1196abd39

@@ -1,0 +1,327 @@
+/* @charset "utf-8"; */
+
+body, html{
+    text-size-adjust: none;
+    height: 100%;
+    overscroll-behavior-x: none;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: inherit;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+
+menu, ol, ul {
+    list-style: none;
+}
+
+*, ::backdrop, :after, :before {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: #000;
+    overscroll-behavior-y: none;
+    font-family: Pretendard Variable;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 1172px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 60px;
+    padding-bottom: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1172px;
+    min-height: 100vh;
+}
+
+div.main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+button {
+    background: inherit;
+    box-shadow: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    font-size: 16px;
+    overflow: visible;
+}
+
+ul.coach-mark-container{
+    display: flex;
+    gap: 20px;
+}
+
+li span.btn-content{
+    font-size: 32px;
+    line-height: 130%;
+    font-weight: 700;
+    color: #B0B8C1;
+}
+
+li span.active{
+    font-size: 32px;
+    line-height: 130%;
+    font-weight: 700;
+    color: #191F28;
+}
+
+div.content-wrapper{
+    display: flex;
+    gap: 16px;
+}
+div.content-list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+ul.content-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 804px;
+}
+
+
+div.content-info{
+    display: flex;
+    gap: 16px;
+    padding: 32px 40px 32px 32px;
+    border: 1px solid rgb(229, 232, 235);
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(224, 230, 240, 0.2) 0px 4px 8px 0px;
+}
+
+div.content-info img.content-info-img{
+    border-radius: 16px;
+    object-fit: cover;
+}
+div.content-info-text{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+div.type-user-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+div.depart-treatment {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+
+div.depart-treatment-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+div.depart-treatment-wrap span, div.info-container span {
+        font-size: 14px;
+        line-height: 150%;
+        font-weight: 400;
+        color: rgb(51, 61, 75);
+}
+
+
+
+div.depart-treatment-wrap span:last-child, div.info-container span.second{
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 700;
+    color: rgb(107, 118, 132);
+    /* margin-left: 25px; */
+}
+
+div.depart-treatment-wrap span:first-child, div.info-container span.first{
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 700;
+    color: rgb(51, 61, 75);
+}
+
+div.info-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+div.doctor-info{
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+}
+
+div.doctor-info span{
+    font-size: 22px;
+    line-height: 150%;
+    font-weight: 500;
+}
+
+div.icon-btn-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.icon-container{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+span.greeting{
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 500;
+    color: rgb(51, 61, 75);
+}
+span.greeting strong{
+    font-weight: 700;
+}
+
+div.btn-wrap{
+    display: flex;
+    gap: 16px;
+}
+
+button.btnshape{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 42px;
+    padding: 0 10px;
+    border-radius: 8px;
+    background-color: #1731e9;
+    gap: 4px;
+    color: #fff;
+    width: 109px;
+}
+button.btnshape span{
+    color: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+    width: max-content;
+}
+
+
+
+button.btnshape img{
+    margin-bottom: 2px;
+    width: 13px;
+    height: 13px;
+}
+
+button.mail-send-btn img{
+    margin-bottom: 2px;
+    width: 20px;
+    height: 22px;
+}
+
+button.interest-btn.active{
+    background-color: #10b981;
+}
+
+span.first::after{
+    content: "";
+    font-size: 9px;
+    border: 1px solid rgb(107, 118, 132);
+    margin: 0px 10px 0px 10px;
+    vertical-align: 3px;
+}
+span.detail-address{
+    margin-left: 26px;
+}
+
+div.doctor-info, div.hospital-info{
+    cursor: pointer;
+}
+div.side-bar-container{
+    position: sticky;
+    top: 84px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 320px;
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+div.kakao-map{
+    background-image: url("../images/temp.png");
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@keyframes popUp {
+    from {scale: 0;}
+    to {scale: 1;}
+}
+
+@keyframes popDown {
+    from {scale: 1;}
+    to {scale: 0;}
+}
+
+div.modal {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    inset: 0px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #8586898a;
+}
+
+div.warn-modal {
+    box-sizing: border-box;
+    position: unset;
+    width: 288px;
+    margin: 20vh 0px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(33 35 41 / 12%) 0px 2px 12px;
+    border-radius: 8px;
+}
+
+div.warn-modal {
+    padding: 24px;
+}
+
+div#content-wrap span{
+    display: block;
+}
