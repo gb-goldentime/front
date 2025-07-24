@@ -1,0 +1,226 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+*, ::backdrop, :after, :before {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+}
+*, :after, :before {
+    box-sizing: border-box;
+    moz-osx-font-smoothing: grayscale;
+    webkit-font-smoothing: antialiased;
+    font-family: inherit;
+    line-height: inherit;
+}
+button, input:where([type=button],[type=reset],[type=submit]) {
+    webkit-appearance: button;
+    moz-appearance: button;
+    appearance: button;
+}
+button, input:where([type=button],[type=reset],[type=submit]) {
+    webkit-appearance: button;
+    moz-appearance: button;
+    appearance: button;
+}
+
+button, input, optgroup, select, textarea {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    opacity: 1;
+    background-color: #0000;
+    border-radius: 0;
+}
+
+div.full {
+    display: flex;
+    webkit-box-align: center;
+    align-items: center;
+    webkit-box-pack: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0px auto;
+}
+
+/* 
+*, :after, :before {
+    box-sizing: border-box;
+    font-family: inherit;
+    line-height: inherit;
+} */
+
+
+div.szkvbm_middle1 {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 356px;
+    padding: 20px 16px;
+}
+
+div.ftjrz7middle2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.emailloginlogomiddle3 {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 20px;
+
+    }
+
+span.css-1202cko {
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 700;
+    color: rgb(25, 31, 40);
+}
+
+
+
+div.sub011n0qd3p {  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+
+div.sub02emailpassword {    
+     display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+    }
+
+
+div.sub033ukwes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+ }
+
+div.sub04k008qsemailgulssi {
+    display: flex;
+ }
+
+
+
+
+
+div.subrs70ns  {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 60px;
+        }
+
+   
+label.label1woir7p{
+    position: relative;
+ }
+
+
+span.emailgul183o2av {
+  font-size: 14px;
+    line-height: 150%;
+    font-weight: 700;
+    color: rgb(25, 31, 40);
+    }
+
+
+div.sbo1gjemailchang {
+    display: flex;
+    box-sizing: content-box;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 0px 16px 0px 0px;
+    border-radius: 14px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(229, 232, 235) 0px 0px 0px 1px inset;
+ }
+
+
+input.bms9cb{
+        width: 100%;
+    padding: 12px 12px 12px 16px;
+    border: none;
+    background: transparent;
+    color: rgb(25, 31, 40);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    caret-color: rgb(37, 83, 229);
+    resize: none;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+.button109jyh9 {
+     display: flex;
+    gap: 8px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 54px;
+    min-height: 54px;
+    border-radius: 14px;
+    background: rgb(23, 49, 233);
+    color: rgb(255, 255, 255);
+}
+
+/* 버튼에 음영들어가 있는거 */
+.button109jyh9 {
+    background: rgb(166, 196, 244);
+    color: rgb(208, 224, 247);
+    }
+
+
+    /* 
+    @media (hover: hover) and (pointer: fine) {
+    .css-109jyh9:hover {
+        background: rgb(15, 39, 209);
+        color: rgb(232, 240, 249); */
+
+
+button.box5p3r3q {
+    display: flex;
+    gap: 8px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 54px;
+    min-height: 54px;
+    border-radius: 14px;
+    color: rgb(51, 61, 75);   
+}     
+
+
+.h2tnj {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    }
+
