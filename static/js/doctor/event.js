@@ -34,9 +34,11 @@ const svg = document.querySelector(".checkbox-svg");
 // 쪽지 보내기 버튼
 const sendBtn = document.querySelector(".mail-send-btn-check");
 
-const textWarnCheck = (tag) => {
+const textWarnCheck = (tag, check = false) => {
     let count = tag.value.length;
-    const temp = document.querySelector(".mail-title-warn.text-warn");
+    const temp = check
+        ? document.querySelector(".content-text-warn.text-warn")
+        : document.querySelector(".mail-title-warn.text-warn");
     temp.setAttribute("data-count", count);
     // console.log(111);
 };
@@ -136,6 +138,11 @@ mailModalInput.forEach((mailInput) => {
             return;
         }
     });
+});
+
+const textarea = document.querySelector("#mailContent");
+textarea.addEventListener("keyup", (e) => {
+    textWarnCheck(textarea, true);
 });
 
 // 임시로 특정 단어 입력 임시입니다.
