@@ -112,6 +112,7 @@ mailModalInput.forEach((mailInput) => {
     });
 });
 
+// 임시로 특정 단어 입력
 mailModalInput[0].addEventListener("keyup", (e) => {
     if (e.target.value === "A") {
         e.target.style.borderColor = "red";
@@ -134,6 +135,7 @@ mailModalInput[0].addEventListener("keyup", (e) => {
 //     });
 // });
 
+// 의사 추가 버튼들 슬라이드 열리면 좀 기달려 주기
 doctorAddBtns.forEach((doctorAddbtn) => {
     doctorAddbtn.addEventListener("click", (e) => {
         // 의사 이름 셋팅 및 상태 처리
@@ -166,12 +168,14 @@ doctorAddBtns.forEach((doctorAddbtn) => {
     });
 });
 
+// 의사 이름 선택했으면 엑스표시 삭제 해주기
 doctorRemoveBtn.addEventListener("click", (e) => {
     doctorSearchInput.value = "";
     doctorSearchInput.disabled = false;
     doctorRemoveBtn.style.display = "none";
 });
 
+// 이미지 파일 부분입니다.
 inputFileBtn.addEventListener("change", (e) => {
     const [file] = e.target.files;
     console.log(file);
