@@ -11,7 +11,7 @@
         <main class ="main-layout-wrapper">
             <div class ="mypage-title-container ">
                 <div class = "mypage-title-wrapper">
-                    <h1 class = "mypage-title">계정 설정</h1>
+                    <h1 class = "mypage-title">마이페이지</h1>
                 </div>
             </div>
             <div class ="mypage-body-container">
@@ -34,7 +34,7 @@
                             <span class = "mypage-category-black">내 관심 전문가</span>
                         </a>
                         <a class = "mypage-category-wrap-black">
-                            <span class = "mypage-category-black">나의 문의글</span>
+                            <span class = "mypage-category-black">1:1 문의함</span>
                         </a>
                     </aside>
                 </div>
@@ -51,7 +51,7 @@
                                         <span class="mypage-main-value">이메일@주소.형식</span>
                                     </div>
                                     <!-- 버튼 클릭 시 이메일 변경 창 생성 -->
-                                    <button class="mypage-main-button" color ="grey" height="54">
+                                    <button Id = "change-email-button" class="mypage-main-button" color ="grey" height="54">
                                         <span class="mypage-main-button-name">변경</span>
                                     </button>
                                 </div>
@@ -65,7 +65,7 @@
                                         </div>
                                         <span class="mypage-main-value">+821012345678</span>
                                     </div>
-                                    <button class="mypage-main-button" color ="grey" height="54">
+                                    <button Id="change-phone-button" class="mypage-main-button" color ="grey" height="54">
                                         <!-- 휴대폰 번호 인증 이벤트 -->
                                         <span class="mypage-main-button-name">변경</span>
                                     </button>
@@ -85,7 +85,7 @@
                                         <span class="mypage-main-value"></span>
                                     </div>
                                     <!-- 버튼 클릭 시 이메일 인증 이벤트 -> 확인 시 새로운 비밀번호 입력 -->                                    
-                                    <button class="mypage-main-button" color ="grey" height="54">
+                                    <button Id= "change-password-button" class="mypage-main-button" color ="grey" height="54">
                                         <span class="mypage-main-button-name">변경</span>
                                     </button>
                                 </div>
@@ -105,12 +105,12 @@
                                         <span class="mypage-main-value"></span>
                                     </div>
                                 <div class = "mypage-button-group">
-                                    <button class="mypage-main-button-on" color ="blue" height="54">
+                                    <button Id ="connect-sms-button" class="mypage-main-button-on" color ="blue" height="54">
                                     <!-- 버튼 클릭 시 카카오 연동 이벤트 ---? -->
                                         <span class="mypage-main-button-name">연동하기</span>
                                     </button>
                                     <!-- 경고 팝업 이벤트 -->
-                                    <button class="mypage-main-button" color ="grey" height="54">
+                                    <button id = "disconnect-sms-button" class="mypage-main-button" color ="grey" height="54">
                                         <span class="mypage-main-button-name">연동 해제</span>
                                     </button>
                                 </div>
@@ -130,7 +130,7 @@
                                         <span class="mypage-main-value"></span>
                                     </div>
                                     <!-- 버튼 클릭 시 바로 로그아웃 이벤트-->
-                                    <button class="mypage-main-button" color ="grey" height="54">
+                                    <button id = "logout-button" class="mypage-main-button" color ="grey" height="54">
                                         <span class="mypage-main-button-name">로그아웃</span>
                                     </button>
                                 </div>
@@ -149,7 +149,7 @@
                                         <span class="mypage-main-value"></span>
                                     </div>
                                     <!-- 버튼 클릭 시 탈퇴 사유 입력 -> "탈퇴합니다" 기입 -> 버튼 눌러서 탈퇴 -->
-                                    <button class="mypage-main-button.delete" color ="grey" height="54">
+                                    <button Id= "delete-button" class="mypage-main-button" color ="grey" height="54">
                                         <span class="mypage-main-button-name">회원 탈퇴</span>
                                     </button>
                                 </div>
@@ -160,6 +160,6 @@
             </div>                                            
         </main>
     </div> 
-    <script src="/static/js/member/event.js"></script>  
+    <script src="/static/js/member/mypage/event.js"></script>  
 </body>
 </html>
