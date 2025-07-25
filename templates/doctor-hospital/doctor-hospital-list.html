@@ -31,14 +31,16 @@
                         </li>
                     </ul>
                     <div class="total-search-container">
-                        <form>
+                        <!-- 잠시 대기 -->
+                        <form id="searchForm" name="searchForm">
                             <div class="total-search-input-wrap">
                                 <!-- 검색 이벤트 -->
-                                <input type="text" class="total-search-input" placeholder="검색어를 입력해주세요.">
+                                <input type="text" class="total-search-input" placeholder="검색어를 입력해주세요." form="searchForm" name="searchContent">
                                 <!-- /검색 이벤트 -->
                                 <img alt="search" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color:transparent" src="https://media.a-ha.io/aha-qna/images/common/icons/mark/magnifying-000%20default.svg">
                             </div>
                         </form>
+                        <!-- /잠시 대기 -->
                     </div>
                     
                 </header>
@@ -719,7 +721,7 @@
                     </div>
                     <!-- keyup 이벤트 -->
                     <div class="main-title-input-wrap">
-                        <input type="text" class="mail-input mail-title-input-content" minlength="16" placeholder="제목을 작성해 주세요.">
+                        <input type="text" class="mail-input mail-title-input-content" minlength="16" placeholder="제목을 작성해 주세요." form="mailForm" name="mailTitle">
                     </div>
                     <!-- /keyup 이벤트 -->
                 </div>
@@ -731,10 +733,10 @@
                     </div>
                     <!-- keyup 이벤트 - 클릭 이벤트 -->
                     <div class="doctor-search-wrap mail-doctor-search-wrap">
-                        <input type="text" class="mail-input doctor-input-content" placeholder="의사를 찾아보세요.">
+                        <input type="text" class="mail-input doctor-input-content" placeholder="의사를 찾아보세요." form="doctorForm">
+                        <input type="text" class="hidden-input" name="docotrPk" form="mailForm" style="display: none;"> 
                         <button><img src="../../static/images/x.png" width="20px" height="20px"></button>
                         <div class="search-layout">
-
                             <ul
                                 class="mail-search-doctor-name-list">
                                 <!-- 반복될 부분 -->
@@ -960,11 +962,11 @@
                                             <path clip-rule="evenodd" d="M3.41634 4.16683C3.41634 3.8298 3.51385 3.66777 3.59056 3.59105C3.66728 3.51434 3.82931 3.41683 4.16634 3.41683H15.833C16.17 3.41683 16.3321 3.51434 16.4088 3.59105C16.4855 3.66777 16.583 3.8298 16.583 4.16683V15.8335C16.583 16.1705 16.4855 16.3326 16.4088 16.4093C16.3321 16.486 16.17 16.5835 15.833 16.5835H4.16634C3.82931 16.5835 3.66728 16.486 3.59056 16.4093C3.51385 16.3326 3.41634 16.1705 3.41634 15.8335V4.16683ZM4.16634 1.5835C3.46171 1.5835 2.7904 1.79849 2.2942 2.29469C1.798 2.79089 1.58301 3.4622 1.58301 4.16683V15.8335C1.58301 16.5381 1.798 17.2094 2.2942 17.7056C2.7904 18.2018 3.46171 18.4168 4.16634 18.4168H15.833C16.5376 18.4168 17.2089 18.2018 17.7051 17.7056C18.2013 17.2094 18.4163 16.5381 18.4163 15.8335V4.16683C18.4163 3.4622 18.2013 2.79089 17.7051 2.29469C17.2089 1.79849 16.5376 1.5835 15.833 1.5835H4.16634ZM14.7914 7.08348C14.7914 8.00395 14.0452 8.75014 13.1248 8.75014C12.2043 8.75014 11.4581 8.00395 11.4581 7.08348C11.4581 6.163 12.2043 5.41681 13.1248 5.41681C14.0452 5.41681 14.7914 6.163 14.7914 7.08348ZM9.38854 9.37223C9.71626 9.03238 10.2606 9.03238 10.5883 9.37223L14.5924 13.5246C14.9751 13.9215 14.6938 14.5835 14.1425 14.5835H5.83434C5.28298 14.5835 5.00172 13.9215 5.38443 13.5246L9.38854 9.37223Z" fill="#B0B8C1" fill-rule="evenodd"></path>
                                         </svg>
                                     </label>
-                                    <input accept=".jpeg, .png, .jpg" id="create-question-image" type="file" multiple>
+                                    <input accept=".jpeg, .png, .jpg" id="create-question-image" form="mailForm" name="multipleFile" type="file" multiple>
                                 </div>
                                 <hr class="line-hr input-btn-list-bottom">
                                 <div class="input-textarea-container">
-                                    <textarea class="mail-content"name="mailContent" id="mailContent" cols="30" rows="10" placeholder="질문의 내용을 구체적으로 입력해주세요."></textarea>
+                                    <textarea class="mail-content" form="mailForm" name="mailContent" id="mailContent" cols="30" rows="10" placeholder="질문의 내용을 구체적으로 입력해주세요."></textarea>
                                 </div>
                             </div>
                         </div>
@@ -1002,17 +1004,17 @@
                     <div
                         class="btn-wrap">
                         <!-- 쪽지 클릭 이벤트 -->
-                        <button class="btnshape mail-send-btn-check" disabled="true">
+                        <button class="btnshape mail-send-btn-check" disabled="true" form="mailForm">
                             <img src="../../static/images/email.png">
                             <span>쪽지 보내기</span>
                         </button>
                         <!-- /쪽지 클릭 이벤트 -->
-                        <!-- 관심 추가 클릭 이벤트 -->
+                        <!-- 쪽지 취소 클릭 이벤트 -->
                         <button class="btnshape mail-send-cancle-btn">
                             <span>쪽지 취소</span>
                             <img src="../../../static/images/cancel.png">
                         </button>
-                        <!-- /관심 추가 클릭 이벤트 -->
+                        <!-- /쪽지 취소 클릭 이벤트 -->
                     </div>
                 </div>
 
@@ -1215,6 +1217,10 @@
                 </div>
             </div>
         </div>
+        <!-- form 1 -->
+<form id="doctorForm" name="doctorForm" style="display: none;"></form>
+<!-- form 2 -->
+<form id="mailForm" name="mailForm" style="display: none;"></form>
     </body>
     <script src="../../static/js/doctor-hospital/doctor-hospital-list/event.js"></script>
 </html>
