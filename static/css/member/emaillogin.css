@@ -100,18 +100,18 @@ div.sub01emailpasswordgap {
 }
 
 
-div.emailpassword {    
+div.sub02emailpassword {    
      display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 10px;
+    gap: 4px;
     }
 
 
 div.iprukchang {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 5px;
  }
 
 div.sub04k008qsemailgulssi {
@@ -156,20 +156,6 @@ div.sbo1gjemailchang {
  }
 
 
- .phone-input {
-    display: flex;
-    box-sizing: content-box;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    padding: 0px 0px 0px 0px;
-    border-radius: 14px;
-    background: rgb(194, 72, 72);
-    box-shadow: rgb(229, 232, 235) 0px 0px 0px 1px inset;
- }
-
-
 
 /* 정상 입력 상태 */
 /* input.bms9cb.valid {
@@ -201,6 +187,8 @@ input.bms9cb{
     word-break: break-word;
     white-space: pre-wrap;
 }
+
+
 
 
 
@@ -297,28 +285,3 @@ input.bms9cb.input-filled {
     gap: 12px;
     cursor: pointer;
 }
-
-
-
-
-    .phone-input {
-
-      display: flex;
-
-      gap: 5px; /* 입력창 사이 간격 */
-
-      align-items: center;
-
-    }
-
-​
-
-    .phone-input {
-
-      width: 30px;
-
-      padding: 5px;
-
-      text-align: center;
-
-    }
