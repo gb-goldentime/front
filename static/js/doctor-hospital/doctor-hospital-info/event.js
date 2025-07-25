@@ -1,4 +1,5 @@
 HTMLCollection.prototype.forEach = Array.prototype.forEach;
+
 let modalCheck;
 //  광클 예방
 let buttonsCheck = true;
@@ -18,6 +19,9 @@ const doctorRemoveBtn = document.querySelector(
 const doctorAddBtns = document.getElementsByClassName(
     "mail-search-doctor-name-list"
 )[0];
+
+//관심 추가-삭제 버튼
+const interestBtn = document.querySelector(".interest-btn");
 
 //숨겨진 input
 const hiddenIuput = document.querySelector(".hidden-input");
@@ -45,7 +49,26 @@ const label = document.querySelector(".checkbox-label");
 const svg = document.querySelector(".checkbox-svg");
 // 쪽지 보내기 버튼
 const sendBtn = document.querySelector(".mail-send-btn-check");
+// 상세보기 아래 버튼들
+const profilBtns = document.querySelectorAll(".profil-content-select");
+const profilCotentCheck = document.querySelector(".profil-content-selector");
+const elements = document.querySelectorAll("[data-cnt]");
 
+profilBtns.forEach((profilBtn) => {
+    profilBtn.addEventListener("click", (e) => {
+        // console.log(1);
+        const cnt = profilBtn.dataset.cnt;
+        console.log(profilCotentCheck);
+        profilCotentCheck.style.transform = `translateX(calc(${100 * cnt}% + ${
+            16 * cnt
+        }px))`;
+        document.querySelector("span.active").classList.remove("active");
+        const spanTag = profilBtn.firstElementChild.firstElementChild;
+        spanTag.classList.add("active");
+    });
+});
+
+/*************** 모달 부분 ***********/
 const textWarnCheck = (tag, check = false) => {
     let count = tag.value.length;
     const temp = check
@@ -55,9 +78,6 @@ const textWarnCheck = (tag, check = false) => {
     // console.log(111);
 };
 
-/**
- * 강사님 모달 코드 부분 응용한 곳
- */
 let check = false;
 
 const showMailModal = () => {
@@ -90,7 +110,6 @@ document.querySelector("div.modal").addEventListener("click", (e) => {
 });
 
 /********************************************************************************/
-
 // 의사 검색창에서의 동작
 doctorSearchInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter" && !check) {
@@ -268,152 +287,6 @@ mailSendCancleBtn.addEventListener("click", (e) => {
     document.getElementById("file-img-list").innerHTML = "";
 });
 
-// 무한 스크롤리여서 이벤트를 동적 처리를 위한 부분
-listLayout.addEventListener("click", (e) => {
-    const mailBtn = e.target.closest(".mail-send-btn");
-    const interestBtn = e.target.closest(".interest-btn");
-    const addressKakao = e.target.closest(".info-container, .hospital-info");
-    // 모달 전에 쪽지 보내기 누르면 모달이 보이게 하기
-    if (mailBtn) {
-        mailSendModal.style.display = "flex";
-        doctorSearchInput.value = "의사이름";
-        doctorRemoveBtn.style.display = "block";
-        hiddenIuput.value = doctorSearchInput.value;
-        doctorSearchInput.disabled = true;
-    } else if (interestBtn) {
-        // 관심 형태에 따라 클릭 버튼 다르게
-        let message = ``;
-        if (!buttonsCheck) {
-            return;
-        }
-        buttonsCheck = false;
-
-        if (e.target.classList[2] === "active") {
-            message = `나의 관심 의사에서 취소했습니다.`;
-            showWarnModal(message);
-        } else {
-            message = `해당 의사를 나의 관심 의사로 <br>등록 했습니다.`;
-            showWarnModal(message);
-        }
-
-        setTimeout(() => {
-            buttonsCheck = true;
-        }, 2000);
-    } else if (addressKakao) {
-        console.log("카카오 나중에 해야하는 부분");
-    }
-});
-
-// 헤더 바로 밑에 부분 버튼 모음들
-const coachMarkBtns = document.querySelectorAll(
-    "ul.coach-mark-container li button"
-);
-// 원장 병원 기타(미정 삭제할 수 도 있음) 버튼 클릭 이벤트 일단은
-// 색깔만 변하게
-coachMarkBtns.forEach((coachMarkBtn) => {
-    coachMarkBtn.addEventListener("click", (e) => {
-        const temp = document.querySelector(
-            "ul.coach-mark-container li button span.active"
-        );
-        temp.classList.remove("active");
-        e.target.classList.add("active");
-    });
-});
-
-let clickable = true;
-const cardListOrderBtn = document.querySelector(".card-list-order-btn");
-cardListOrderBtn.addEventListener("click", (e) => {
-    if (!clickable) return; // 클릭 무시
-    clickable = false;
-    const spanTag = document.querySelector(".card-list-btn-text");
-    if (spanTag.classList[1]) {
-        console.log(1);
-        spanTag.classList.remove("change-order");
-        spanTag.textContent = "답변왕 순";
-    } else {
-        console.log(2);
-        spanTag.classList.add("change-order");
-        spanTag.textContent = "선호도 순";
-    }
-    setTimeout(() => {
-        clickable = true;
-    }, 1000);
-});
-
-// 나중에 서버에 보낼 문자열 배열 부분
-// 클릭 시 여기에 추가, 삭제
-// 삭제는 아마 indexOf로 찾아서 하지 않을까 싶음
-// 카테고리 버튼들
-const categoryListBtns = document.querySelectorAll(
-    "ul.category-list-wrap li button.category-btn"
-);
-
-const categoryList = [];
-categoryListBtns.forEach((categoryListBtn) => {
-    categoryListBtn.addEventListener("click", (e) => {
-        let text = categoryListBtn.firstElementChild.textContent;
-        if (categoryListBtn.classList[1]) {
-            categoryListBtn.classList.remove("checked");
-            // 해당 부분에서 배열 원소 값 삭제
-            categoryList.splice(categoryList.indexOf(text));
-        } else {
-            categoryListBtn.classList.add("checked");
-            // 해당 부분에서 배열 원소 추가 해주기
-            categoryList.push(text);
-        }
-    });
-});
-
-// 선택한 카테고리 모두 취소
-// 선택 취소 버튼
-const categorySelectCancleAll = document.querySelector(
-    ".category-select-btn-del"
-);
-categorySelectCancleAll.addEventListener("click", (e) => {
-    categoryListBtns.forEach((categoryListBtn) => {
-        let text = null;
-        if (categoryListBtn.classList[1]) {
-            text = categoryListBtn.firstElementChild.textContent;
-            categoryListBtn.classList.remove("checked");
-            // 해당 부분에서 배열 원소 값 삭제
-            categoryList.splice(categoryList.indexOf(text));
-        }
-    });
-});
-
-// 선택한 카테고리들로 보여주도록 하고 모달 창 닫기
-// 아무것도 선택 안하면 전체보여주기
-// 선택 완료 버튼
-const categoryFinalSelect = document.querySelector(".category-select-fix-btn");
-const categoryModal = document.querySelector(".category-modal");
-const categoryModalOpenBtnText = document.querySelector(
-    "button.category-container-modal-btn span.check-list"
-);
-categoryFinalSelect.addEventListener("click", (e) => {
-    // console.log(categoryList == false);
-    if (categoryList.length === 0) {
-        console.log(11);
-        categoryModalOpenBtnText.textContent = "전체";
-    } else {
-        console.log(categoryList);
-        categoryModalOpenBtnText.textContent =
-            categoryList.length > 1
-                ? `${categoryList[0]}외 ${categoryList.length - 1}개`
-                : `${categoryList[0]}`;
-        console.log(categoryModalOpenBtnText.textContent);
-    }
-
-    categoryModal.style.display = "none";
-});
-
-// 카테고리 모달 넣기
-const categoryModalOpenBtn = document.querySelector(
-    "button.category-container-modal-btn"
-);
-categoryModalOpenBtn.addEventListener("click", (e) => {
-    categoryModal.style.display = "flex";
-});
-
 // 쪽지 작성부분 텍스트 영역 포커스
 const textareaTag = document.getElementById("mailContent");
 const textareaTagWrap = document.querySelector(".mail-content-input-container");
@@ -423,7 +296,90 @@ textareaTag.addEventListener("focus", (e) => {
 textareaTag.addEventListener("blur", (e) => {
     textareaTagWrap.style.borderColor = "#f2f4f6";
 });
+// 쪽지 열기
+mailSendBtns[0].addEventListener("click", (e) => {
+    mailSendModal.style.display = "flex";
+    doctorSearchInput.value = "의사이름";
+    doctorRemoveBtn.style.display = "block";
+    hiddenIuput.value = doctorSearchInput.value;
+    doctorSearchInput.disabled = true;
+});
 
+// 관심 추가 삭제
+interestBtn.addEventListener("click", (e) => {
+    // 관심 형태에 따라 클릭 버튼 다르게
+    let message = ``;
+    if (!buttonsCheck) {
+        return;
+    }
+    buttonsCheck = false;
+
+    if (e.target.classList[2] === "active") {
+        message = `나의 관심 의사에서 취소했습니다.`;
+        showWarnModal(message);
+    } else {
+        message = `해당 의사를 나의 관심 의사로 <br>등록 했습니다.`;
+        showWarnModal(message);
+    }
+
+    setTimeout(() => {
+        buttonsCheck = true;
+    }, 2000);
+});
+
+// // 후기 남기기 버튼입니다. (내용이 없을 때)
+// const noExistReviewBtn = document.querySelector(".noexist-search-btn");
+// let noExistReviewBtnCheck = true;
+// noExistReviewBtn.addEventListener("click", (e) => {
+//     console.log(1111);
+//     const divTag = document.querySelector(".review-register-container");
+//     console.log(divTag);
+//     noExistReviewBtnCheck
+//         ? divTag.classList.add("active")
+//         : divTag.classList.remove("active");
+
+//     noExistReviewBtnCheck &&
+//         (reviewForm[
+//             "reviewContent"
+//         ].placeholder = `[나중에 유저 이름] 입력해주세요.`);
+//     noExistReviewBtnCheck = !noExistReviewBtnCheck;
+// });
+// // 후기 남기기 버튼입니다. (내용이 하나라도 있을 때)
+// const existReviewBtn = document.querySelector(".exist-review-btn");
+// let existReviewBtnCheck = true;
+// existReviewBtn.addEventListener("click", (e) => {
+//     const divTag = document.querySelector(".review-register-container");
+//     console.log(divTag);
+//     existReviewBtnCheck
+//         ? divTag.classList.add("active")
+//         : divTag.classList.remove("active");
+
+//     existReviewBtnCheck &&
+//         (reviewForm_v2[
+//             "reviewContent"
+//         ].placeholder = `[나중에 유저 이름] 입력해주세요.`);
+//     existReviewBtnCheck = !existReviewBtnCheck;
+// });
+const reviewRegBtn = (className, formTag, tagClass) => {
+    const btnTag = document.querySelector(`${className}`);
+    let btnCheck = true;
+    btnTag.addEventListener("click", (e) => {
+        // console.log(btnTag);
+        console.log(formTag);
+        console.log(btnCheck);
+        const divTag = document.querySelector(`${tagClass}`);
+        btnCheck
+            ? divTag.classList.add("active")
+            : divTag.classList.remove("active");
+        btnCheck &&
+            (formTag[
+                "reviewContent"
+            ].placeholder = `[나중에 유저 이름] 후기를 입력해주세요.`);
+        btnCheck = !btnCheck;
+    });
+};
+reviewRegBtn(".noexist-search-btn", reviewForm_v1, ".v1");
+reviewRegBtn(".exist-review-btn", reviewForm_v2, ".v2");
 /**************** */
 
 // let itemIndex = 0;
