@@ -1,3 +1,32 @@
+body {
+    top: -500px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    color: #000;
+    overscroll-behavior-y: none;
+    font-family: Pretendard Variable, Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, Helvetica Neue, Segoe UI, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    text-size-adjust: none;
+    height: 100%;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: inherit;
+    line-height: inherit;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    unicode-bidi: isolate;
+}
+
 .modal-container {
     display: flex;
     position: fixed;
@@ -74,7 +103,7 @@
 .delete-account-detail-container {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 12px;
 }
 
 .delete-account-detail-content-wrapper {
@@ -220,9 +249,7 @@ ul {
     display: block;
     list-style: none;
     list-style-type: disc;
-    margin-block-start: 1em;
     margin-block-end: 1em;
-    padding-inline-start: 40px;
     unicode-bidi: isolate;
 }
 
