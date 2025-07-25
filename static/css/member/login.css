@@ -48,6 +48,16 @@ div.css-1kizdzl {
     width: 100%; 
 }
 
+
+div.emailpassword {
+       display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px; 
+}
+
+
+
 a.css-1po0s02 {
         display: -webkit-box;
     display: -webkit-flex;
