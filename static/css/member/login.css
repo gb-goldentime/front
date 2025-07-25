@@ -1,0 +1,76 @@
+div.ir7f {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #5e7cc8;
+    background-image: url(https://media.a-ha.io/aha-qna/images/web/v2/auth/auth-main-background.jpg);
+    -webkit-background-position: center;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+div.css-1m0yuj3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 140px;
+}
+
+div.css-1kizdzl {
+       display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%; 
+}
+
+a.css-1po0s02 {
+        display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 50%;
+    height: 52px;
+    padding: 0 10px;
+    border-radius: 14px;
+    background-color: #F9D450;
+    gap: 4px;
+    color: #333D4B;
+    background-color: #F9D450;
+    color: #333D4B;
+    gap: 12px;
+    cursor: pointer;
+}
+
