@@ -1,9 +1,25 @@
 /* @charset "utf-8"; */
 
+/* 병원 부분이랑 의사부분 css입니다. */
+
 body, html{
     text-size-adjust: none;
     height: 100%;
     overscroll-behavior-x: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -992,3 +1008,61 @@ span.no-search-result-text{
     margin-top: 16px;
 }
 /* /검색 결과 없음 */
+
+/* 병원 부분 */
+div.items-center{
+    height: 1px;
+    border: 1px solid #f2f4f6;;
+}
+div.doctor-list-btn{
+    display: flex;
+}
+div.doctor-list-container{
+    display: flex;
+    gap: 12px;
+}
+
+div.doctor-user-list-wrap{
+    justify-content: center;
+    margin-left: 20px;
+}
+
+a.link-click img{
+    border-radius: 12px;
+}
+
+div.doctor-quick-info{
+    border: 1px solid rgb(229, 232, 235);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.doctor-mv-detail-info{
+    margin: 7px 0px;
+    cursor: pointer;
+}
+div.doctor-user-list-wrap div.doctor-list-container div.doctor-info{
+    cursor: unset;
+}
+
+div.hospital-list-text-wrap{
+    gap: 8px;
+}
+
+div.no-search-hospital{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+div.no-doctor-quick-info{
+    height: 52px;
+}
+
+span.no-search-span{
+    margin-top: 0; 
+    margin-left: 10px;
+}

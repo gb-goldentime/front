@@ -1,3 +1,4 @@
+HTMLCollection.prototype.forEach = Array.prototype.forEach;
 let modalCheck;
 //  광클 예방
 let buttonsCheck = true;
@@ -13,10 +14,14 @@ const slide = document.querySelector(".search-layout");
 const doctorRemoveBtn = document.querySelector(
     "div.mail-doctor-search-wrap button"
 );
+
+const listLayout = document.getElementById("intersectionObserver");
+
 // 이미지 파일 연달아 붙이는 공간
 const ulTag = document.getElementById("file-img-list");
 // 쪽지 작성 모달 띄우기 버튼
-const mailSendBtns = document.querySelectorAll(".mail-send-btn");
+const mailSendBtns = document.getElementsByClassName("mail-send-btn");
+
 // 이미지 파일 버튼
 const inputFileBtn = document.getElementById("create-question-image");
 
@@ -78,29 +83,6 @@ document.querySelector("div.modal").addEventListener("click", (e) => {
             document.querySelector("div.modal").style.display = "none";
         }, 450);
     }
-});
-
-// 관심 형태에 따라 클릭 버튼 다르게
-buttons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-        let message = ``;
-        if (!buttonsCheck) {
-            return;
-        }
-        buttonsCheck = false;
-
-        if (e.target.classList[2] === "active") {
-            message = `나의 관심 의사에서 취소했습니다.`;
-            showWarnModal(message);
-        } else {
-            message = `해당 의사를 나의 관심 의사로 <br>등록 했습니다.`;
-            showWarnModal(message);
-        }
-
-        setTimeout(() => {
-            buttonsCheck = true;
-        }, 2000);
-    });
 });
 
 /********************************************************************************/
@@ -215,9 +197,7 @@ inputFileBtn.addEventListener("click", (e) => {
         document.getElementsByClassName("thumbnail-list-content")
     );
     lis.forEach((li) => {
-        console.log(1);
         li.remove();
-        console.log(2);
     });
 });
 
@@ -295,21 +275,40 @@ mailSendCancleBtn.addEventListener("click", (e) => {
         sendBtn.disabled = true;
     }
     doctorRemoveBtn.style.display = "none";
-    if (document.getElementById("thumbnail-wrap")) {
-        inputFileBtn.value = "";
-        document.getElementById("thumbnail-wrap").remove();
-        cancelBtn.style.display = "none";
-    }
-    // console.log(document.getElementsByClassName("thumbnail-wrap")[0]);
+    inputFileBtn.value = "";
+    document.getElementById("file-img-list").innerHTML = "";
 });
 
-// 모달 전에 쪽지 보내기 누르면 모달이 보이게 하기
-mailSendBtns.forEach((mailSendBtn) => {
-    mailSendBtn.addEventListener("click", (e) => {
+// 무한 스크롤리여서 이벤트를 동적 처리를 위한 부분
+listLayout.addEventListener("click", (e) => {
+    const mailBtn = e.target.closest(".mail-send-btn");
+    const interestBtn = e.target.closest(".interest-btn");
+    const addressKakao = e.target.closest(".info-container, .hospital-info");
+    // 모달 전에 쪽지 보내기 누르면 모달이 보이게 하기
+    if (mailBtn) {
         mailSendModal.style.display = "flex";
-        // 여기서 나중에 버튼에서 의사 pk값 가져와서 해당 의사 정보를 의사 검색 창에 넣어주고
-        // 제거 버튼도 보이게 해주기
-    });
+    } else if (interestBtn) {
+        // 관심 형태에 따라 클릭 버튼 다르게
+        let message = ``;
+        if (!buttonsCheck) {
+            return;
+        }
+        buttonsCheck = false;
+
+        if (e.target.classList[2] === "active") {
+            message = `나의 관심 의사에서 취소했습니다.`;
+            showWarnModal(message);
+        } else {
+            message = `해당 의사를 나의 관심 의사로 <br>등록 했습니다.`;
+            showWarnModal(message);
+        }
+
+        setTimeout(() => {
+            buttonsCheck = true;
+        }, 2000);
+    } else if (addressKakao) {
+        console.log("카카오 나중에 해야하는 부분");
+    }
 });
 
 // 헤더 바로 밑에 부분 버튼 모음들
@@ -433,7 +432,7 @@ textareaTag.addEventListener("blur", (e) => {
 });
 
 /**************** */
-/*
+
 let itemIndex = 0;
 // 만약 데이터가 없으면 무한 스크롤 안하기 일단은 주석 처리
 const maxItems = 20; // 총 20개까지만 로딩 나중에 여기에 글 목록 개수 가져오기
@@ -441,13 +440,11 @@ const loadCount = 5; // 한 번에 5개씩
 
 // 아이템 5개씩 로딩하는 함수
 function loadItems(count = 5) {
-    const list = document.getElementById("intersectionObserver");
     const remaining = maxItems - itemIndex;
     const countToLoad = Math.min(loadCount, remaining);
     for (let i = 0; i < countToLoad; i++) {
-        list.innerHTML += `
+        listLayout.innerHTML += `
         <li>
-        <a class="link-click">
             <div class="content-info">
                 <img src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" width="48" height="48" alt="" class="contentInfoImg" style="color: transparent">
                 <div class="content-info-text">
@@ -521,7 +518,6 @@ function loadItems(count = 5) {
                     </div>
                 </div>
             </div>
-        </a>
     </li>
         `;
         itemIndex++;
@@ -532,6 +528,7 @@ function loadItems(count = 5) {
 const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
         loadItems(); // 추가 아이템 로딩
+        console.log(mailSendBtns);
     }
 });
 
@@ -542,7 +539,6 @@ if (itemIndex >= maxItems) {
 // sentinel 엘리먼트 관찰 시작
 observer.observe(document.getElementById("intersectionObserverLayout"));
 
-// 처음에 5개만 로딩
-// loadItems();
-*/
+// // 처음에 5개만 로딩
+// // loadItems();
 /****************** */
