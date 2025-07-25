@@ -1,5 +1,8 @@
 .mypost-list-main-container {
     display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
     gap: 20px;
 }
 
@@ -9,7 +12,6 @@
 
 .mypost-list-main-category-container {
     width: 100%;
-    border-bottom: 1px solid rgb(242, 244, 246);
     padding: 0px;
 }
 
@@ -33,11 +35,18 @@
     gap: 4px;
 }
 
-.mypost-list-category-content {
+.mypost-list-category-content-active {
     font-size: 16px;
     line-height: 150%;
-    font-weight: 700;
+    font-weight: 500;
     color: rgb(25, 31, 40);
+}
+
+.mypost-list-category-content{
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    color: rgb(176, 184, 193);
 }
 
 .mypost-list-category-highlight {
@@ -66,7 +75,6 @@
     border: 1px solid rgb(229, 232, 235);
     border-radius: 12px;
     background-color: rgb(255, 255, 255);
-    box-shadow: rgba(224, 230, 240, 0.2) 0px 4px 8px 0px;
 }
 
 .mypost-category-container {
@@ -141,4 +149,57 @@
     overflow-wrap: break-word;
     word-break: break-word;
     white-space: pre-wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.mypost-page-button-wrap {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.mypost-page-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mypost-page-arrow-button {
+    display: flex;
+    align-items: center;
+    cursor: not-allowed;
+}
+
+.mypost-page-button-wrapper {
+    display: flex;
+    gap: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.mypost-page-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(240, 240, 240, 0.959);
+    color: rgba(143, 152, 165, 0.952);
+}
+
+.active-page {
+    background: rgb(102, 101, 101);
+    color: rgb(255, 255, 255);
+}
+
+.mypost-page-button-number {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: 500;
 }

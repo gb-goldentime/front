@@ -1,4 +1,4 @@
-// NodeList.prototype.indexOf = Array.prototype.indexOf;
+NodeList.prototype.indexOf = Array.prototype.indexOf;
 const categories = document.querySelectorAll(".mypage-category-wrapper a");
 let temp = document.querySelector("span.active");
 
