@@ -418,3 +418,8 @@ span.first::after {
     margin: 0px 10px 0px 10px;
     vertical-align: 3px;
 }
+
+
+div.doctor-list{
+    flex-direction: column;
+}
