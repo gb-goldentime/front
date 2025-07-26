@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="../../static/css/fonts.css">
-        <link rel="stylesheet" href="../../static/css/doctor-hospital/doctor-hospital-info.css">
+        <link rel="stylesheet" href="../../static/css/doctor/doctor-info.css">
 
     </head>
     <body>
@@ -97,6 +97,7 @@
                         <div class="profil-content-title-container">
                             <div class="profil-content-title-wrap">
                                 <div class="profil-content-section">
+                                    <!-- 버튼 클릭 이벤트들 -->
                                     <div class="profil-content-select" data-cnt="0">
                                         <div class="profil-content">
                                             <span class="profil-content-text active">
@@ -112,6 +113,7 @@
                                             </span>
                                         </div>
                                     </div>
+                                    <!-- /버튼 클릭 이벤트들 -->
                                     <!-- <div class="profil-content-select" data-cnt="2">
                                                                         <div class="profil-content">
                                                                             <span class="profil-content-text">
@@ -175,7 +177,17 @@
                             <div class="answer-list-container">
                                 <div class="answer-list-header-wrap">
                                     <div class="answer-list-content-tag">
-                                        <img class="info-profil-img" src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" style="color:transparent" width="35" height="35">
+                                        <div class="review-img-star">
+                                            <img class="info-profil-img" src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" style="color:transparent" width="35" height="35">
+                                        <div class="review-star-wrap">
+                                            <div class="review-star-content">
+                                                <div class="review-star-svg">
+                                                    <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M15.4051 8.03139L12.9909 2.66029C12.5951 1.7799 11.4043 1.7799 11.0085 2.66029L8.59514 8.03139L2.96143 8.77208C2.03363 8.8939 1.67468 10.0851 2.34632 10.7443L6.48848 14.805L5.42104 20.6365C5.24542 21.5939 6.21605 22.3212 7.02477 21.8555L11.9997 18.9922L16.9746 21.8555C17.7824 22.3212 18.7539 21.5939 18.5783 20.6365L17.5108 14.805L21.6539 10.7443C22.3255 10.0851 21.9657 8.89389 21.0388 8.77208L15.4051 8.03139ZM11.9997 4.11402L9.62039 9.40951L3.8953 10.1622L8.1074 14.2915L7.04139 20.1152L11.9997 17.2615L16.9579 20.1152L15.8919 14.2914L20.1048 10.1622L14.38 9.40953L11.9997 4.11402Z" fill="#333D4B" fill-rule="evenodd"></path></svg>
+                                                </div>
+                                                <span class="review-point">5.0</span>
+                                            </div>
+                                        </div>
+                                        </div>
                                         <div class="review-content-text-wrap">
                                         <span class="review-content-text anonymous">비공개</span>
                                         <span class="review-content-text content">
@@ -196,16 +208,7 @@
                                 <span>후기 남기기</span>
                             </button>
                         </div>
-                        <!-- <label>별점:
-                            <select name="rating" required>
-                              <option value="">선택</option>
-                              <option value="5">★★★★★</option>
-                              <option value="4">★★★★☆</option>
-                              <option value="3">★★★☆☆</option>
-                              <option value="2">★★☆☆☆</option>
-                              <option value="1">★☆☆☆☆</option>
-                            </select>
-                          </label> -->
+                        <!-- 리뷰 생기는 부분 -->
                         <div class="review-register-container v2">
                             <hr class="review-horizon">
                             <div class="review-register-wrap">
@@ -218,13 +221,56 @@
                                 <div class="review-input-wrap">
                                     <form class="review-form" name="reviewForm_v2" id="reviewForm_2">
                                         <textarea name="reviewContent" id="reviewContent" maxlength="300" minlength="1"></textarea>
+                                        <input type="text" name="rate" id="rate" style="display: none;" value="0">
                                         <button size="22">
                                             <img src="https://media.a-ha.io/aha-qna/images/common/icons/object-and-tool/paperplane-filled-gray.svg" style="color:transparent">
                                         </button>
+                                        <div class="reg-star-cnt">
+                                            <ul class="star-list-wrap">
+                                                <li class="star-list-content" data-point="0">
+                                                    <button class="start-btn-click" type="button">
+                                                        <div class="star-btn-wrap">
+                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                        </div>
+                                                    </button>
+                                                </li>
+                                                <li class="star-list-content" data-point="1">
+                                                    <button class="start-btn-click" type="button">
+                                                        <div class="star-btn-wrap">
+                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                        </div>
+                                                    </button>
+                                                </li>
+                                                <li class="star-list-content" data-point="2">
+                                                    <button class="start-btn-click" type="button">
+                                                        <div class="star-btn-wrap">
+                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                        </div>
+                                                    </button>
+                                                </li>
+                                                <li class="star-list-content" data-point="3">
+                                                    <button class="start-btn-click" type="button">
+                                                        <div class="star-btn-wrap">
+                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                        </div>
+                                                    </button>
+                                                </li>
+                                                <li class="star-list-content" data-point="4">
+                                                    <button class="start-btn-click" type="button">
+                                                        <div class="star-btn-wrap">
+                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                        </div>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </form>
+                                    
                                 </div>
+                                
                             </div>
                         </div>
+                        <!-- /리뷰 생기는 부분 -->
                     </ul>
 
                     <!-- 버튼 클릭 시 둘 중 하나만 보이게 -->
@@ -238,6 +284,7 @@
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAABAAAAAQBPJcTWAAAAJHpUWHRDcmVhdG9yAAAImXNMyU9KVXBMK0ktUnBNS0tNLikGAEF6Bs5qehXFAAAFR0lEQVRoge2az27bRhDGv+FSQo66JpewQJszbcuAYdjO+tY6KsI+QZwnSPUEjp/A7RNUeYIogOP2Zhp2ggBREt5doGx68FVNUaAQtTs92FHEXVKiYspWC/1O1nB3OZ9nuX9mF5gzZ86cOXNmBiq7QSmD2t/oeUrBB6jmENUmqa+ZuyR07IDi1+FBVLZ/pQhekYHX070HxCQB8gGeSOQYQgaeVUWl/Spsx5dt7FKC67IhWfEOAHlZRwoSMvjJ2+OD1uc28FmCr0GoSQyhm2/Cn9uTVpxIsJRB7YNOdojx/aQvmhItJSrNKGx3i1YoLHhFBl6ik0MwvBHNdR1QW0EdCYVIVKvdSb87XwY1t9/3NWmPQBKEu6PfibgiKptF31NI8PLqlq+Fc5g3GBEoBGO3c7IfFmlvUuprDQnCIwYHOUW6juLN1y/Hj+pjBY8SO22hJr782hNa5PWyQqJHCl6RgZeo/rtMsRrNzovnP0zmcjnU1xqPmXgn49FY0bmC879Z6hLju6uKah4jel6sRGUhbyBz8hpMVLKTJVYpvXndYgHg9cuDyFF6EyBTmCdU76e8epkRXlzf2iaQVUkpXogKDAxXSX2tIZn40LQTU2ZgMiNMRNb3QUy7syYWADon+yFrNE07E2dGWZiGi+huD9sIFHZO9h+W5mXJnP1x+urW7TsSSH2CtZu3v/r97P1pKkhWhLOi2xf9mRX7EWLatWygB6YtJXh5NfAz5rhWFP4Sl+rdFLj4XkPDLOtrDTlsSAnWbn/bbIiYnpTr2vTIijKc9AYnJZiAu0bxeBamoKJ0TvZDEOK0le8P/xoI9mVQY2bfaCOckm9ThJ4N/2KG78tgsDgZCHbRN8UCQj+zbDMOs7amzgp63se/3UFBRTWAUwUdUFz0RVIGtQ8q2QaAUemYssuZaKFDoYzZVgkfQAQMRZigPbNygmqhl6zIwPtLJ+8I2CNgL1HJ4XA3mla5bG5Ya2iGtrs0MrKLRTMJfZUExnTmuRfRmWa5LDJ9HtKWu3n4v/JJMLP1nynajfqi0jKmg7gvlJVgK7tcFpk+D2kbCNawBd8ACgmOwnZXOWqTgSYDzfP9qL06K7tcFpWenQ1hoQd1B6O0UNVIiyRVUCklAbSKvOjCobEZkLLLmWihPNNGfWFHOKmaKxRAk7Ln5plH3zctfdcdzM0DwVHY7hJRetJmsirPPJReOxMhGh65zVHaXFl55m5jlqnLhjR3eww+Gv6dFqzttTOTfjQF36YCK7b3v056DLJyWkvr9w5hnBk5iheKJLmvk/OUcvKbYY7fHD//YthgLTwYbO1/taC9kv0rnUQlVg6Lwdb+2Mppnb0/jW55d7aRnoO9m7e//PPs/a+vSvWyJBY3tnbMPByA+O3xgZWays5aarIKEpy95dWtmZumlle3fGJ6bNqzogvkCD7PcpC1lNOCnq7IwLukj6Xx6fTBopV3aJ67eVDCfWinS+AlOnlafKs2PeqyIfOPWlRmdIERgqOw3SXA3moxfOCfaxW8tNF4xIozxFJXCbU5at3t5j1Y3Li3xwzrmyWNZnR8PWnbwVULZmk/PT/3GudbpuDFja3Maw3EtNt5sX/lR6QfhbLKEgoMxH7Ogfi5WHvUI6bdzsm+ZS+bFRl4Cr2aUvAJdBegYMw1qHhcNx4mJXhp/ZsAcJ5exuErhflH5VYfT3KpJd2lydkzEpczyaerFs/DSeumBbOdqp0lyrhTkhLMmnfJwQytm6lLQATGkeu6ralcPVxa/zYgso5crgzN3AW4KxSipFqNJ/k+58yZM2fOnP8Y/wIZbsEG5wPtWwAAAABJRU5ErkJggg==">
                             <span>후기 남기기</span>
                         </button>
+                        <!-- 리뷰 남기기 부분 -->
                         <div class="review-register-container v1">
                             <hr class="review-horizon">
                             <div class="review-register-wrap">
@@ -257,9 +304,11 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- /리뷰 남기기 부분 -->
                     </div>
-
+                    <!-- /버튼 클릭 시 둘 중 하나만 보이게 -->
                     <!-- /후기 부분 -->
+                    
                     <!-- 남긴 답변 부분 -->
                     <div class="no-search-result-wrap">
                         <img src="https://media.a-ha.io/aha-qna/images/v3/product/feed/message.webp" width="48" height="48" style="color:transparent">
@@ -268,7 +317,7 @@
                         </span>
                     </div>
                     <!-- /남긴 답변 부분 -->
-                    <!-- /버튼 클릭 시 둘 중 하나만 보이게 -->
+                    
                     <div style="height:300px" id="intersectionObserverLayout"></div>
                 </div>
                 <div class="side-bar-container">
@@ -590,5 +639,5 @@
             </div>
         </div>
     </body>
-    <script src="../../static/js/doctor-hospital/doctor-hospital-info/event.js"></script>
+    <script src="../../static/js/doctor/event.js"></script>
 </html>
