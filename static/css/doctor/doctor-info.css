@@ -929,6 +929,7 @@ div.review-input-wrap{
 form.review-form{
     display: flex;
     align-items: end;
+    position: relative;
     width: 100%;
     gap: 8px;
 }
@@ -981,6 +982,71 @@ div.review-content-text-wrap{
 }
 span.review-content-text.content{
     font-weight: 400;
+}
+div.review-star-wrap{
+    position: relative;
+}
+div.review-star-content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+span.review-point{
+    color: #333d4b;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 100%;
+}
+div.review-star-svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+}
+div.review-star-content svg{
+    width: 100%;
+    height: 100%;
+}
+div.review-img-star{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+}
+div.reg-star-cnt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: absolute;
+    bottom: -39px;
+    left: -16px;
+}
+ul.star-list-wrap{
+    display: flex;
+}
+li.star-list-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+}
+button.start-btn-click{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 8px;
+}
+div.star-btn-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
 }
 /* button.exist-search-btn */
 /* /후기 부분 */
