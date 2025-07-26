@@ -358,6 +358,7 @@ div.department-list-wrap{
     gap: 4px;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 div.department-item{
     flex-shrink: 0;
@@ -406,9 +407,20 @@ div.doctor-info, div.hospital-info {
 }
 
 div.doctor-info span:first-child {
-    font-size: 22px;
+    font-size: 17px;
     line-height: 150%;
     font-weight: 500;
+}
+ul.content-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+ul.content-list li{
+    width: 90%;
 }
 
 span.first::after {
@@ -418,8 +430,32 @@ span.first::after {
     margin: 0px 10px 0px 10px;
     vertical-align: 3px;
 }
-
-
 div.doctor-list{
     flex-direction: column;
+}
+
+div.content-info{
+    display: flex;
+    gap: 17px;
+    padding: 17px 40px 17px 32px;
+    border: 1px solid rgb(229, 232, 235);
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(224, 230, 240, 0.2) 0px 4px 8px 0px;
+}
+div.doctor-info-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+span.doctor-introduction{
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    color: rgb(51, 61, 75);
+    max-width: 100%;
+}
+div.horizon{
+    border: 1px solid rgb(229, 232, 235);
+    width: 100%;
+    box-shadow: rgba(224, 230, 240, 0.2) 0px 4px 8px 0px;
 }

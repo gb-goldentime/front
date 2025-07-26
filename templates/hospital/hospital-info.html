@@ -55,6 +55,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="horizon"></div>
                     <!-- 진료과목 -->
                     <div>
                         <div class="department-tag-wrap">
@@ -78,9 +79,6 @@
                                 <div class="department-item">
                                     산부인과
                                 </div>
-                                <div class="department-item">
-                                    산부인과
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -98,30 +96,32 @@
                             <div class="department-list-wrap">
                                 <ul
                                     class="content-list" id="intersectionObserver">
-                                    <!-- 의료진 부분 -->
+                                    <!-- 의료진 반복 부분 -->
                                     <li>
                                         <!-- 클릭 버튼 -->
                                         <a class="link-click">
                                             <div class="content-info">
-                                                <img src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" width="30" height="30" alt="" class="contentInfoImg" style="color: transparent">
+                                                <img src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" width="50" height="50" alt="" class="contentInfoImg" style="color: transparent">
                                                 <div class="content-info-text">
                                                     <div class="type-user-wrapper">
                                                         <div class="depart-treatment">
                                                             <div class="mail-doctor-info doctor-info">
-                                                                <span class="doctorinfo-name">
-                                                                    의사 이름
-                                                                </span>
-                                                                <span class="first">
-                                                                    진료 과목
-                                                                </span>
-                                                                <span class="second">
-                                                                    안과
-                                                                </span>
-                                                                <span class="first detail-address">
-                                                                    상세 주소
-                                                                </span>
-                                                                <span class="second">
-                                                                    서울 노원구 동일로 1342 상계백병원
+                                                                <div class="doctor-info-wrap">
+                                                                    <span class="doctorinfo-name">
+                                                                        의사 이름
+                                                                    </span>
+                                                                    <span>관심 수 : 10</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="first">
+                                                                        진료 과목
+                                                                    </span>
+                                                                    <span class="second">
+                                                                        안과
+                                                                    </span>
+                                                                </div>
+                                                                <span class="doctor-introduction" id="test">
+                                                                    최선을 다하겠습니다.
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -131,12 +131,179 @@
                                         </a>
                                         <!-- /클릭 버튼 -->
                                     </li>
-                                    <!-- /의료진 부분 -->
-                                <!-- 나중에 삭제 -->
-
-                                    <!-- /나중에 삭제  -->
-
-
+                                    <!-- /의료진 반복 부분 -->
+                                    <!-- 의료진 나중에 삭제할 부분 -->
+                                    <li>
+                                        <!-- 클릭 버튼 -->
+                                        <a class="link-click">
+                                            <div class="content-info">
+                                                <img src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" width="50" height="50" alt="" class="contentInfoImg" style="color: transparent">
+                                                <div class="content-info-text">
+                                                    <div class="type-user-wrapper">
+                                                        <div class="depart-treatment">
+                                                            <div class="mail-doctor-info doctor-info">
+                                                                <div class="doctor-info-wrap">
+                                                                    <span class="doctorinfo-name">
+                                                                        의사 이름
+                                                                    </span>
+                                                                    <span>관심 수 : 10</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="first">
+                                                                        진료 과목
+                                                                    </span>
+                                                                    <span class="second">
+                                                                        안과
+                                                                    </span>
+                                                                </div>
+                                                                <span class="doctor-introduction">
+                                                                    안녕하세요. 테스트 문장입니다. 잠시 실례하겠습니다. 화내지마세요. 반가습니다. 안녕하세요. 잘있어요. 다시 만나요.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- /클릭 버튼 -->
+                                    </li>
+                                    <li>
+                                        <!-- 클릭 버튼 -->
+                                        <a class="link-click">
+                                            <div class="content-info">
+                                                <img src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" width="50" height="50" alt="" class="contentInfoImg" style="color: transparent">
+                                                <div class="content-info-text">
+                                                    <div class="type-user-wrapper">
+                                                        <div class="depart-treatment">
+                                                            <div class="mail-doctor-info doctor-info">
+                                                                <div class="doctor-info-wrap">
+                                                                    <span class="doctorinfo-name">
+                                                                        의사 이름
+                                                                    </span>
+                                                                    <span>관심 수 : 10</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="first">
+                                                                        진료 과목
+                                                                    </span>
+                                                                    <span class="second">
+                                                                        안과
+                                                                    </span>
+                                                                </div>
+                                                                <span class="doctor-introduction" id="test">
+                                                                    최선을 다하겠습니다.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- /클릭 버튼 -->
+                                    </li>
+                                    <li>
+                                        <!-- 클릭 버튼 -->
+                                        <a class="link-click">
+                                            <div class="content-info">
+                                                <img src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" width="50" height="50" alt="" class="contentInfoImg" style="color: transparent">
+                                                <div class="content-info-text">
+                                                    <div class="type-user-wrapper">
+                                                        <div class="depart-treatment">
+                                                            <div class="mail-doctor-info doctor-info">
+                                                                <div class="doctor-info-wrap">
+                                                                    <span class="doctorinfo-name">
+                                                                        의사 이름
+                                                                    </span>
+                                                                    <span>관심 수 : 10</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="first">
+                                                                        진료 과목
+                                                                    </span>
+                                                                    <span class="second">
+                                                                        안과
+                                                                    </span>
+                                                                </div>
+                                                                <span class="doctor-introduction" id="test">
+                                                                    최선을 다하겠습니다.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- /클릭 버튼 -->
+                                    </li>
+                                    <li>
+                                        <!-- 클릭 버튼 -->
+                                        <a class="link-click">
+                                            <div class="content-info">
+                                                <img src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" width="50" height="50" alt="" class="contentInfoImg" style="color: transparent">
+                                                <div class="content-info-text">
+                                                    <div class="type-user-wrapper">
+                                                        <div class="depart-treatment">
+                                                            <div class="mail-doctor-info doctor-info">
+                                                                <div class="doctor-info-wrap">
+                                                                    <span class="doctorinfo-name">
+                                                                        의사 이름
+                                                                    </span>
+                                                                    <span>관심 수 : 10</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="first">
+                                                                        진료 과목
+                                                                    </span>
+                                                                    <span class="second">
+                                                                        안과
+                                                                    </span>
+                                                                </div>
+                                                                <span class="doctor-introduction" id="test">
+                                                                    최선을 다하겠습니다.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- /클릭 버튼 -->
+                                    </li>
+                                    <li>
+                                        <!-- 클릭 버튼 -->
+                                        <a class="link-click">
+                                            <div class="content-info">
+                                                <img src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" width="50" height="50" alt="" class="contentInfoImg" style="color: transparent">
+                                                <div class="content-info-text">
+                                                    <div class="type-user-wrapper">
+                                                        <div class="depart-treatment">
+                                                            <div class="mail-doctor-info doctor-info">
+                                                                <div class="doctor-info-wrap">
+                                                                    <span class="doctorinfo-name">
+                                                                        의사 이름
+                                                                    </span>
+                                                                    <span>관심 수 : 10</span>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="first">
+                                                                        진료 과목
+                                                                    </span>
+                                                                    <span class="second">
+                                                                        안과
+                                                                    </span>
+                                                                </div>
+                                                                <span class="doctor-introduction" id="test">
+                                                                    최선을 다하겠습니다.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!-- /클릭 버튼 -->
+                                    </li>
+                                    <!-- /의료진 나중에 삭제할 부분 -->
                                 </ul>
                             </div>
                             <!-- 이거는 만에 하나임 임시로 일단 만들어 놓은 부분 -->
@@ -149,8 +316,7 @@
                             <!-- /이거는 만에 하나임 임시로 일단 만들어 놓은 부분 -->
                         </div>
                     </div>
-
-                    <div style="height:300px" id="intersectionObserverLayout"></div>
+                    <div style="height:0px" id="intersectionObserverLayout"></div>
                 </div>
                 <div class="side-bar-container">
                     <div class="kakao-map"></div>
@@ -158,4 +324,5 @@
             </div>
         </main>
     </body>
+    <script src="../../static/js/hospital/event.js"></script>
 </html>
