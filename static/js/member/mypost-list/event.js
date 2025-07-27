@@ -62,7 +62,12 @@ const mypostList = document
         });
     });
 
-const leftArrowToSwitch
+const leftArrowUseToSwitch = document.querySelectorAll(".mypost-page-arrow-button").forEach((element) => {
+    element.addEventListener("click", (e) => {
+    console.log("클릭");
+    });
+});
+
 
 const switchPage = document
     .querySelectorAll(".mypost-page-button")
