@@ -479,6 +479,15 @@ div.input-textarea-container .input-textarea p.is-editor-empty:first-of-type::be
     color: #b0b8c1;
     line-height: 150%;
 }
+div.content-info {
+    display: flex;
+    gap: 16px;
+    padding: 32px 40px 32px 32px;
+    border: 1px solid rgb(229, 232, 235);
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(224, 230, 240, 0.2) 0px 4px 8px 0px;
+}
 div.ProseMirror{
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -558,13 +567,66 @@ div.mail-doctor-info  span.second{
     cursor: unset;
 }
 
+div.content-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+div.type-user-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+div.depart-treatment {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+div.doctor-info, div.hospital-info {
+    cursor: pointer;
+}
+
+div.doctor-info span:first-child {
+    font-size: 22px;
+    line-height: 150%;
+    font-weight: 500;
+}
+
+span.first::after {
+    content: "";
+    font-size: 9px;
+    border: 1px solid rgb(107, 118, 132);
+    margin: 0px 10px 0px 10px;
+    vertical-align: 3px;
+}
+
+div.mail-doctor-info span.second {
+    font-size: 15px;
+    font-weight: 400;
+    cursor: unset;
+}
+div.mail-doctor-info span.first {
+    margin-left: 10px;
+    font-weight: 900;
+    cursor: unset;
+}
+a.link-click img {
+    border-radius: 12px;
+}
 ul.mail-search-doctor-name-list li a.link-click div.content-info{
     height: 53px;
     padding: 11px 40px 14px 32px;
     z-index: 1000;
     position: static;
 }
-
+div.doctor-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
 div.mail-doctor-search-wrap{
     position: relative;
@@ -637,6 +699,10 @@ button.mail-send-btn-check:disabled{
     cursor: pointer;
 }
 
+
+ul li a{
+    cursor: pointer;
+}
 div.label-check-box{
     width: 50%;
     display: flex;
@@ -864,6 +930,7 @@ div.review-input-wrap{
 form.review-form{
     display: flex;
     align-items: end;
+    position: relative;
     width: 100%;
     gap: 8px;
 }
@@ -905,6 +972,82 @@ div.review-btn-wrap{
     width: 100%;
     display: flex;
     justify-content: flex-end;
+}
+span.review-content-text{
+    margin-left: 10px;
+}
+div.review-content-text-wrap{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+span.review-content-text.content{
+    font-weight: 400;
+}
+div.review-star-wrap{
+    position: relative;
+}
+div.review-star-content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+span.review-point{
+    color: #333d4b;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 100%;
+}
+div.review-star-svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+}
+div.review-star-content svg{
+    width: 100%;
+    height: 100%;
+}
+div.review-img-star{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+}
+div.reg-star-cnt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: absolute;
+    bottom: -39px;
+    left: -16px;
+}
+ul.star-list-wrap{
+    display: flex;
+}
+li.star-list-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+}
+button.start-btn-click{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 8px;
+}
+div.star-btn-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
 }
 /* button.exist-search-btn */
 /* /후기 부분 */

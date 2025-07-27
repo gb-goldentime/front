@@ -272,7 +272,7 @@ mailSendCancleBtn.addEventListener("click", (e) => {
 listLayout.addEventListener("click", (e) => {
     const mailBtn = e.target.closest(".mail-send-btn");
     const interestBtn = e.target.closest(".interest-btn");
-    const addressKakao = e.target.closest(".info-container, .hospital-info");
+    const addressKakao = e.target.closest(".hospital-info");
     // 모달 전에 쪽지 보내기 누르면 모달이 보이게 하기
     if (mailBtn) {
         mailSendModal.style.display = "flex";
