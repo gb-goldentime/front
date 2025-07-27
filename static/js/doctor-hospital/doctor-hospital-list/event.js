@@ -398,7 +398,7 @@ categoryFinalSelect.addEventListener("click", (e) => {
         console.log(categoryList);
         categoryModalOpenBtnText.textContent =
             categoryList.length > 1
-                ? `${categoryList[0]}외 ${categoryList.length - 1}개`
+                ? `${categoryList[0]} 외 ${categoryList.length - 1}개`
                 : `${categoryList[0]}`;
         console.log(categoryModalOpenBtnText.textContent);
     }
