@@ -92,3 +92,115 @@ cardListOrderBtn.addEventListener("click", (e) => {
         clickable = true;
     }, 1000);
 });
+
+/**************** */
+
+// let itemIndex = 0;
+// // 만약 데이터가 없으면 무한 스크롤 안하기 일단은 주석 처리
+// const maxItems = 20; // 총 20개까지만 로딩 나중에 여기에 글 목록 개수 가져오기
+// const loadCount = 5; // 한 번에 5개씩
+
+// // 아이템 5개씩 로딩하는 함수
+// function loadItems(count = 5) {
+//     const remaining = maxItems - itemIndex;
+//     const countToLoad = Math.min(loadCount, remaining);
+//     for (let i = 0; i < countToLoad; i++) {
+//         listLayout.innerHTML += `
+//         <li>
+//             <div class="content-info">
+//                 <img src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" width="48" height="48" alt="" class="contentInfoImg" style="color: transparent">
+//                 <div class="content-info-text">
+//                     <div class="type-user-wrapper">
+//                         <div class="depart-treatment">
+//                             <div class="doctor-info">
+//                                 <span class="doctorinfo-name">
+//                                     의사 이름
+//                                 </span>
+//                             </div>
+//                             <div class="depart-treatment-wrap">
+//                                 <span class="first">
+//                                     진료 과목
+//                                 </span>
+//                                 <span class="second">
+//                                     안과
+//                                 </span>
+//                             </div>
+
+//                         </div>
+//                     </div>
+//                     <!-- 주소 클릭 이벤트 -->
+//                     <div class="info-container">
+//                         <span class="first">
+//                             소속 병원
+//                         </span>
+//                         <span class="second">
+//                             서울 백병원
+//                         </span>
+//                         <span class="first detail-address">
+//                             상세 주소
+//                         </span>
+//                         <span class="second">
+//                             서울 노원구 동일로 1342 상계백병원
+//                         </span>
+//                     </div>
+//                     <!-- /주소 클릭 이벤트 -->
+//                     <div class="info-container">
+//                         <span class="first">
+//                             병원 전화 번호
+//                         </span>
+//                         <span class="second">
+//                             02-123-1234
+//                         </span>
+
+//                     </div>
+//                     <div class="icon-btn-wrap">
+//                         <div class="icon-container">
+//                             <img src="../../static/images/DrIcon-Photoroom.png" with="35" height="35" alt="">
+//                             <span class="greeting">
+//                                 <strong>최선</strong>을 다하겠습니다.</span>
+//                         </div>
+//                         <div class="btn-container">
+//                             <div
+//                                 class="btn-wrap">
+//                                 <!-- 쪽지 클릭 이벤트 -->
+//                                 <button class="btnshape mail-send-btn">
+//                                     <img src="../../static/images/email.png">
+//                                     <span>쪽지 보내기</span>
+//                                 </button>
+//                                 <!-- /쪽지 클릭 이벤트 -->
+//                                 <!-- 관심 추가 클릭 이벤트 -->
+//                                 <button class="btnshape interest-btn active">
+//                                     <span>관심 중
+//                                     </span>
+//                                     <img src="../../static/images/check.png">
+//                                 </button>
+//                                 <!-- /관심 추가 클릭 이벤트 -->
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//     </li>
+//         `;
+//         itemIndex++;
+//     }
+// }
+
+// // IntersectionObserver 생성
+// const observer = new IntersectionObserver((entries) => {
+//     if (entries[0].isIntersecting) {
+//         loadItems(); // 추가 아이템 로딩
+//         console.log(mailSendBtns);
+//     }
+// });
+
+// if (itemIndex >= maxItems) {
+//     observer.disconnect();
+// }
+
+// // sentinel 엘리먼트 관찰 시작
+// observer.observe(document.getElementById("intersectionObserverLayout"));
+
+// // 처음에 5개만 로딩
+// // loadItems();
+/****************** */

@@ -182,7 +182,7 @@ main {
 div.main-container {
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: 5px;
 }
 button {
     background: inherit;
@@ -202,8 +202,9 @@ ul.category-list-wrap {
 }
 
 header.coach-mark-wrapper {
+    gap :19px;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 
@@ -417,7 +418,7 @@ div.side-bar-container {
     width: 100%;
     min-width: 320px;
     max-width: 320px;
-    max-height: 500px;
+    max-height: 700px;
     overflow-y: auto;
     scrollbar-width: none;
 }
@@ -815,6 +816,9 @@ aside.side-bar-wrap {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 100%;
+    margin-top: 19px;
+    height: calc(100% - 62px);
 }
 div.side-bar-poster {
     display: flex;

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/css/fonts.css">
+    <link rel="stylesheet" href="../../static/css/post/post-reg.css">
+</head>
+<body>
+    <div class="main-wrap">
+    <main>
+        <div class="post-header-container">
+            <div class="post-header-wrap">
+                <div class="post-header-content">
+                    <div class="post-header-title">
+                        <div class="post-header-title-wrap">
+                            <h1 class="post-header-title-text">무엇이든 물어보세요.</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="post-main-container">
+            <div class="mail-modal">
+                <div class="mail-title-wrap">
+                    <div class="mail-title-text warn-text">
+                        <label class="mail-title-content">제목</label>
+                        <span class="mail-title-warn text-warn" data-count="0">/ 80자 (최소 16자)</span>
+                    </div>
+                    <!-- keyup 이벤트 -->
+                    <div class="main-title-input-wrap">
+                        <input type="text" class="mail-input mail-title-input-content" minlength="16" placeholder="제목을 작성해 주세요." form="mailForm" name="mailTitle">
+                    </div>
+                    <!-- /keyup 이벤트 -->
+                </div>
+                <hr class="line-hr content-hr">
+                <div class="mail-content-container">
+                    <div class="mail-content-wrap">
+                        <div class="mail-content-text warn-text">
+                            <label class="content-text">내용</label>
+                            <span class="content-text-warn text-warn" data-count="0">/500자 (최소 55자)</span>
+                        </div>
+                        <div class="mail-content-input-wrap">
+                            <div class="mail-content-input-container">
+                                <div class="input-btn-list-wrap">
+                                    <label for="create-question-image" class="img-btn">
+                                        <svg height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                            <path clip-rule="evenodd" d="M3.41634 4.16683C3.41634 3.8298 3.51385 3.66777 3.59056 3.59105C3.66728 3.51434 3.82931 3.41683 4.16634 3.41683H15.833C16.17 3.41683 16.3321 3.51434 16.4088 3.59105C16.4855 3.66777 16.583 3.8298 16.583 4.16683V15.8335C16.583 16.1705 16.4855 16.3326 16.4088 16.4093C16.3321 16.486 16.17 16.5835 15.833 16.5835H4.16634C3.82931 16.5835 3.66728 16.486 3.59056 16.4093C3.51385 16.3326 3.41634 16.1705 3.41634 15.8335V4.16683ZM4.16634 1.5835C3.46171 1.5835 2.7904 1.79849 2.2942 2.29469C1.798 2.79089 1.58301 3.4622 1.58301 4.16683V15.8335C1.58301 16.5381 1.798 17.2094 2.2942 17.7056C2.7904 18.2018 3.46171 18.4168 4.16634 18.4168H15.833C16.5376 18.4168 17.2089 18.2018 17.7051 17.7056C18.2013 17.2094 18.4163 16.5381 18.4163 15.8335V4.16683C18.4163 3.4622 18.2013 2.79089 17.7051 2.29469C17.2089 1.79849 16.5376 1.5835 15.833 1.5835H4.16634ZM14.7914 7.08348C14.7914 8.00395 14.0452 8.75014 13.1248 8.75014C12.2043 8.75014 11.4581 8.00395 11.4581 7.08348C11.4581 6.163 12.2043 5.41681 13.1248 5.41681C14.0452 5.41681 14.7914 6.163 14.7914 7.08348ZM9.38854 9.37223C9.71626 9.03238 10.2606 9.03238 10.5883 9.37223L14.5924 13.5246C14.9751 13.9215 14.6938 14.5835 14.1425 14.5835H5.83434C5.28298 14.5835 5.00172 13.9215 5.38443 13.5246L9.38854 9.37223Z" fill="#B0B8C1" fill-rule="evenodd"></path>
+                                        </svg>
+                                    </label>
+                                    <input accept=".jpeg, .png, .jpg" id="create-question-image" form="mailForm" name="multipleFile" type="file" multiple>
+                                </div>
+                                <hr class="line-hr input-btn-list-bottom">
+                                <div class="input-textarea-container">
+                                    <textarea class="mail-content" form="mailForm" name="mailContent" id="mailContent" cols="30" rows="10" placeholder="질문의 내용을 구체적으로 입력해주세요."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="btn-hr input-btn-list-bottom" style="margin-top:-12px;">
+                <div class="thumbnail-wrap" id="thumbnail-wrap">
+                    <ul id="file-img-list"></ul>
+                </div>
+                <hr class="btn-hr input-btn-list-bottom" style="margin-bottom: 0px;">
+            </div>
+        <div class="post-side-bar-wrap">
+            <button class="post-reg-btn"></button>
+        </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
