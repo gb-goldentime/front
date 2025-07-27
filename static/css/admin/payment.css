@@ -308,6 +308,15 @@ a:-webkit-any-link {
     margin-left: 12px;
 }
 
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.white-panel {
+    background-color: #fff;
+    border-radius: 6px;
+}
+
 .text-right {
     text-align: right !important;
 }
@@ -640,14 +649,6 @@ a:-webkit-any-link {
     padding-top: 4px;
 }
 
-.receipt-index .amount-section .amount-box {
-    border-right: 1px solid #ededed;
-    display: inline-block;
-    height: 100%;
-    padding: 26px 35px;
-    vertical-align: top;
-    width: 50%;
-}
 
 .receipt-index .amount-section .extra-info .amount-box .sub {
     background-color: rgba(80, 124, 243, .07);

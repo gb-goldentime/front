@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>골든타임-관리자</title>
     <link rel="stylesheet" href="/static/css/admin/payment.css">
-    <link rel="stylesheet" href="/static/css/fonts.css">
+    <link rel="stylesheet" href="/static/css/admin/font.css">
+    
 </head>
 <body>
     <div id="bootpay">
         <div id="boot-notify-container"></div>
         <div class="popup-manager" style="width: 0px;"></div>
-        <aside class="bootpay-side">
+        <aside id="bootpay-side">
             <div class="d-flex flex-column" id="side-wrapper">
                 <div class="side-header">
                     <div class="app-wrapper">
@@ -114,15 +115,10 @@
                             </ul>
                         </li>
                         <li class="menu menu-item d-flex flex-column">
-                            <a class="menu-btn d-flex w-100 collapsed" href="#menu-6284cdfecf9f6d001b046f3a" data-toggle="collapse" aria-expanded="false" aria-controls="menu-6284cdfecf9f6d001b046f3a"><i class="mdi mdi mdi-credit-card-clock-outline"></i><span class="menu-name">자동 결제 관리</span><div class="icon-wrapper flex-grow-1 text-right"><i class="mdi mdi-chevron-right"></i></div></a>
-                            <i class="mdi mdi mdi-credit-card-clock-outline">
-                            </i>
-                            <span class="menu-name">자동 결제 관리</span>
-                            <div class="icon-wrapper flex-grow-1 text-right">
-                                <i class="mdi mdi-chevron-right">
-                                    
-                                </i>
-                            </div>
+                            <a class="menu-btn d-flex w-100 collapsed" href="#menu-6284cdfecf9f6d001b046f3a" data-toggle="collapse" aria-expanded="false" aria-controls="menu-6284cdfecf9f6d001b046f3a">
+                                <i class="mdi mdi mdi-credit-card-clock-outline"></i>
+                                <span class="menu-name">자동 결제 관리</span>
+                                <div class="icon-wrapper flex-grow-1 text-right"><i class="mdi mdi-chevron-right"></i></div></a>
                         <ul class="menu-sub-list collapse" id="menu-6284cdfecf9f6d001b046f3a">
                             <li class="submenu menu-item ">
                                 <a class="boot-link" data-param="3" href="">
@@ -229,150 +225,20 @@
                                 <div class="col-auto title-col">
                                     <span class="badge-label text-danger icon-label mr-3">
                                         <i class="mdi mdi-close">
-
                                         </i>
                                     </span>
                                     <span class="badge-label">결제취소</span>
                                 </div>
-                                <div>
                                     <div class="col text-right amount-col">
                                         <span class="magnify-btn" data-toggle="collapse" data-target="#extra-sum-collapse">
                                             <i class="mdi mdi-magnify">
-
                                             </i>
                                         </span>
                                         <span class="span-amount">0</span>
                                         <span class="amount-unit">원</span>
                                     </div>
-                                </div>
                             </div>
                             <div class="extra-info collapse" id="extra-sum-collapse">
-                                <div class="amount-box extra-box">
-                                    <div class="sub">
-                                        <table class="sub-table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="td-icon">
-                                                        <span class="badge-label text-primary icon-label">
-                                                            <i class="mdi mdi-check-all"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-title">
-                                                        <span class="badge-label">총 승인금액</span>
-                                                    </td>
-                                                    <td class="td-operator">=</td>
-                                                    <td class="td-amount">
-                                                        <span class="span-amount">0</span>
-                                                    </td>
-                                                    <td class="td-unit">
-                                                        <span class="amount-unit calc calc-minus">원</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="td-icon">
-                                                        <span class="badge-label text-primary icon-label">
-                                                            <i class="mdi mdi-check-all"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-title">
-                                                        <span class="badge-label">부분취소금액</span>
-                                                    </td>
-                                                    <td class="td-operator">=</td>
-                                                    <td class="td-amount">
-                                                        <span class="span-amount">0</span>
-                                                    </td>
-                                                    <td class="td-unit">
-                                                        <span class="amount-unit">원</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="sub">
-                                        <table class="sub-table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="td-icon">
-                                                        <span class="badge-label text-success icon-label">
-                                                            <i class="mdi mdi-bank-outline"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-title">
-                                                        <span class="badge-label">승인 과세금액</span>
-                                                    </td>
-                                                    <td class="td-operator">=</td>
-                                                    <td class="td-amount">
-                                                        <span class="span-amount">0</span>
-                                                    </td>
-                                                    <td class="td-unit">
-                                                        <span class="amount-unit">원</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="td-icon">
-                                                        <span class="badge-label text-success icon-label">
-                                                            <i class="mdi mdi-bank-outline"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-title">
-                                                        <span class="badge-label">승인 비과세금액</span>
-                                                    </td>
-                                                    <td class="td-operator">=</td>
-                                                    <td class="td-amount">
-                                                        <span class="span-amount">0</span>
-                                                    </td>
-                                                    <td class="td-unit">
-                                                        <span class="amount-unit">원</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="amount-box extra-box">
-                                    <div class="sub cancel">
-                                        <table class="sub-table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="td-icon">
-                                                        <span class="badge-label text-danger icon-label">
-                                                            <i class="mdi mdi-close"></i>
-                                                        </span>
-                                                    </td>
-                                                    <td class="td-title">
-                                                        <span class="badge-label">매입 전 취소 (전체취소)</span>
-                                                    </td>
-                                                    <td class="td-operator">=</td>
-                                                    <td class="td-amount">
-                                                        <span class="span-amount">0</span>
-                                                    </td>
-                                                    <td class="td-unit">
-                                                        <span class="amount-unit calc calc-plus">원</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <tr>
-                                                        <td class="td-icon">
-                                                            <span class="badge-label text-danger icon-label">
-                                                                <i class="mdi mdi-close"></i>
-                                                            </span>
-                                                        </td>
-                                                        <td class="td-title">
-                                                            <span class="badge-label">매입 후 취소 (부분취소)</span>
-                                                        </td>
-                                                        <td class="td-operator">+</td>
-                                                        <td class="td-amount">
-                                                            <span class="span-amount">0</span>
-                                                        </td>
-                                                        <td class="td-unit">
-                                                            <span class="amount-unit">원</span>
-                                                        </td>
-                                                    </tr>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
                                 <div class="amount-box extra-box">
                                     <div class="sub cancel">
                                         <table class="sub-table">
@@ -433,11 +299,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="expand-btn cursor-pointer" data-toggle="collapse" data-target="#extra-sum-collapse" aria-expanded="true">
-                                <i class="mdi mdi-chevron-up">
-
-                                </i>
-                            </div>
                         </div>
                         <div class="page-content">
                             <div class="table-layout white-panel">
@@ -471,7 +332,7 @@
                                                     <button class="boot-pop-checkbox-filter-btn btn btn-primary " id="btn-filter-status">
                                                         "결제완료 + 2"
                                                         <i class="mdi mdi-menu-down">
-
+                                        
                                                         </i>
                                                     </button>
                                                     <div class="bt-pop-menu">
@@ -483,7 +344,7 @@
                                                                     <div class="col col-6">
                                                                         <button class="btn btn-outline-default btn-sm">
                                                                             <i class="mdi mdi-checkbox-multiple-marked mr-1">
-
+                                        
                                                                             </i>
                                                                             "전체선택"
                                                                         </button>
@@ -491,7 +352,7 @@
                                                                     <div class="col col-6">
                                                                         <button class="btn btn-outline-default btn-sm">
                                                                             <i class="mdi mdi-checkbox-multiple-marked-outline mr-1">
-
+                                        
                                                                             </i>
                                                                             "선택취소"
                                                                         </button>
@@ -511,7 +372,7 @@
                                                                         <div class="col-auto">
                                                                             <a class="collapsed" href="" data-toggle="collapse" aria-expanded="false">
                                                                                 <i class="mdi mdi-plus">
-
+                                        
                                                                                 </i>
                                                                             </a>
                                                                         </div>
@@ -559,7 +420,7 @@
                                                                             <div class="boot-check d-flex align-items-center undefined checked">
                                                                                 <div class="boot-check-box checked" tabindex="0" style="width: 20px; height: 20px;">
                                                                                     <i class="mdi mdi-check" style="display: inline-block;">
-
+                                        
                                                                                     </i>
                                                                                 </div>
                                                                                 <div class="boot-check-content flex-grow-1">결제완료</div>
@@ -568,7 +429,7 @@
                                                                         <div class="col-auto">
                                                                             <a class href="" data-toggle="collapse" aria-expanded="false">
                                                                                 <i class="mdi mdi-plus">
-
+                                        
                                                                                 </i>
                                                                             </a>
                                                                         </div>
@@ -609,7 +470,7 @@
                                                                         <div class="col-auto">
                                                                             <a class href="" data-toggle="collapse" aria-expanded="false">
                                                                                 <i class="mdi mdi-plus">
-
+                                        
                                                                                 </i>
                                                                             </a>
                                                                         </div>
@@ -732,7 +593,7 @@
                                                                                         <div class="col-auto">
                                                                                             <a class href="" data-toggle="collapse" aria-expanded="false">
                                                                                                 <i class="mdi mdi-plus">
-
+                                        
                                                                                                 </i>
                                                                                             </a>
                                                                                         </div>
@@ -822,9 +683,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto"></div>
+                                                <div class="col-auto"></div>
                                         <div class="col-auto"></div>
                                         <div class="col-auto">
                                             <div class="filter-wrapper" data-for="6ce46b37-6203-4ed9-848b-59542bd80c9d" data-toggle="tooltip" data-custom-class title data-original-title="필터초기화">
@@ -835,7 +694,7 @@
                                                 <div class="btn-group">
                                                     <button class="btn btn-primary" data-for="5d5526f5-97b6-4162-88ca-5029f878630d" data-toggle="tooltip" data-custom-class title data-original-title="간략리스트">
                                                         <i class="mdi mdi-format-list-bulleted">
-
+                                        
                                                         </i>
                                                     </button>
                                                     <button class="btn btn-outline-primary" data-for="b0d46af5-4e30-44c6-8f4d-d28aca0bc15d" data-toggle="tooltip" data-custom-class title data-original-title="확장리스트">
@@ -865,6 +724,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                     <div class="fill-table-layout">
                                         <table class="table grey-header-table w-100 receipt-table">
