@@ -37,6 +37,18 @@
                 <div class="content-wrapper">
                     <div class="content-list-container">
                         <div class="category-list-wrap">
+                            <div class="total-search-container">
+                                <!-- 잠시 대기 -->
+                                <form id="searchForm" name="searchForm">
+                                    <div class="total-search-input-wrap">
+                                        <!-- 검색 이벤트 -->
+                                        <input type="text" class="total-search-input" placeholder="검색어를 입력해주세요." form="searchForm" name="searchContent">
+                                        <!-- /검색 이벤트 -->
+                                        <img alt="search" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color:transparent" src="https://media.a-ha.io/aha-qna/images/common/icons/mark/magnifying-000%20default.svg">
+                                    </div>
+                                </form>
+                                <!-- /잠시 대기 -->
+                            </div>
                             <div class="category-list-container">
                                 <!-- 버튼 이벤트 모달 열기 -->
                                 <button class="category-container-modal-btn">
@@ -48,18 +60,7 @@
                                     </div>
                                 </button>
                                 <!-- /버튼 이벤트 모달 열기 -->
-                                <div class="total-search-container">
-                                    <!-- 잠시 대기 -->
-                                    <form id="searchForm" name="searchForm">
-                                        <div class="total-search-input-wrap">
-                                            <!-- 검색 이벤트 -->
-                                            <input type="text" class="total-search-input" placeholder="검색어를 입력해주세요." form="searchForm" name="searchContent">
-                                            <!-- /검색 이벤트 -->
-                                            <img alt="search" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color:transparent" src="https://media.a-ha.io/aha-qna/images/common/icons/mark/magnifying-000%20default.svg">
-                                        </div>
-                                    </form>
-                                    <!-- /잠시 대기 -->
-                                </div>
+                                
                                 <button class="card-list-order-btn">
                                     <span class="card-list-btn-text change-order">선호도 순</span>
                                     <div class="card-list-icon">
@@ -683,7 +684,6 @@
                                         <div class="items-center"></div>
                                         <div class="doctor-quick-info no-doctor-quick-info">
                                             <div class="no-search-result-wrap no-search-hospital">
-                                                <img src="https://media.a-ha.io/aha-qna/images/v3/product/feed/message.webp" width="48" height="48" style="color:transparent">
                                                 <span class="no-search-result-text no-search-span">
                                                     아직 포함된 의사가 없습니다.
                                                 </span>

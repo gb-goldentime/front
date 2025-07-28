@@ -414,7 +414,7 @@ div.hospital-info {
 }
 div.side-bar-container {
     position: sticky;
-    top: 84px;
+    top: 188px;
     width: 100%;
     min-width: 320px;
     max-width: 320px;
@@ -638,6 +638,7 @@ button.category-fix-btn span {
 
 button.category-btn.checked {
     color: rgb(86, 130, 239);
+    border: 1px solid rgb(86, 130, 239);
 }
 /* /카테고리 모달 부분 */
 
@@ -828,4 +829,8 @@ div.side-bar-poster {
 }
 div.side-bar-poster img{
     border-radius: 12px;
+}
+
+ul#intersectionObserver li a{
+    cursor: pointer;
 }
