@@ -961,6 +961,7 @@ button.category-fix-btn span{
 
 button.category-btn.checked{
     color: rgb(86, 130, 239);
+    border: 1px solid rgb(86, 130, 239);
 }
 /* /카테고리 모달 부분 */
 
@@ -1038,6 +1039,7 @@ div.doctor-quick-info{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 div.doctor-mv-detail-info{
     margin: 7px 0px;
