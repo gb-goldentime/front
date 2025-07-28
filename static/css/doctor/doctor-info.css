@@ -122,6 +122,13 @@ img.info-profil-img{
     border: 1px solid rgb(242,244,246);
     border-radius: 40px;
     object-fit: cover;
+    width: 140px;
+    height: 140px;
+}
+
+img.info-profil-img.review{
+    width: 35px;
+    height: 35px;
 }
 div.info-profil-text-wrap{
     display: flex;

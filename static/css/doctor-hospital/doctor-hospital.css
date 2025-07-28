@@ -371,7 +371,16 @@ div.warn-modal {
     box-shadow: rgb(33 35 41 / 12%) 0px 2px 12px;
     border-radius: 8px;
 }
-
+img.img-doc-tag{
+    width: 48px;
+    height: 48px;
+    color: transparent
+}
+img.img-hos-tag{
+    width: 152px;
+    height: 152px;
+    color: transparent
+}
 div.warn-modal {
     padding: 24px;
 }

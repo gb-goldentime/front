@@ -807,11 +807,16 @@ ul.answer-imag-container {
 ul.answer-imag-container li {
     display: flex;
 }
-
+img.answer-client-img{
+    width: 48px;
+    height: 48px;
+}
 ul.answer-imag-container li img {
     color: transparent;
     border-radius: 8px;
     object-fit: cover;
+    width: 161px;
+    height: 161px;
 }
 aside.side-bar-wrap {
     display: flex;
