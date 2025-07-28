@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>골든타임-관리자</title>
+    <title>골든타임 관리자</title>
     <link rel="stylesheet" href="/static/css/admin/payment.css">
     <link rel="stylesheet" href="/static/css/admin/font.css">
     
@@ -24,33 +24,39 @@
                         <a class="app-name d-flex justify-content-between align-items-center">
                             <span>골든타임</span>
                             <i class="mdi mdi-apps">
-
                             </i>
                         </a>
-
                     </div>
                 </div>
                 <div class="menu-wrapper flex-grow-1">
                     <ul class="menu-list">
                         <li class="menu menu-item d-flex flex-column">
-                            <a class="menu-btn d-flex w-100 " data-toggle="collapse" aria-expanded="false" aria-controls="menu-6109064136799700f1ebced6"><i class="mdi mdi mdi-credit-card-plus-outline"></i><span class="menu-name">회원 관리</span><div class="icon-wrapper flex-grow-1 text-right"><i class="mdi mdi-chevron-right"></i></div></a>
-                            <ul class="menu-sub-list collapse" id="menu-6109064136799700f1ebced6">
+                            <!-- 클릭 이벤트 -->
+                             <!-- 회원 목록 클릭 시 collipse 열고 닫기 이벤트 -->
+                            <a class="menu-btn d-flex w-100 " data-toggle="collapse" aria-expanded="false" aria-controls="menu-6109064136799700f1ebced6">
+                                <i class="mdi mdi mdi-credit-card-plus-outline"></i>
+                                <span class="menu-name">회원 관리</span>
+                                <div class="icon-wrapper flex-grow-1 text-right">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </div>
+                            </a>
+                            <ul class="menu-sub-list collapse show" id="menu-6109064136799700f1ebced6" style="display: none;">
                                 <li class="submenu menu-item ">
                                     <a class="boot-link" data-param="0">
-                                        "_ "
-                                        "일반 회원목록"
+                                        - 
+                                        가입승인 페이지
                                     </a>
                                 </li>
                                 <li class="submenu menu-item ">
                                     <a class="boot-link" data-param="0">
-                                        "_ "
-                                        "의사 회원목록"
+                                        - 
+                                        의사 회원목록
                                     </a>
                                 </li>
                                 <li class="submenu menu-item">
                                     <a class="boot-link" data-param="0">
-                                        "_ "
-                                        "가입승인 페이지"
+                                        - 
+                                        일반 회원목록
                                     </a>
                                 </li>
                             </ul>
@@ -61,74 +67,26 @@
                                 <div class="icon-wrapper flex-grow-1 text-right">
                                 </div>
                             </a>
-                            <ul class="menu-sub-list collapse " id="menu-60934381367997007c4c3d2d">
-                                <li class="submenu menu-item ">
-                                    <a class="boot-link " data-param="1">
-                                        "_ "
-                                        "연동키 및 보안"
-                                    </a>
-                                </li>
-                                <li class="submenu menu-item">
-                                    <a class="boot-link" data-param="1" >
-                                    "_ "
-                                    "웹혹 설정"
-                                    </a>
-                                </li>
-                                <li class="submenu menu-item ">
-                                    <a class="boot-link " data-param="1">
-                                        "_ "
-                                        "서드파티 설정"
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="menu menu-item d-flex flex-column">
                             <a class="boot-link menu-btn active">
-                                <span class="menu-name">게시글 리스트</span>
+                                <span class="menu-name">주문결제</span>
                             </a>
                             <ul class="menu-sub-list collapse " id="menu-60934308367997007c4c3d2c"></ul>
                         </li>
                         <li class="menu menu-item d-flex flex-column">
-                            <a class="menu-btn d-flex w-100 collapsed" href="#menu-628c6e30d01c7e001ffdf398" data-toggle="collapse" aria-expanded="false" aria-controls="menu-628c6e30d01c7e001ffdf398"><i class="mdi mdi mdi-form-textbox-password"></i><span class="menu-name">주문결제</span><div class="icon-wrapper flex-grow-1 text-right"><i class="mdi mdi-chevron-down"></i></div></a>
-                            <ul class="menu-sub-list collapse" id="menu-628c6e30d01c7e001ffdf398">
-                                <li class="submenu menu-item ">
-                                    <a class="boot-link " data-param="3" href="">
-                                        "_ "
-                                        "링크페이 관리"
-                                    </a>
-                                </li>
-                                <li class="submenu menu-item ">
-                                    <a class="boot-link" data-param="3" href="">
-                                        "_ "
-                                        "링크페이 결제내역"
-                                    </a>
-                                </li>
-                                <li class="submenu menu-item ">
-                                    <a class="boot-link" data-param="3" href="">
-                                        "_ "
-                                        "카드 수기 결제"
-                                    </a>
-                                </li>
-                            </ul>
+                            <a class="menu-btn d-flex w-100 collapsed" href="" data-toggle="collapse" aria-expanded="false" aria-controls="menu-628c6e30d01c7e001ffdf398"><i class="mdi mdi mdi-form-textbox-password"></i>
+                                <span class="menu-name">게시글 리스트</span>
+                                <div class="icon-wrapper flex-grow-1 text-right">
+                                    <i class="mdi mdi-chevron-down"></i>
+                                </div>
+                            </a>
                         </li>
                         <li class="menu menu-item d-flex flex-column">
                             <a class="menu-btn d-flex w-100 collapsed" href="#menu-6284cdfecf9f6d001b046f3a" data-toggle="collapse" aria-expanded="false" aria-controls="menu-6284cdfecf9f6d001b046f3a">
                                 <span class="menu-name">문의 게시글 리스트</span>
-                                <div class="icon-wrapper flex-grow-1 text-right"></div></a>
-                        <ul class="menu-sub-list collapse" id="menu-6284cdfecf9f6d001b046f3a">
-                            <li class="submenu menu-item ">
-                                <a class="boot-link" data-param="3" href="">
-                                    "_ "
-                                    "빌링키 관리"
-                                </a>
-                            </li>
-                            <li class="submenu menu-item ">
-                                <a class="boot-link" data-param="3" href="">
-                                    "_ "
-                                    "자동 결제 예약 관리"
-                                </a>
-                            </li>
-                        </ul>    
+                                <div class="icon-wrapper flex-grow-1 text-right"></div>
+                            </a>  
                         </li>
                     </ul>
                 </div>
@@ -150,7 +108,6 @@
                             <a class="boot-link mr-3" href="">
                                 <div class="header-menu-btn " data-for="4f0c4ceb-f6db-419a-8401-ef6f1f189242" data-toggle="tooltip" data-custom-class title data-original-title="공지사항">
                                     <i class="mdi mdi-bullhorn-variant-outline">
-
                                     </i>
                                     <div class="count-badge"></div>
                                 </div>
@@ -324,12 +281,12 @@
                                         <div class="filter-wrapper filter-status" id="filter-status">
                                             <div class="boot-pop-checkbox">
                                                 <button class="boot-pop-checkbox-filter-btn btn btn-primary " id="btn-filter-status">
-                                                    결제완료 + 2
+                                                    결제상태선택
                                                     <i class="mdi mdi-menu-down">
                                     
                                                     </i>
                                                 </button>
-                                                <div class="bt-pop-menu">
+                                                <div class="bt-pop-menu" id="popMenu" style="display: none;">
                                                     <div class="bt-pop-menu-back "></div>
                                                     <div class="bt-pop-menu-context" style="top: 0px; bottom: unset; left: -59.793px; right: unset; transform: scale(0.9, 0.9) translate3d(0px, 0px, 0px);">
                                                         <ul class="list-wrapper list-unstyled">
@@ -890,4 +847,5 @@
         </div>
     </div>
 </body>
+<script src="/static/js/admin/payment.js"></script>
 </html>

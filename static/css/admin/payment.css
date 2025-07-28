@@ -1,6 +1,3 @@
-element.style {
-
-}
 
 :root{
     --blue: #007bff;
@@ -64,7 +61,6 @@ link {
 script {
     display: none;
 }
-
 
 body #bootpay {
     height: 100%;
@@ -1761,4 +1757,31 @@ element.style {
     transition: visibility 400ms cubic-bezier(0.36, 0, 0, 1), width 400ms cubic-bezier(0.36, 0, 0, 1), max-width 400ms cubic-bezier(0.36, 0, 0, 1), max-height 400ms cubic-bezier(0.36, 0, 0, 1) !important;
     animation: 400ms cubic-bezier(0.36, 0, 0, 1) 0s 1 normal none running dIKmRx !important;
 }
+
+/* 회원 목록 화살표 이벤트 */
+.mdi {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-btn.active .mdi {
+    transform: rotate(90deg);
+  }
+  
+
+  /* 버튼 효과 이벤트 */
+.menu-btn.active {
+    background: linear-gradient(90deg, #4976ff, #9fb5ff);
+    color: white;
+}
+
+
+#filterBox {
+    display: none;
+  }
+  #filterBox.show {
+    display: block;
+  }
+  
+
 
