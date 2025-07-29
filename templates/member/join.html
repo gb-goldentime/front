@@ -44,7 +44,7 @@
                                         <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" />
                                     </label>
                                 </div>
-                                <div class="phone-inputa" style="gap: 10px;">
+                                <div class="jumin-inputa" style="gap: 10px;">
                                     <input type="text" id="ssn1" name="ssn1" maxlength="6" placeholder="앞 6자리" />
                                     <span>-</span>
                                     <input type="password" id="ssn2" name="ssn2" maxlength="7" placeholder="뒤 7자리" />
@@ -142,3 +142,88 @@
         </div>
         <div class="16y2swjfooter"></div>
     </div>  
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // 주민등록번호
+    const ssn1 = document.getElementById("ssn1");
+    const ssn2 = document.getElementById("ssn2");
+
+    ssn1.addEventListener("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, "");
+        if (this.value.length === this.maxLength) {
+            ssn2.focus();
+        }
+    });
+
+    // 핸드폰 번호
+    const phone1 = document.getElementById("phone1");
+    const phone2 = document.getElementById("phone2");
+    const phone3 = document.getElementById("phone3");
+
+    phone1.addEventListener("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, "");
+        if (this.value.length === this.maxLength) {
+            phone2.focus();
+        }
+    });
+
+    phone2.addEventListener("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, "");
+        if (this.value.length === this.maxLength) {
+            phone3.focus();
+        }
+    });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const signupBtn = document.getElementById("loginBtn");
+    const nameInput = document.getElementById("name");
+    const ssn1 = document.getElementById("ssn1");
+    const ssn2 = document.getElementById("ssn2");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const passwordConfirmInput = document.getElementById("passwordConfirm");
+    const addressInput = document.getElementById("address");
+    const phone1 = document.getElementById("phone1");
+    const phone2 = document.getElementById("phone2");
+    const phone3 = document.getElementById("phone3");
+
+    function checkAllInputs() {
+        const allFilled =
+            nameInput.value.trim() !== "" &&
+            ssn1.value.length === ssn1.maxLength &&
+            ssn2.value.length === ssn2.maxLength &&
+            emailInput.value.trim() !== "" &&
+            passwordInput.value.trim() !== "" &&
+            passwordConfirmInput.value.trim() !== "" &&
+            addressInput.value.trim() !== "" &&
+            phone1.value.length === phone1.maxLength &&
+            phone2.value.length === phone2.maxLength &&
+            phone3.value.length === phone3.maxLength;
+
+        if (allFilled) {
+            signupBtn.disabled = false;
+            signupBtn.style.backgroundColor = "green";
+            signupBtn.style.color = "white";
+            signupBtn.style.cursor = "pointer";
+        } else {
+            signupBtn.disabled = true;
+            signupBtn.style.backgroundColor = "gray";
+            signupBtn.style.color = "white";
+            signupBtn.style.cursor = "default";
+        }
+    }
+
+    // 모든 input에 input 이벤트 달기
+    const inputs = [nameInput, ssn1, ssn2, emailInput, passwordInput, passwordConfirmInput, addressInput, phone1, phone2, phone3];
+    inputs.forEach(input => {
+        input.addEventListener("input", checkAllInputs);
+    });
+
+    checkAllInputs();
+});
+</script>
