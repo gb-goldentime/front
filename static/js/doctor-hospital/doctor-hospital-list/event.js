@@ -272,9 +272,14 @@ mailSendCancleBtn.addEventListener("click", (e) => {
 listLayout.addEventListener("click", (e) => {
     const mailBtn = e.target.closest(".mail-send-btn");
     const interestBtn = e.target.closest(".interest-btn");
+    const divTag = e.target.closest(".content-info");
+    const heartImg = divTag.querySelector(".docterinfo-favorite-wrapper");
+    const people = heartImg.querySelector(".doctorinfo-favoriteCount");
     const addressKakao = e.target.closest(".hospital-info");
     // 모달 전에 쪽지 보내기 누르면 모달이 보이게 하기
     if (mailBtn) {
+        e.stopPropagation();
+        e.preventDefault();
         mailSendModal.style.display = "flex";
         doctorSearchInput.value = "의사이름";
         doctorRemoveBtn.style.display = "block";
@@ -282,17 +287,34 @@ listLayout.addEventListener("click", (e) => {
         doctorSearchInput.disabled = true;
     } else if (interestBtn) {
         // 관심 형태에 따라 클릭 버튼 다르게
+        e.stopPropagation();
+        e.preventDefault();
         let message = ``;
         if (!buttonsCheck) {
             return;
         }
         buttonsCheck = false;
 
-        if (e.target.classList[2] === "active") {
+        if (interestBtn.classList[2] === "active") {
+            console.log(e.target);
+            interestBtn.classList.remove("active");
+            heartImg.firstElementChild.src =
+                "../../static/images/heart-empty.png";
+            people.textContent--;
+            interestBtn.lastElementChild.src = "../../static/images/plus.png";
+            interestBtn.firstElementChild.textContent = "관심 추가";
             message = `나의 관심 의사에서 취소했습니다.`;
             showWarnModal(message);
         } else {
+            console.log(e.target);
+
             message = `해당 의사를 나의 관심 의사로 <br>등록 했습니다.`;
+            interestBtn.lastElementChild.src = "../../static/images/check.png";
+            heartImg.firstElementChild.src = "../../static/images/heart.png";
+            people.textContent++;
+            console.log(heartImg.lastElementChild.textContent);
+            interestBtn.classList.add("active");
+            interestBtn.firstElementChild.textContent = "관심 중";
             showWarnModal(message);
         }
 
@@ -300,6 +322,8 @@ listLayout.addEventListener("click", (e) => {
             buttonsCheck = true;
         }, 2000);
     } else if (addressKakao) {
+        e.stopPropagation();
+        e.preventDefault();
         console.log("카카오 나중에 해야하는 부분");
     }
 });

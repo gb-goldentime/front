@@ -1093,3 +1093,26 @@ div.star-btn-wrap{
 }
 /* button.exist-search-btn */
 /* /후기 부분 */
+
+.docterinfo-favorite-wrapper{
+    display: flex;
+    align-items: center;
+    gap:4px;
+    position: absolute;
+    top: 0px;
+    right: 39px;
+}
+
+.doctorinfo-favoriteCount {
+    font-size: 20px;
+    font-weight: 500;
+    color:#6b7684;
+}
+
+
+
+span.unit{
+    font-size: 20px;
+    font-weight: 500;
+    color: #6b7684;
+}

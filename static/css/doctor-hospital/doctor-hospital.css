@@ -1079,3 +1079,22 @@ span.no-search-span{
     margin-top: 0; 
     margin-left: 10px;
 }
+
+
+.docterinfo-favorite-wrapper{
+    display: flex;
+    align-items: center;
+    gap:4px;
+}
+
+.doctorinfo-favoriteCount {
+    font-size: 14px;
+    font-weight: 500;
+    color:#6b7684;
+}
+
+span.unit{
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7684;
+}

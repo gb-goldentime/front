@@ -77,20 +77,22 @@
                             class="content-list" id="intersectionObserver">
                             <!-- 반복 부분 -->
                             <li>
+                                <a> 
                                     <div class="content-info">
                                         <img class="contentInfoImg img-doc-tag" src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" width="48" height="48" alt="" style="color: transparent">
                                         <div class="content-info-text">
                                             <div class="type-user-wrapper">
                                                 <div class="depart-treatment">
-                                                    <a>
                                                         <div class="doctor-info">
                                                             <span class="doctorinfo-name">
                                                                 의사 이름
                                                             </span>
-                                                            <span>관심 수 : 10</span>
+                                                            <div class="docterinfo-favorite-wrapper">
+                                                                <img alt="관심토픽 이미지" loading="lazy" width="15" height="15" decoding="async" data-nimg="1" src="../../static/images/heart-empty.png" style="color: transparent;">
+                                                                <span class="doctorinfo-favoriteCount">2886</span><span class="unit">명</span>
+                                                                </div>
                                                         </div>
                                                         
-                                                    </a>
                                                     <div class="depart-treatment-wrap">
                                                         <span class="first">
                                                             진료 과목
@@ -155,6 +157,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                </a>
                             </li>
                             <!-- 나중에 삭제할 부분 -->
                             <li>
@@ -167,7 +170,10 @@
                                                         <span class="doctorinfo-name">
                                                             의사 이름
                                                         </span>
-                                                        <span>관심 수 : 10</span>
+                                                        <div class="docterinfo-favorite-wrapper">
+                                                                <img alt="관심토픽 이미지" loading="lazy" width="15" height="15" decoding="async" data-nimg="1" src="../../static/images/heart.png" style="color: transparent;">
+                                                                <span class="doctorinfo-favoriteCount">2886</span><span class="unit">명</span>
+                                                                </div>
                                                     </div>
                                                     <div class="depart-treatment-wrap">
                                                         <span class="first">
@@ -461,6 +467,9 @@
                                         </div>
                                     </div>
                             </li>
+                            <!-- /나중에 삭제할 부분 -->
+                            <!-- /반복 부분 -->
+                            <!-- 여기는 병원 부분입니다. -->
                             <li>
                                 <div class="content-info img-hos-tag">
                                     <img src="../../static/images/temp_hospital.jpeg" width="152" height="152" alt="" class="contentInfoImg img-hos-tag" style="color: transparent">
@@ -558,8 +567,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <!-- /반복 부분 -->
-                            <!-- 삭제 부분 -->
+                            <!-- 삭제 해도 되는 부분 -->
                             <li>
                                 <div class="content-info">
                                     <img src="../../static/images/temp_hospital.jpeg" width="152" height="152" alt="" class="contentInfoImg img-hos-tag" style="color: transparent">
@@ -692,8 +700,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <!-- /나중에 삭제할 부분 -->
-                            <!-- /반복 부분 -->
+                            <!-- /삭제 해도 되는 부분 -->
+                            <!-- /여기는 병원 부분입니다. -->
                         </ul>
                         <div class="no-search-result-wrap">
                             <img src="https://media.a-ha.io/aha-qna/images/v3/product/feed/message.webp" width="48" height="48" style="color:transparent">
