@@ -12,30 +12,30 @@ function timeForToday(datetime) {
     }
 
     if (gap < 60) {
-        return `${gap}분 후`;
+        return `${gap}분`;
     }
 
     gap = Math.floor(gap / 60);
 
     if (gap < 24) {
-        return `${gap}시간 후`;
+        return `${gap}시간`;
     }
 
     gap = Math.floor(gap / 24);
 
     if (gap < 31) {
-        return `${gap}일 후`;
+        return `${gap}일`;
     }
 
     gap = Math.floor(gap / 31);
 
     if (gap < 12) {
-        return `${gap}개월 후`;
+        return `${gap}개월`;
     }
 
     gap = Math.floor(gap / 12);
 
-    return `${gap}년 후`;
+    return `${gap}년`;
 }
 
 // console.log(timeForToday("2025-07-18T11:45:00"));
@@ -83,11 +83,18 @@ listLayout.addEventListener("click", (e) => {
         buttonsCheck = false;
 
         if (housecallBtn.classList[2] === "active") {
+            housecallBtn.classList.remove("active");
+            housecallBtn.firstElementChild.src = "../../static/images/wait.png";
+            housecallBtn.lastElementChild.textContent = "진료 대기";
             console.log(e.target);
             message = `진료를 취소하였습니다.`;
             showWarnModal(message);
         } else {
             console.log(e.target);
+            housecallBtn.classList.add("active");
+            housecallBtn.firstElementChild.src =
+                "../../static/images/check-mark.png";
+            housecallBtn.lastElementChild.textContent = "진료 승인";
             message = `진료를 승인하였습니다.`;
             showWarnModal(message);
         }
@@ -109,11 +116,11 @@ cardListOrderBtn.addEventListener("click", (e) => {
     clickable = false;
     const spanTag = document.querySelector(".card-list-btn-text");
     if (spanTag.classList[1]) {
-        console.log(1);
+        // console.log(1);
         spanTag.classList.remove("change-order");
         spanTag.textContent = "마감 순";
     } else {
-        console.log(2);
+        // console.log(2);
         spanTag.classList.add("change-order");
         spanTag.textContent = "위험 순";
     }

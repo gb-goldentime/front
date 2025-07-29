@@ -476,3 +476,7 @@ span.pain{
     font-weight: 700;
     color: rgb(51, 61, 75);
 }
+
+div.tell-date{
+    cursor: unset;
+}

@@ -308,17 +308,30 @@ mailSendBtns[0].addEventListener("click", (e) => {
 // 관심 추가 삭제
 interestBtn.addEventListener("click", (e) => {
     // 관심 형태에 따라 클릭 버튼 다르게
+    const button = e.target.closest(".interest-btn");
+    const heartImg = document.querySelector(".docterinfo-favorite-wrapper img");
+    const people = document.querySelector(".docterinfo-favorite-wrapper span");
     let message = ``;
     if (!buttonsCheck) {
         return;
     }
     buttonsCheck = false;
 
-    if (e.target.classList[2] === "active") {
+    if (button.classList[2] === "active") {
         message = `나의 관심 의사에서 취소했습니다.`;
+        interestBtn.classList.remove("active");
+        interestBtn.lastElementChild.src = "../../static/images/plus.png";
+        interestBtn.firstElementChild.textContent = "관심 추가";
+        heartImg.src = "../../static/images/heart-empty.png";
+        people.textContent--;
         showWarnModal(message);
     } else {
         message = `해당 의사를 나의 관심 의사로 <br>등록 했습니다.`;
+        interestBtn.classList.add("active");
+        interestBtn.lastElementChild.src = "../../static/images/check.png";
+        heartImg.src = "../../static/images/heart.png";
+        people.textContent++;
+        interestBtn.firstElementChild.textContent = "관심 중";
         showWarnModal(message);
     }
 
