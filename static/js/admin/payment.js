@@ -40,12 +40,12 @@ paySelectBtn.addEventListener("click", (e) => {
     }
 });
 
-// 결제상태선택 클릭 이벤트
-// const payStBtn = document.getElementById("pay-status-btn");
-// const allAndCancel = document.getElementById("status-btn");
+결제상태선택 클릭 이벤트
+const payStBtn = document.getElementById("pay-status-btn");
+const allAndCancel = document.getElementById("status-btn");
 
-// payStBtn.addEventListener("click", (e) => {
-//     if(e.target.allAndCancel){
-//         allAndCancel.style =
-//     }
-// });
+payStBtn.addEventListener("click", (e) => {
+    if(e.target.allAndCancel){
+        allAndCancel.style =
+    }
+});
