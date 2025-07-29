@@ -288,10 +288,12 @@ listLayout.addEventListener("click", (e) => {
         }
         buttonsCheck = false;
 
-        if (e.target.classList[2] === "active") {
+        if (interestBtn.classList[2] === "active") {
+            console.log(e.target);
             message = `나의 관심 의사에서 취소했습니다.`;
             showWarnModal(message);
         } else {
+            console.log(e.target);
             message = `해당 의사를 나의 관심 의사로 <br>등록 했습니다.`;
             showWarnModal(message);
         }
