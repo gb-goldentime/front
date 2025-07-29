@@ -76,7 +76,7 @@ document.querySelectorAll(".inbox-content-time").forEach((time) => {
     time.textContent = relativeTime;
 });
 
-const doctorInfoToUseName = document
+const doctorInfoUseToName = document
     .querySelectorAll(".inbox-content-name-wrapper")
     .forEach((element) => {
         element.addEventListener("click", (e) => {
@@ -84,7 +84,7 @@ const doctorInfoToUseName = document
         });
     });
 
-const doctorInfoToUseImg = document
+const doctorInfoUseToImg = document
     .querySelectorAll(".inbox-img-wrapper")
     .forEach((element) => {
         element.addEventListener("click", (e) => {
