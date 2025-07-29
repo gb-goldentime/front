@@ -48,7 +48,7 @@ div.full {
     margin: 0px auto;
 }
 
-/* 
+/*
 *, :after, :before {
     box-sizing: border-box;
     font-family: inherit;
@@ -156,19 +156,27 @@ div.sbo1gjemailchang {
  }
 
 
- .phone-input {
-    display: flex;
-    box-sizing: content-box;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    padding: 0px 0px 0px 0px;
-    border-radius: 14px;
-    background: rgb(194, 72, 72);
-    box-shadow: rgb(229, 232, 235) 0px 0px 0px 1px inset;
- }
 
+
+
+  .phone-inputa {
+        justify-content: space-between;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;  /* 수직 가운데 정렬 */
+    gap: 18px;              /* 요소 간 간격 */
+
+  }
+
+  .phone-inputa input {
+    width: 80px;           /* 입력창 너비 조절 */
+    justify-content: space-between;
+    padding: 10px 10px 10px 10px;
+    border-radius: 9px;
+    box-shadow: none;  
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(229, 232, 235) 0px 0px 0px 1px inset;
+  }
 
 
 /* 정상 입력 상태 */
@@ -205,13 +213,6 @@ input.bms9cb{
 
 
 
-    /* 
-    @media (hover: hover) and (pointer: fine) {
-    .css-109jyh9:hover {
-        background: rgb(15, 39, 209);
-        color: rgb(232, 240, 249); */
-
-
 button.box5p3r3q {
     display: flex;
     gap: 8px;
@@ -223,8 +224,8 @@ button.box5p3r3q {
     height: 54px;
     min-height: 54px;
     border-radius: 14px;
-    color: rgb(51, 61, 75);   
-}     
+    color: rgb(51, 61, 75);  
+}    
 
 
 .h2tnj {
@@ -237,6 +238,13 @@ input.bms9cb:focus {
   outline: none;
   box-shadow: 0 0 0 2px #2553e5 inset; /* 파란색 테두리 효과 */
   border-radius: 14px;
+}
+
+
+.phone-inputa input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2553e5 inset;
+  border-radius: 9px;
 }
 
 
@@ -298,27 +306,3 @@ input.bms9cb.input-filled {
     cursor: pointer;
 }
 
-
-
-
-    .phone-input {
-
-      display: flex;
-
-      gap: 5px; /* 입력창 사이 간격 */
-
-      align-items: center;
-
-    }
-
-​
-
-    .phone-input {
-
-      width: 30px;
-
-      padding: 5px;
-
-      text-align: center;
-
-    }
