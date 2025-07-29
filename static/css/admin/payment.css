@@ -880,12 +880,16 @@ button {
 
 .bt-pop-menu .bt-pop-menu-back {
     display: none;
-    height: 100%;
+    height: 100px;
     left: 0;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100px;
     z-index: 98;
+}
+
+.bt-pop-menu .bt-pop-menu-back.show {
+    display: block;
 }
 
 element.style {
@@ -896,9 +900,15 @@ element.style {
     transform: scale(0.9, 0.9) translate3d(0px, 0px, 0px);
 }
 
+.bt-pop-menu .bt-pop-menu-context.show {
+    height: auto;
+    opacity: 1;
+    transform: scale(1) translateZ(0) !important;
+}
 .boot-pop-checkbox .bt-pop-menu-context {
     padding: 10px;
 }
+
 
 .bt-pop-menu .bt-pop-menu-context {
     height: 0;
@@ -1046,11 +1056,11 @@ element.style {
 }
 
 .boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active {
-    color: #292929;
+    color: #56626a;
 }
 
 .boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active .boot-check-box i {
-    color: #fff;
+    color: #56626a;
 }
 
 .mdi-check:before {
@@ -1066,10 +1076,19 @@ element.style {
     list-style: none;
     padding-left: 0;
 }
-
-
 .boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active .boot-check-box{
-    background-color: #507cf3;
+    background-color: #fff
+}
+
+
+.boot-check .boot-check-box {
+    background-color: #fff;
+    border: 1px solid #edeff0;
+    border-radius: 3px;
+    height: 20px;
+    margin-right: 6px;
+    position: relative;
+    text-align: center;
 }
 
 .mt-2{
