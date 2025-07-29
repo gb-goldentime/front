@@ -90,7 +90,7 @@ cardListOrderBtn.addEventListener("click", (e) => {
     }
     setTimeout(() => {
         clickable = true;
-    }, 1000);
+    }, 500);
 });
 
 /**************** */

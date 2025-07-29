@@ -337,7 +337,7 @@ cardListOrderBtn.addEventListener("click", (e) => {
     }
     setTimeout(() => {
         clickable = true;
-    }, 1000);
+    }, 500);
 });
 
 // 나중에 서버에 보낼 문자열 배열 부분

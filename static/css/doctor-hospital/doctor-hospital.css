@@ -371,7 +371,16 @@ div.warn-modal {
     box-shadow: rgb(33 35 41 / 12%) 0px 2px 12px;
     border-radius: 8px;
 }
-
+img.img-doc-tag{
+    width: 48px;
+    height: 48px;
+    color: transparent
+}
+img.img-hos-tag{
+    width: 152px;
+    height: 152px;
+    color: transparent
+}
 div.warn-modal {
     padding: 24px;
 }
@@ -725,6 +734,8 @@ div.label-check-box{
     border-radius: 14px;
     background: rgb(232, 240, 249);
 }
+
+
 span.checkbox-span-wrap{
     font-size: 13px;
     font-weight: 500;
@@ -961,6 +972,7 @@ button.category-fix-btn span{
 
 button.category-btn.checked{
     color: rgb(86, 130, 239);
+    border: 1px solid rgb(86, 130, 239);
 }
 /* /카테고리 모달 부분 */
 
@@ -1038,6 +1050,7 @@ div.doctor-quick-info{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 div.doctor-mv-detail-info{
     margin: 7px 0px;
