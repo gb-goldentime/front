@@ -107,6 +107,12 @@
     color:#6b7684;
 }
 
+span.unit{
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7684;
+}
+
 .mydoctor-content-no-exist-wrapper {
     display: flex;
     flex-direction: column;
