@@ -1,19 +1,72 @@
-const usernameInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
-const loginBtn = document.getElementById("loginBtn");
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // 필드 가져오기
+    const ssn1 = document.getElementById("ssn1");
+    const ssn2 = document.getElementById("ssn2");
+    const phone1 = document.getElementById("phone1");
+    const phone2 = document.getElementById("phone2");
+    const phone3 = document.getElementById("phone3");
 
-function toggleLoginButton() {
-    const isUsernameFilled = usernameInput.value.trim() !== "";
-    const isPasswordFilled = passwordInput.value.trim() !== "";
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const passwordConfirmInput = document.getElementById("passwordConfirm");
+    const addressInput = document.getElementById("address");
+    const signupBtn = document.getElementById("loginBtn");
 
-    if (isUsernameFilled && isPasswordFilled) {
-        loginBtn.disabled = false;
-        loginBtn.classList.add("active");
-    } else {
-        loginBtn.disabled = true;
-        loginBtn.classList.remove("active");
+    // 숫자만 입력 & 자동 포커스 함수
+    function autoTab(currentInput, nextInput) {
+        currentInput.addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+            if (this.value.length === this.maxLength && nextInput) {
+                nextInput.focus();
+            }
+            checkAllInputs();
+        });
     }
-}
 
-usernameInput.addEventListener("input", toggleLoginButton);
-passwordInput.addEventListener("input", toggleLoginButton);
+    // 나머지 입력 필드는 숫자만 제한 없이 체크
+    function checkAllInputs() {
+        const allFilled =
+            nameInput.value.trim() !== "" &&
+            ssn1.value.length === ssn1.maxLength &&
+            ssn2.value.length === ssn2.maxLength &&
+            emailInput.value.trim() !== "" &&
+            passwordInput.value.trim() !== "" &&
+            passwordConfirmInput.value.trim() !== "" &&
+            addressInput.value.trim() !== "" &&
+            phone1.value.length === phone1.maxLength &&
+            phone2.value.length === phone2.maxLength &&
+            phone3.value.length === phone3.maxLength;
+
+        if (allFilled) {
+            signupBtn.disabled = false;
+            signupBtn.style.backgroundColor = "green"; // 초록색으로 변경
+            signupBtn.style.color = "white"; // 글씨는 흰색
+            signupBtn.style.cursor = "pointer";
+        } else {
+            signupBtn.disabled = true;
+            signupBtn.style.backgroundColor = ""; // 기본으로
+            signupBtn.style.color = "";
+            signupBtn.style.cursor = "default";
+        }
+    }
+
+    // 주민등록번호 숫자+자동탭
+    autoTab(ssn1, ssn2);
+    autoTab(ssn2, null);
+
+    // 핸드폰번호 숫자+자동탭
+    autoTab(phone1, phone2);
+    autoTab(phone2, phone3);
+    autoTab(phone3, null);
+
+    // 나머지 입력 필드에 입력될 때마다 체크
+    [nameInput, emailInput, passwordInput, passwordConfirmInput, addressInput].forEach(input => {
+        input.addEventListener("input", checkAllInputs);
+    });
+
+    // 초기 버튼 상태 확인
+    checkAllInputs();
+});
+</script>

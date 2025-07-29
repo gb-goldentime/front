@@ -160,13 +160,34 @@ div.sbo1gjemailchang {
 
 
   .phone-inputa {
-        justify-content: space-between;
+    justify-content: space-between;
     padding: 0px 0px 0px 0px;
     display: flex;
     align-items: center;  /* 수직 가운데 정렬 */
     gap: 18px;              /* 요소 간 간격 */
 
   }
+
+
+  .jumin-inputa {
+    justify-content: space-between;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;  /* 수직 가운데 정렬 */
+    gap: 18px;              /* 요소 간 간격 */
+
+  }
+
+  .jumin-inputa input {
+    width: 120px;           /* 입력창 너비 조절 */
+    justify-content: space-between;
+    padding: 10px 10px 10px 10px;
+    border-radius: 9px;
+    box-shadow: none;  
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(229, 232, 235) 0px 0px 0px 1px inset;
+  }
+
 
   .phone-inputa input {
     width: 80px;           /* 입력창 너비 조절 */
