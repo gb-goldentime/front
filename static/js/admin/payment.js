@@ -40,12 +40,40 @@ paySelectBtn.addEventListener("click", (e) => {
     }
 });
 
-결제상태선택 클릭 이벤트
-const payStBtn = document.getElementById("pay-status-btn");
-const allAndCancel = document.getElementById("status-btn");
+// 결제상태선택 클릭 이벤트
+const selectAllBtn = document.getElementById("btn-select-all");
+const deselectAllBtn = document.getElementById("btn-deselect-all");
+const checkBoxes = document.querySelectorAll(".boot-check-box");
 
-payStBtn.addEventListener("click", (e) => {
-    if(e.target.allAndCancel){
-        allAndCancel.style =
-    }
+// 전체 선택 클릭 시 이벤트
+selectAllBtn.addEventListener("click", (e) => {
+    checkBoxes.forEach((box) => {
+        const checkIcon = box.querySelector("i.mdi-check");
+        if (checkIcon) {
+            checkIcon.style.display = "inline-block";
+        }
+    });
+});
+
+// 전체 취소 클릭 시 이벤트
+deselectAllBtn.addEventListener("click", (e) => {
+    checkBoxes.forEach((box) => {
+        const checkIcon = box.querySelector("i.mdi-check");
+        if (checkIcon) {
+            checkIcon.style.display = "none";
+        }
+    });
+});
+
+checkBoxes.forEach((box) => {
+    box.addEventListener("click", (e) => {
+        const checkIcon = box.querySelector("i.mdi-check");
+        if (checkIcon) {
+            checkIcon.style.display =
+                checkIcon.style.display === "none" ||
+                checkIcon.style.display === ""
+                    ? "inline-block"
+                    : "none";
+        }
+    });
 });

@@ -96,53 +96,6 @@
             <div id="header-wrapper">
                 <div id="bootpay-header" class="d-flex false">
                     <div class="flex-grow-1"></div>
-                    <div>
-                        <div class="header-menu-group d-flex">
-                            <a class="boot-link mr-3" target="_blank" href="">
-                                <div class="header-menu-btn" data-for="f2c4724a-a9e4-4ef3-b93c-20bbe00a9cf7" data-toggle="tooltip" data-custom-class title data-original-title="부트페이 개발매뉴얼">
-                                    <i class="mdi mdi-text-box-outline">
-                                        
-                                    </i>
-                                </div>
-                            </a>
-                            <a class="boot-link mr-3" href="">
-                                <div class="header-menu-btn " data-for="4f0c4ceb-f6db-419a-8401-ef6f1f189242" data-toggle="tooltip" data-custom-class title data-original-title="공지사항">
-                                    <i class="mdi mdi-bullhorn-variant-outline">
-                                    </i>
-                                    <div class="count-badge"></div>
-                                </div>
-                            </a>
-                            <div class="user-menu">
-                                <div class="user-menu-wrapper d-flex align-items-center cursor-pointer" id="user-menu-handler" data-toggle="dropdown">
-                                    <div class="user-avatar">X</div>
-                                    <div class="user-menu-email">test@gmail.com</div>
-                                </div>
-                                <div class="user-menu-content dropdown-menu dropdown-menu-right">
-                                    <ul>
-                                        <li>
-                                            <a class="boot-link d-block text-dark" href="">
-                                                <i class="mdi mdi-bell-outline mr-2 mdi-18px"></i>
-                                                "알림"
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-block text-dark" href="">
-                                                <i class="mdi mdi-account-box-outline mr-2 mdi-18px">
-                                                </i>
-                                                "회원정보"
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="d-block text-dark" href="">
-                                                <i class="mdi mdi-logout-variant mr-2 mdi-18px"></i>
-                                                "로그아웃"
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="page wide-page receipt-index">
@@ -295,7 +248,7 @@
                                                             <li class="list-item row mb-2">
                                                                 
                                                                 <div id="status-btn" class="col col-6">
-                                                                    <button id="pay-status-btn" class="btn btn-outline-default btn-sm">
+                                                                    <button id="btn-select-all" class="btn btn-outline-default btn-sm">
                                                                         <i class="mdi mdi-checkbox-multiple-marked mr-1">
                                     
                                                                         </i>
@@ -303,7 +256,7 @@
                                                                     </button>
                                                                 </div>
                                                                 <div id="status-btn" class="col col-6">
-                                                                    <button id="pay-status-btn" class="btn btn-outline-default btn-sm">
+                                                                    <button id="btn-deselect-all" class="btn btn-outline-default btn-sm">
                                                                         <i class="mdi mdi-checkbox-multiple-marked-outline mr-1">
                                                                         </i>
                                                                         선택취소
@@ -369,25 +322,24 @@
                                                             <li class="list-item active">
                                                                 <div class="row">
                                                                     <div class="col">
-                                                                        <!-- checked -->
                                                                         <div class="boot-check d-flex align-items-center undefined">
                                                                             <div class="boot-check-box " tabindex="0" style="width: 20px; height: 20px;">
-                                                                                <i class="mdi mdi-check" style="display: none;"></i>
+                                                                                <i class="mdi mdi-check" style="display: none;">
+                                                                                </i>
                                                                             </div>
                                                                             <div class="boot-check-content flex-grow-1">결제완료</div>
+                                                                            <div class="col-auto">
+                                                                                <a class href="" data-toggle="collapse" aria-expanded="false">
+                                                                                    <i class="mdi mdi-plus">
+                                            
+                                                                                    </i>
+                                                                                </a>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="col-auto">
-                                                                        <a class href="" data-toggle="collapse" aria-expanded="false">
-                                                                            <i class="mdi mdi-plus">
-                                    
-                                                                            </i>
-                                                                        </a>
-                                                                    </div>
                                                                 </div>
                                                                 <div class="collapse" id="collapse_결제완료1001">
                                                                     <ul class="sub-list-wrapper list-unstyled"> 
-                                                                        <li class="list-item active">
+                                                                        <li class="list-item">
                                                                             <div class="boot-check d-flex align-items-center undefined">
                                                                                 <div class="boot-check-box" tabindex="0" style="width: 20px; height: 20px;">
                                                                                     <i class="mdi mdi-check" style="display: none;">

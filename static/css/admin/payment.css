@@ -1056,11 +1056,11 @@ element.style {
 }
 
 .boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active {
-    color: #292929;
+    color: #56626a;
 }
 
 .boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active .boot-check-box i {
-    color: #fff;
+    color: #56626a;
 }
 
 .mdi-check:before {
@@ -1076,11 +1076,10 @@ element.style {
     list-style: none;
     padding-left: 0;
 }
-
-
 .boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active .boot-check-box{
-    background-color: #507cf3;
+    background-color: #fff
 }
+
 
 .boot-check .boot-check-box {
     background-color: #fff;
