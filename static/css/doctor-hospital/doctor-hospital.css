@@ -278,15 +278,14 @@ button.btnshape{
     color: #fff;
     width: 109px;
 }
-button.btnshape span{
+
+button.btnshape span {
     color: inherit;
     font-size: 14px;
     font-weight: 500;
     line-height: 100%;
     width: max-content;
 }
-
-
 
 button.btnshape img{
     margin-bottom: 2px;
