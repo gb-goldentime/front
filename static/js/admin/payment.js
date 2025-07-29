@@ -1,9 +1,12 @@
 const menuBtns = document.querySelectorAll(".menu-btn");
 const allSubMenus = document.querySelectorAll(".menu-sub-list");
+console.log(menuBtns);
 
 menuBtns.forEach((btn) => {
+    console.log(btn);
+
     btn.addEventListener("click", function (e) {
-        e.preventDefault();
+        console.log(e.target);
 
         // 모든 서브메뉴 닫기
         allSubMenus.forEach((submenu) => {
@@ -16,7 +19,7 @@ menuBtns.forEach((btn) => {
         // active 추가 (화살표 회전용)
         this.classList.add("active");
 
-        // aria-controls에서 서브메뉴 id 가져와서 열기
+        // aria-controls에서 서브메뉴 열기
         const targetId = this.getAttribute("aria-controls");
         if (targetId) {
             const targetMenu = document.getElementById(targetId);
@@ -25,11 +28,24 @@ menuBtns.forEach((btn) => {
     });
 });
 
-const paySelect = document.getElementById("btn-filter-status");
+// 결제상태 선택 클릭시 결제 리스트 열기
+const paySelectBtn = document.getElementById("btn-filter-status");
+const paySelect = document.querySelector(".bt-pop-menu-context");
 
-paySelect.addEventListener("click", (e) => {
-    if (e.target.closest("#btn-filter-status")) {
-        const box = document.getElementById("popMenu");
-        box.style.display = box.style.display === "none" ? "block" : "none";
+paySelectBtn.addEventListener("click", (e) => {
+    if (paySelect.classList[1]) {
+        paySelect.classList.remove("show");
+    } else {
+        paySelect.classList.add("show");
     }
 });
+
+// 결제상태선택 클릭 이벤트
+// const payStBtn = document.getElementById("pay-status-btn");
+// const allAndCancel = document.getElementById("status-btn");
+
+// payStBtn.addEventListener("click", (e) => {
+//     if(e.target.allAndCancel){
+//         allAndCancel.style =
+//     }
+// });
