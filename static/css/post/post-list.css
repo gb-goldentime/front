@@ -182,7 +182,7 @@ main {
 div.main-container {
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: 5px;
 }
 button {
     background: inherit;
@@ -202,8 +202,9 @@ ul.category-list-wrap {
 }
 
 header.coach-mark-wrapper {
+    gap :19px;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 
@@ -413,11 +414,11 @@ div.hospital-info {
 }
 div.side-bar-container {
     position: sticky;
-    top: 84px;
+    top: 188px;
     width: 100%;
     min-width: 320px;
     max-width: 320px;
-    max-height: 500px;
+    max-height: 700px;
     overflow-y: auto;
     scrollbar-width: none;
 }
@@ -637,6 +638,7 @@ button.category-fix-btn span {
 
 button.category-btn.checked {
     color: rgb(86, 130, 239);
+    border: 1px solid rgb(86, 130, 239);
 }
 /* /카테고리 모달 부분 */
 
@@ -805,16 +807,24 @@ ul.answer-imag-container {
 ul.answer-imag-container li {
     display: flex;
 }
-
+img.answer-client-img{
+    width: 48px;
+    height: 48px;
+}
 ul.answer-imag-container li img {
     color: transparent;
     border-radius: 8px;
     object-fit: cover;
+    width: 161px;
+    height: 161px;
 }
 aside.side-bar-wrap {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 100%;
+    margin-top: 19px;
+    height: calc(100% - 62px);
 }
 div.side-bar-poster {
     display: flex;
@@ -824,4 +834,8 @@ div.side-bar-poster {
 }
 div.side-bar-poster img{
     border-radius: 12px;
+}
+
+ul#intersectionObserver li a{
+    cursor: pointer;
 }

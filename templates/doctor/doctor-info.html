@@ -24,6 +24,7 @@
                                                 <span class="info-profil-name">
                                                     의사 이름
                                                 </span>
+                                                
                                             </div>
                                             <div class="info-profil-span-wrap">
                                                 <span class="info-profil-introduction department">
@@ -64,6 +65,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="docterinfo-favorite-wrapper">
+                                        <img alt="관심토픽 이미지" loading="lazy" width="25" height="25" decoding="async" data-nimg="1" src="../../static/images/heart-empty.png" style="color: transparent;">
+                                        <span class="doctorinfo-favoriteCount">2886</span><span class="unit">명</span>
+                                        </div>
                                     <div class="btn-container">
                                         <div
                                             class="btn-wrap">
@@ -81,10 +86,10 @@
                                             </button>
                                             <!-- 보여주기용 버튼 둘 중 하나 선택 -->
                                         <!-- <button class="btnshape interest-btn active">
-                                                                                    <span>관심 중
-                                                                                    </span>
-                                                                                    <img src="../../static/images/check.png">
-                                                                                </button> -->
+                                                                                                                                                                    <span>관심 중
+                                                                                                                                                                    </span>
+                                                                                                                                                                    <img src="../../static/images/check.png">
+                                                                                                                                                                </button> -->
                                             <!-- 보여주기용 버튼 둘 중 하나 선택 -->
                                             <!-- /관심 추가 클릭 이벤트 -->
                                         </div>
@@ -96,7 +101,8 @@
                     <div class="profil-content-container">
                         <div class="profil-content-title-container">
                             <div class="profil-content-title-wrap">
-                                <div class="profil-content-section">
+                                <div
+                                    class="profil-content-section">
                                     <!-- 버튼 클릭 이벤트들 -->
                                     <div class="profil-content-select" data-cnt="0">
                                         <div class="profil-content">
@@ -115,12 +121,12 @@
                                     </div>
                                     <!-- /버튼 클릭 이벤트들 -->
                                     <!-- <div class="profil-content-select" data-cnt="2">
-                                                                        <div class="profil-content">
-                                                                            <span class="profil-content-text">
-                                                                                보류
-                                                                            </span>
-                                                                        </div>
-                                                                    </div> -->
+                                                                                                                                                <div class="profil-content">
+                                                                                                                                                    <span class="profil-content-text">
+                                                                                                                                                        보류
+                                                                                                                                                    </span>
+                                                                                                                                                </div>
+                                                                                                                                            </div> -->
                                 </div>
                             </div>
                         </div>
@@ -137,7 +143,7 @@
                                                 내과
                                             </span>
                                         </div>
-                                        <div class="answer-create-day">
+                                        <div class="answer-create-day write-date">
                                             10시간 전
                                         </div>
                                     </div>
@@ -159,7 +165,7 @@
                                                 내과 외 2개
                                             </span>
                                         </div>
-                                        <div class="answer-create-day">
+                                        <div class="answer-create-day write-date">
                                             10시간 전
                                         </div>
                                     </div>
@@ -176,28 +182,31 @@
                         <li>
                             <div class="answer-list-container">
                                 <div class="answer-list-header-wrap">
-                                    <div class="answer-list-content-tag">
+                                    <div class="answer-list-content-tag review-list-content-tag">
                                         <div class="review-img-star">
-                                            <img class="info-profil-img" src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" style="color:transparent" width="35" height="35">
-                                        <div class="review-star-wrap">
-                                            <div class="review-star-content">
-                                                <div class="review-star-svg">
-                                                    <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M15.4051 8.03139L12.9909 2.66029C12.5951 1.7799 11.4043 1.7799 11.0085 2.66029L8.59514 8.03139L2.96143 8.77208C2.03363 8.8939 1.67468 10.0851 2.34632 10.7443L6.48848 14.805L5.42104 20.6365C5.24542 21.5939 6.21605 22.3212 7.02477 21.8555L11.9997 18.9922L16.9746 21.8555C17.7824 22.3212 18.7539 21.5939 18.5783 20.6365L17.5108 14.805L21.6539 10.7443C22.3255 10.0851 21.9657 8.89389 21.0388 8.77208L15.4051 8.03139ZM11.9997 4.11402L9.62039 9.40951L3.8953 10.1622L8.1074 14.2915L7.04139 20.1152L11.9997 17.2615L16.9579 20.1152L15.8919 14.2914L20.1048 10.1622L14.38 9.40953L11.9997 4.11402Z" fill="#333D4B" fill-rule="evenodd"></path></svg>
+                                            <img class="info-profil-img review"  src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" style="color:transparent" width="35" height="35">
+                                            <div class="review-star-wrap">
+                                                <div class="review-star-content">
+                                                    <div class="review-star-svg">
+                                                        <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path clip-rule="evenodd" d="M15.4051 8.03139L12.9909 2.66029C12.5951 1.7799 11.4043 1.7799 11.0085 2.66029L8.59514 8.03139L2.96143 8.77208C2.03363 8.8939 1.67468 10.0851 2.34632 10.7443L6.48848 14.805L5.42104 20.6365C5.24542 21.5939 6.21605 22.3212 7.02477 21.8555L11.9997 18.9922L16.9746 21.8555C17.7824 22.3212 18.7539 21.5939 18.5783 20.6365L17.5108 14.805L21.6539 10.7443C22.3255 10.0851 21.9657 8.89389 21.0388 8.77208L15.4051 8.03139ZM11.9997 4.11402L9.62039 9.40951L3.8953 10.1622L8.1074 14.2915L7.04139 20.1152L11.9997 17.2615L16.9579 20.1152L15.8919 14.2914L20.1048 10.1622L14.38 9.40953L11.9997 4.11402Z" fill="#333D4B" fill-rule="evenodd"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="review-point">5.0</span>
                                                 </div>
-                                                <span class="review-point">5.0</span>
                                             </div>
                                         </div>
-                                        </div>
                                         <div class="review-content-text-wrap">
-                                        <span class="review-content-text anonymous">비공개</span>
-                                        <span class="review-content-text content">
-                                            상담이 친절해요asdadadhadahaldkahkdhakldkhash
-                                        </span>
+                                            <div class="review-header">
+                                                <span class="review-content-text anonymous">비공개</span>
+                                                <div class="answer-create-day write-date">
+                                                    10시간 전
+                                                </div>
+                                            </div>
+                                            <span class="review-content-text content">상담이 친절해요asdadadhadahaldkahkdhakldkhash</span>
+                                        </div>
                                     </div>
-                                    </div>
-                                    <div class="answer-create-day">
-                                        10시간 전
-                                    </div>
+
                                 </div>
                             </div>
                         </li>
@@ -230,44 +239,54 @@
                                                 <li class="star-list-content" data-point="0">
                                                     <button class="start-btn-click" type="button">
                                                         <div class="star-btn-wrap">
-                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                            <svg fill="none" height="40" viewbox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                <path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path>
+                                                            </svg>
                                                         </div>
                                                     </button>
                                                 </li>
                                                 <li class="star-list-content" data-point="1">
                                                     <button class="start-btn-click" type="button">
                                                         <div class="star-btn-wrap">
-                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                            <svg fill="none" height="40" viewbox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                <path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path>
+                                                            </svg>
                                                         </div>
                                                     </button>
                                                 </li>
                                                 <li class="star-list-content" data-point="2">
                                                     <button class="start-btn-click" type="button">
                                                         <div class="star-btn-wrap">
-                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                            <svg fill="none" height="40" viewbox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                <path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path>
+                                                            </svg>
                                                         </div>
                                                     </button>
                                                 </li>
                                                 <li class="star-list-content" data-point="3">
                                                     <button class="start-btn-click" type="button">
                                                         <div class="star-btn-wrap">
-                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                            <svg fill="none" height="40" viewbox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                <path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path>
+                                                            </svg>
                                                         </div>
                                                     </button>
                                                 </li>
                                                 <li class="star-list-content" data-point="4">
                                                     <button class="start-btn-click" type="button">
                                                         <div class="star-btn-wrap">
-                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                            <svg fill="none" height="40" viewbox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                <path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path>
+                                                            </svg>
                                                         </div>
                                                     </button>
                                                 </li>
                                             </ul>
                                         </div>
                                     </form>
-                                    
+
                                 </div>
-                                
+
                             </div>
                         </div>
                         <!-- /리뷰 생기는 부분 -->
@@ -305,35 +324,45 @@
                                                 <li class="star-list-content" data-point="0">
                                                     <button class="start-btn-click" type="button">
                                                         <div class="star-btn-wrap">
-                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                            <svg fill="none" height="40" viewbox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                <path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path>
+                                                            </svg>
                                                         </div>
                                                     </button>
                                                 </li>
                                                 <li class="star-list-content" data-point="1">
                                                     <button class="start-btn-click" type="button">
                                                         <div class="star-btn-wrap">
-                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                            <svg fill="none" height="40" viewbox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                <path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path>
+                                                            </svg>
                                                         </div>
                                                     </button>
                                                 </li>
                                                 <li class="star-list-content" data-point="2">
                                                     <button class="start-btn-click" type="button">
                                                         <div class="star-btn-wrap">
-                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                            <svg fill="none" height="40" viewbox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                <path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path>
+                                                            </svg>
                                                         </div>
                                                     </button>
                                                 </li>
                                                 <li class="star-list-content" data-point="3">
                                                     <button class="start-btn-click" type="button">
                                                         <div class="star-btn-wrap">
-                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                            <svg fill="none" height="40" viewbox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                <path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path>
+                                                            </svg>
                                                         </div>
                                                     </button>
                                                 </li>
                                                 <li class="star-list-content" data-point="4">
                                                     <button class="start-btn-click" type="button">
                                                         <div class="star-btn-wrap">
-                                                            <svg fill="none" height="40" viewBox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path></svg>
+                                                            <svg fill="none" height="40" viewbox="0 0 40 40" width="20" xmlns="http://www.w3.org/2000/svg">
+                                                                <path clip-rule="evenodd" d="M21.6515 4.43374L25.6752 13.3856L35.0647 14.6201C36.6096 14.8231 37.2093 16.8084 36.0899 17.907L29.1848 24.675L30.9639 34.3941C31.2566 35.9898 29.6374 37.2019 28.291 36.4257L19.9995 31.6536L11.708 36.4257C10.3601 37.2019 8.74241 35.9898 9.03512 34.3941L10.8142 24.675L3.91058 17.907C2.79117 16.8084 3.38942 14.8231 4.93575 14.6201L14.3253 13.3856L18.3475 4.43374C19.0071 2.96642 20.9918 2.96642 21.6515 4.43374Z" fill="#E0E0E0" fill-rule="evenodd"></path>
+                                                            </svg>
                                                         </div>
                                                     </button>
                                                 </li>
@@ -349,14 +378,13 @@
                     <!-- /후기 부분 -->
 
                     <!-- 남긴 답변 부분 -->
-                    <div class="no-search-result-wrap">
-                        <img src="https://media.a-ha.io/aha-qna/images/v3/product/feed/message.webp" width="48" height="48" style="color:transparent">
+                        <div class="no-search-result-wrap"> <img src="https://media.a-ha.io/aha-qna/images/v3/product/feed/message.webp" width="48" height="48" style="color:transparent">
                         <span class="no-search-result-text">
                             남긴 답변이 없습니다!
                         </span>
                     </div>
                     <!-- /남긴 답변 부분 -->
-                    
+
                     <div style="height:300px" id="intersectionObserverLayout"></div>
                 </div>
                 <div class="side-bar-container">

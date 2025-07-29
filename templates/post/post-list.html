@@ -12,25 +12,23 @@
     <!-- main -->
     <main>
         <div class="main-container">
-            <header class="coach-mark-wrapper">
-                <div class="total-search-container">
-                    <!-- 잠시 대기 -->
-                    <form id="searchForm" name="searchForm">
-                        <div class="total-search-input-wrap">
-                            <!-- 검색 이벤트 -->
-                            <input type="text" class="total-search-input" placeholder="검색어를 입력해주세요." form="searchForm" name="searchContent">
-                            <!-- /검색 이벤트 -->
-                            <img alt="search" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color:transparent" src="https://media.a-ha.io/aha-qna/images/common/icons/mark/magnifying-000%20default.svg">
-                        </div>
-                    </form>
-                    <!-- /잠시 대기 -->
-                </div>
                 
-            </header>
             <!-- 무한 스크롤 -->
             <div class="content-wrapper">
                 <div class="content-list-container">
                     <div class="category-list-wrap">
+                        <div class="total-search-container">
+                            <!-- 잠시 대기 -->
+                            <form id="searchForm" name="searchForm">
+                                <div class="total-search-input-wrap">
+                                    <!-- 검색 이벤트 -->
+                                    <input type="text" class="total-search-input" placeholder="검색어를 입력해주세요." form="searchForm" name="searchContent">
+                                    <!-- /검색 이벤트 -->
+                                    <img alt="search" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color:transparent" src="https://media.a-ha.io/aha-qna/images/common/icons/mark/magnifying-000%20default.svg">
+                                </div>
+                            </form>
+                            <!-- /잠시 대기 -->
+                        </div>
                         <div class="category-list-container">
                             <!-- 버튼 이벤트 모달 열기 -->
                             <button class="category-container-modal-btn">
@@ -41,6 +39,7 @@
                                     </svg>
                                 </div>
                             </button>
+                            
                             <button class="card-list-order-btn">
                                 <span class="card-list-btn-text change-order">최신 순</span>
                                 <div class="card-list-icon">
@@ -58,7 +57,7 @@
                         class="content-list" id="intersectionObserver">
                         <!--  답변 반복 부분 -->
                         <li>
-                            <a class="test">
+                            <a>
                                 <div class="answer-list-container">
                                         <img src="https://media.a-ha.io/aha-qna/images/v3/product/default-profile-image.webp" width="48" height="48" class="answer-client-img">
                                         <div class="answer-list-content-tag">
@@ -73,7 +72,7 @@
                                                         작성자 이름
                                                     </span>
                                                     <svg fill="none" height="3" viewBox="0 0 2 3" width="2" xmlns="http://www.w3.org/2000/svg"><circle cx="1" cy="1.5" fill="#282b2f" r="1"></circle></svg>
-                                                    <span class="write-create-time">1일 전</span>
+                                                    <span class="write-create-time write-date">1일 전</span>
                                                 </div>
                                             </div>
                                             <div class="answer-content-container">
@@ -121,7 +120,7 @@
                                                         작성자 이름
                                                     </span>
                                                     <svg fill="none" height="3" viewBox="0 0 2 3" width="2" xmlns="http://www.w3.org/2000/svg"><circle cx="1" cy="1.5" fill="#282b2f" r="1"></circle></svg>
-                                                    <span class="write-create-time">1일 전</span>
+                                                    <span class="write-create-time write-date">1일 전</span>
                                                 </div>
                                             </div>
                                             <div class="answer-content-container">

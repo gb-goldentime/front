@@ -308,17 +308,30 @@ mailSendBtns[0].addEventListener("click", (e) => {
 // 관심 추가 삭제
 interestBtn.addEventListener("click", (e) => {
     // 관심 형태에 따라 클릭 버튼 다르게
+    const button = e.target.closest(".interest-btn");
+    const heartImg = document.querySelector(".docterinfo-favorite-wrapper img");
+    const people = document.querySelector(".docterinfo-favorite-wrapper span");
     let message = ``;
     if (!buttonsCheck) {
         return;
     }
     buttonsCheck = false;
 
-    if (e.target.classList[2] === "active") {
+    if (button.classList[2] === "active") {
         message = `나의 관심 의사에서 취소했습니다.`;
+        interestBtn.classList.remove("active");
+        interestBtn.lastElementChild.src = "../../static/images/plus.png";
+        interestBtn.firstElementChild.textContent = "관심 추가";
+        heartImg.src = "../../static/images/heart-empty.png";
+        people.textContent--;
         showWarnModal(message);
     } else {
         message = `해당 의사를 나의 관심 의사로 <br>등록 했습니다.`;
+        interestBtn.classList.add("active");
+        interestBtn.lastElementChild.src = "../../static/images/check.png";
+        heartImg.src = "../../static/images/heart.png";
+        people.textContent++;
+        interestBtn.firstElementChild.textContent = "관심 중";
         showWarnModal(message);
     }
 
@@ -521,3 +534,50 @@ reviewStarBtns.forEach((reviewStarBtn) => {
 // // 처음에 5개만 로딩
 // // loadItems();
 /****************** */
+
+/***************/
+// 시간 부분
+// function timeForToday(datetime) {
+//     const today = new Date();
+//     const date = new Date(datetime);
+
+//     let gap = Math.floor((today.getTime() - date.getTime()) / 1000 / 60);
+
+//     if (gap < 1) {
+//         return "방금 전";
+//     }
+
+//     if (gap < 60) {
+//         return `${gap}분 전`;
+//     }
+
+//     gap = Math.floor(gap / 60);
+
+//     if (gap < 24) {
+//         return `${gap}시간 전`;
+//     }
+
+//     gap = Math.floor(gap / 24);
+
+//     if (gap < 31) {
+//         return `${gap}일 전`;
+//     }
+
+//     gap = Math.floor(gap / 31);
+
+//     if (gap < 12) {
+//         return `${gap}개월 전`;
+//     }
+
+//     gap = Math.floor(gap / 12);
+
+//     return `${gap}년 전`;
+// }
+
+// console.log(timeForToday("2025-07-18T11:45:00"));
+
+// 예시
+// posts.forEach((post) => {
+// timeForToday(post.createdDate);
+// })
+/***************/

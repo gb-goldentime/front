@@ -1,76 +1,112 @@
-// 나중에 서버에 보낼 문자열 배열 부분
-// 클릭 시 여기에 추가, 삭제
-// 삭제는 아마 indexOf로 찾아서 하지 않을까 싶음
-// 카테고리 버튼들
-const categoryListBtns = document.querySelectorAll(
-    "ul.category-list-wrap li button.category-btn"
-);
+let modalCheck;
+let buttonsCheck = true;
+function timeForToday(datetime) {
+    const today = new Date();
+    const date = new Date(datetime);
 
-const categoryList = [];
-categoryListBtns.forEach((categoryListBtn) => {
-    categoryListBtn.addEventListener("click", (e) => {
-        let text = categoryListBtn.firstElementChild.textContent;
-        if (categoryListBtn.classList[1]) {
-            categoryListBtn.classList.remove("checked");
-            // 해당 부분에서 배열 원소 값 삭제
-            categoryList.splice(categoryList.indexOf(text));
-        } else {
-            categoryListBtn.classList.add("checked");
-            // 해당 부분에서 배열 원소 추가 해주기
-            categoryList.push(text);
-        }
-    });
-});
-
-// 선택한 카테고리 모두 취소
-// 선택 취소 버튼
-const categorySelectCancleAll = document.querySelector(
-    ".category-select-btn-del"
-);
-categorySelectCancleAll.addEventListener("click", (e) => {
-    categoryListBtns.forEach((categoryListBtn) => {
-        let text = null;
-        if (categoryListBtn.classList[1]) {
-            text = categoryListBtn.firstElementChild.textContent;
-            categoryListBtn.classList.remove("checked");
-            // 해당 부분에서 배열 원소 값 삭제
-            categoryList.splice(categoryList.indexOf(text));
-        }
-    });
-});
-
-// 선택한 카테고리들로 보여주도록 하고 모달 창 닫기
-// 아무것도 선택 안하면 전체보여주기
-// 선택 완료 버튼
-const categoryFinalSelect = document.querySelector(".category-select-fix-btn");
-const categoryModal = document.querySelector(".category-modal");
-const categoryModalOpenBtnText = document.querySelector(
-    "button.category-container-modal-btn span.check-list"
-);
-categoryFinalSelect.addEventListener("click", (e) => {
-    // console.log(categoryList == false);
-    if (categoryList.length === 0) {
-        console.log(11);
-        categoryModalOpenBtnText.textContent = "전체";
-    } else {
-        console.log(categoryList);
-        categoryModalOpenBtnText.textContent =
-            categoryList.length > 1
-                ? `${categoryList[0]} 외 ${categoryList.length - 1}개`
-                : `${categoryList[0]}`;
-        console.log(categoryModalOpenBtnText.textContent);
+    let gap = Math.floor((date.getTime() - today.getTime()) / 1000 / 60);
+    // console.log(today.getTime() - date.getTime());
+    // console.log(date.getTime() - today.getTime());
+    if (gap < 1) {
+        return "곧 마감";
     }
 
-    categoryModal.style.display = "none";
+    if (gap < 60) {
+        return `${gap}분`;
+    }
+
+    gap = Math.floor(gap / 60);
+
+    if (gap < 24) {
+        return `${gap}시간`;
+    }
+
+    gap = Math.floor(gap / 24);
+
+    if (gap < 31) {
+        return `${gap}일`;
+    }
+
+    gap = Math.floor(gap / 31);
+
+    if (gap < 12) {
+        return `${gap}개월`;
+    }
+
+    gap = Math.floor(gap / 12);
+
+    return `${gap}년`;
+}
+
+// console.log(timeForToday("2025-07-18T11:45:00"));
+console.log(document.querySelector(".remain-time-span"));
+document.querySelector(".remain-time-span").textContent =
+    "남은 시간 : " + timeForToday("2025-07-29T20:12:00");
+
+// 예시
+// posts.forEach((post) => {
+// timeForToday(post.createdDate);
+// })
+
+const showWarnModal = (modalMessage) => {
+    modalCheck = false;
+    document.getElementById("content-wrap").innerHTML = modalMessage;
+    document.querySelector("div.warn-modal").style.animation = "popUp 0.5s";
+    document.querySelector("div.modal").style.display = "flex";
+    setTimeout(() => {
+        modalCheck = true;
+    }, 500);
+};
+
+document.querySelector("div.modal").addEventListener("click", (e) => {
+    if (modalCheck) {
+        document.querySelector("div.warn-modal").style.animation =
+            "popDown 0.5s";
+        setTimeout(() => {
+            document.querySelector("div.modal").style.display = "none";
+        }, 450);
+    }
 });
 
-// 카테고리 모달 넣기
-const categoryModalOpenBtn = document.querySelector(
-    "button.category-container-modal-btn"
-);
-categoryModalOpenBtn.addEventListener("click", (e) => {
-    console.log(111);
-    categoryModal.style.display = "flex";
+const listLayout = document.getElementById("intersectionObserver");
+
+listLayout.addEventListener("click", (e) => {
+    const housecallBtn = e.target.closest(".housecall-btn");
+    const addressKakao = e.target.closest(".hospital-info");
+    // 모달 전에 쪽지 보내기 누르면 모달이 보이게 하기
+    if (housecallBtn) {
+        // 관심 형태에 따라 클릭 버튼 다르게
+        let message = ``;
+        if (!buttonsCheck) {
+            return;
+        }
+        buttonsCheck = false;
+
+        if (housecallBtn.classList[2] === "active") {
+            housecallBtn.classList.remove("active");
+            housecallBtn.firstElementChild.src = "../../static/images/wait.png";
+            housecallBtn.lastElementChild.textContent = "진료 대기";
+            console.log(e.target);
+            message = `진료를 취소하였습니다.`;
+            showWarnModal(message);
+        } else {
+            console.log(e.target);
+            housecallBtn.classList.add("active");
+            housecallBtn.firstElementChild.src =
+                "../../static/images/check-mark.png";
+            housecallBtn.lastElementChild.textContent = "진료 승인";
+            message = `진료를 승인하였습니다.`;
+            showWarnModal(message);
+        }
+
+        setTimeout(() => {
+            buttonsCheck = true;
+        }, 2000);
+    } else if (addressKakao) {
+        e.stopPropagation();
+        e.preventDefault();
+        console.log("카카오 나중에 해야하는 부분");
+    }
 });
 
 let clickable = true;
@@ -80,19 +116,18 @@ cardListOrderBtn.addEventListener("click", (e) => {
     clickable = false;
     const spanTag = document.querySelector(".card-list-btn-text");
     if (spanTag.classList[1]) {
-        console.log(1);
+        // console.log(1);
         spanTag.classList.remove("change-order");
-        spanTag.textContent = "답변 순";
+        spanTag.textContent = "마감 순";
     } else {
-        console.log(2);
+        // console.log(2);
         spanTag.classList.add("change-order");
-        spanTag.textContent = "최신 순";
+        spanTag.textContent = "위험 순";
     }
     setTimeout(() => {
         clickable = true;
     }, 500);
 });
-
 /**************** */
 
 // let itemIndex = 0;
