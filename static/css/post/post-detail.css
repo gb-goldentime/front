@@ -389,8 +389,8 @@ button.reply-reg-btn {
     border-radius: 14px;
     border-radius: 14px;
     max-width: 140px;
-    background: #E8F0F9;
-    color: #2553E5;
+    background: #1731e9;
+    color: #fff;
     position: absolute;
     right: 32px;
 }
@@ -790,3 +790,4 @@ div.department-item {
     border-radius: 20px;
     background-color: rgb(249, 250, 251);
 }
+
