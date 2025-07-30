@@ -56,6 +56,7 @@ selectAllBtn.addEventListener("click", (e) => {
 });
 
 // 전체 취소 클릭 시 이벤트
+
 deselectAllBtn.addEventListener("click", (e) => {
     checkBoxes.forEach((box) => {
         const checkIcon = box.querySelector("i.mdi-check");
@@ -65,6 +66,7 @@ deselectAllBtn.addEventListener("click", (e) => {
     });
 });
 
+// 결제 상세 선택 (전체 선택, 선택 취소 버튼, 체크박스 클릭 이벤트 )
 checkBoxes.forEach((box) => {
     box.addEventListener("click", (e) => {
         const checkIcon = box.querySelector("i.mdi-check");
@@ -76,4 +78,38 @@ checkBoxes.forEach((box) => {
                     : "none";
         }
     });
+});
+
+// 결제 상세 선택 상세 +버튼 리스트
+const payList = document.getElementById("collapse_payloading");
+const payFail = document.getElementById("collapse_payFail");
+const payComplete = document.getElementById("collapse_canel");
+const payBtnIcons = document.querySelectorAll(".mdi.mdi-plus");
+console.log(payComplete);
+
+// 결제 상세 선택 - 결제 진행중
+payBtnIcons[0].addEventListener("click", (e) => {
+    if (payList.classList[1]) {
+        payList.classList.remove("show");
+    } else {
+        payList.classList.add("show");
+    }
+});
+
+// 결제 상세 선택 - 결제 실패
+payBtnIcons[1].addEventListener("click", (e) => {
+    if (payFail.classList[1]) {
+        payFail.classList.remove("show");
+    } else {
+        payFail.classList.add("show");
+    }
+});
+
+// 결제 상세 선택 - 결제 취소
+payBtnIcons[2].addEventListener("click", (e) => {
+    if (payComplete.classList[1]) {
+        payComplete.classList.remove("show");
+    } else {
+        payComplete.classList.add("show");
+    }
 });
