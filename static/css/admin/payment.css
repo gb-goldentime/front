@@ -519,6 +519,9 @@ a:-webkit-any-link {
     flex: 0 0 auto;
     max-width: 100%;
     width: auto;
+}
+
+.col-auto {
     position: relative;
 }
 
@@ -853,9 +856,6 @@ button {
     padding-right: 2px;
 }
 
-.receipt-index .page-content .table-layout .filter-section .row .col-auto .filter-wrapper{
-    margin-bottom: 12px;
-}
 
 .receipt-index .page-content .table-layout .filter-section .filter-wrapper button {
     font-size: 13px;
@@ -1157,9 +1157,12 @@ element.style {
 .receipt-index .page-content .table-layout .filter-section .filter-wrapper.filter-search .input-group{
     display: inline-block;
     position: relative;
+    border: 1px solid #ededed;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
-.input-group{
+.input-group {
     align-items: stretch;
     width: 100%;
 }
@@ -1172,6 +1175,10 @@ element.style {
     padding-right: 44px;
     text-align: left;
     width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 38px;
 }
 
 .input-group>.form-control{
@@ -1243,6 +1250,7 @@ input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" 
     line-height: 30px;
     padding-bottom: 0;
     padding-top: 0;
+    background-color: #fff;
 }
 
 .input-group-append .btn{
