@@ -13,6 +13,7 @@ select.addEventListener("click", (e) => {
         }
     });
 });
+
 console.log(options);
 options.forEach((option) => {
     console.log(123);
@@ -34,13 +35,14 @@ inputTags.forEach((inputTag) => {
     });
 
     inputTag.addEventListener("blur", (e) => {
-        inputTag.style.border = "1px solid #f2f4f6";
+        inputTag.removeAttribute("style");
     });
 });
 // 인풋에다가 포커스 블러 처리 해주기 //
 
+// 아픔 정도 부분 1~5만 입력 나중에 정규식 해야함
 const painLevel = document.querySelector("input[type=text].pain-level");
-painLevel.addEventListener("keyup", (e) => {
+painLevel.addEventListener("input", (e) => {
     if (painLevel.value > 5) {
         painLevel.value = 5;
         return;
@@ -50,4 +52,39 @@ painLevel.addEventListener("keyup", (e) => {
         painLevel.value = 1;
         return;
     }
+});
+
+//
+const tempNames = [
+    "temp1",
+    "temp4",
+    "temp5",
+    "temp6",
+    "temp7",
+    "temp8",
+    "temp9",
+    "temp10",
+    "temp11",
+];
+//  제출하기 전에 정규식 검사 하기
+//  나중에 휴대폰 번호 이어붙이기
+const hiddenInput = document.getElementById("phoneHidden");
+const reqForm = document.getElementById("reqForm");
+reqForm.addEventListener("submit", (e) => {
+    let checkNull = true;
+    const form = e.target;
+    e.preventDefault();
+    console.log(form.temp1.value);
+    tempNames.forEach((name) => {
+        const field = form[name];
+        const value = field?.value ?? field?.textContent;
+
+        if (!value) {
+            field.classList.add("warn");
+            checkNull = false;
+        } else {
+            field.classList.remove("warn");
+        }
+        checkNull && e.target.submit();
+    });
 });

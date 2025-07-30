@@ -862,6 +862,7 @@ button.category-fix-btn span {
 
 button.category-btn.checked {
     color: rgb(86, 130, 239);
+    border: 1px solid rgb(86, 130, 239);
 }
 /* /카테고리 모달 부분 */
 
