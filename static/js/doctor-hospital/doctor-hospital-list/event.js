@@ -130,12 +130,12 @@ mailModalInput.forEach((mailInput) => {
 });
 
 const textarea = document.querySelector("#mailContent");
-textarea.addEventListener("keyup", (e) => {
+textarea.addEventListener("input", (e) => {
     textWarnCheck(textarea, true);
 });
 
 // 임시로 특정 단어 입력 임시입니다.
-mailModalInput[0].addEventListener("keyup", (e) => {
+mailModalInput[0].addEventListener("input", (e) => {
     if (e.target.value === "A") {
         e.target.style.borderColor = "red";
     } else {
