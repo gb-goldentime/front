@@ -1,4 +1,3 @@
-<script>
 document.addEventListener("DOMContentLoaded", function () {
     // 필드 가져오기
     const ssn1 = document.getElementById("ssn1");
@@ -25,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // 나머지 입력 필드는 숫자만 제한 없이 체크
+    // 입력 값 모두 확인
     function checkAllInputs() {
         const allFilled =
             nameInput.value.trim() !== "" &&
@@ -41,32 +40,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (allFilled) {
             signupBtn.disabled = false;
-            signupBtn.style.backgroundColor = "green"; // 초록색으로 변경
-            signupBtn.style.color = "white"; // 글씨는 흰색
+            signupBtn.style.backgroundColor = "blue"; // 파란색으로 변경
+            signupBtn.style.color = "white";
             signupBtn.style.cursor = "pointer";
         } else {
             signupBtn.disabled = true;
-            signupBtn.style.backgroundColor = ""; // 기본으로
+            signupBtn.style.backgroundColor = ""; // 초기화
             signupBtn.style.color = "";
             signupBtn.style.cursor = "default";
         }
     }
 
-    // 주민등록번호 숫자+자동탭
+    // 주민등록번호 자동탭
     autoTab(ssn1, ssn2);
     autoTab(ssn2, null);
 
-    // 핸드폰번호 숫자+자동탭
+    // 핸드폰번호 자동탭
     autoTab(phone1, phone2);
     autoTab(phone2, phone3);
     autoTab(phone3, null);
 
-    // 나머지 입력 필드에 입력될 때마다 체크
-    [nameInput, emailInput, passwordInput, passwordConfirmInput, addressInput].forEach(input => {
+    // 기타 필드 입력 감지
+    [
+        nameInput,
+        emailInput,
+        passwordInput,
+        passwordConfirmInput,
+        addressInput,
+    ].forEach((input) => {
         input.addEventListener("input", checkAllInputs);
     });
 
-    // 초기 버튼 상태 확인
+    // 초기 상태 체크
     checkAllInputs();
 });
-</script>
