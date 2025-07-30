@@ -62,7 +62,7 @@ script {
     display: none;
 }
 
-body #bootpay {
+body,#bootpay {
     height: 100%;
 }
 
