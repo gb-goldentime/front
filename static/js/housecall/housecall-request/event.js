@@ -54,7 +54,8 @@ painLevel.addEventListener("input", (e) => {
     }
 });
 
-//
+//  제출하기 전에 정규식 검사 하기
+//  나중에 휴대폰 번호 이어붙이기
 const tempNames = [
     "temp1",
     "temp4",
@@ -66,8 +67,6 @@ const tempNames = [
     "temp10",
     "temp11",
 ];
-//  제출하기 전에 정규식 검사 하기
-//  나중에 휴대폰 번호 이어붙이기
 const hiddenInput = document.getElementById("phoneHidden");
 const reqForm = document.getElementById("reqForm");
 reqForm.addEventListener("submit", (e) => {
@@ -85,6 +84,6 @@ reqForm.addEventListener("submit", (e) => {
         } else {
             field.classList.remove("warn");
         }
-        checkNull && e.target.submit();
     });
+    checkNull && e.target.submit();
 });
