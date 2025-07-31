@@ -996,6 +996,12 @@ button.btn.btn-outline-default{
     margin-right: .25rem !important;
 }
 
+.mdi .mdi-checkbox-multiple-marked .mr-1{
+    border: 1px solid #3b82f6;
+    background-color: #e0efff;
+    border-radius: 6px;
+}
+
 .mdi-checkbox-multiple-marked:before {
     content: "\F0138";
 }
@@ -1924,3 +1930,9 @@ element.style {
 .ml-1 {
     margin-left: .25rem !important;
 }
+
+button#btn-select-all.active {
+    border-color: #507cf3;
+    border: 1px solid #507cf3
+  }
+  

@@ -50,6 +50,7 @@ const checkBoxes = document.querySelectorAll(".boot-check-box");
 selectAllBtn.addEventListener("click", (e) => {
     checkBoxes.forEach((box) => {
         const checkIcon = box.querySelector("i.mdi-check");
+        selectAllBtn.classList.add("active");
         if (checkIcon) {
             checkIcon.style.display = "inline-block";
         }
@@ -67,7 +68,7 @@ deselectAllBtn.addEventListener("click", (e) => {
     });
 });
 
-// 결제 상세 선택 (전체 선택, 선택 취소 버튼, 체크박스 클릭 이벤트 )
+// 결제 상세 선택 (전체 선택, 선택 취소 버튼 클릭 이벤트 )
 checkBoxes.forEach((box) => {
     box.addEventListener("click", (e) => {
         const checkIcon = box.querySelector("i.mdi-check");
@@ -81,39 +82,25 @@ checkBoxes.forEach((box) => {
     });
 });
 
-const statusIcons = document.querySelectorAll(".btn-status");
-
-statusIcons.forEach((icon) => {
-    icon.style.cursor = "pointer";
-
-    icon.addEventListener("click", () => {
-        const targetGroup = icon.getAttribute("data-target");
-        if (!targetGroup) return;
-
-        // 1) 버튼 활성화 초기화 및 활성화 표시
-        statusIcons.forEach((ic) => ic.classList.remove("active"));
-        icon.classList.add("active");
-
-        // 2) 모든 체크박스 아이콘 숨기기 (초기화)
-        document
-            .querySelectorAll(".boot-check-box i.mdi-check")
-            .forEach((boxIcon) => {
-                boxIcon.style.display = "none";
-            });
-
-        // 3) 클릭한 버튼에 대응하는 그룹 체크박스 아이콘 모두 보이기 (체크 표시)
-        document
-            .querySelectorAll(`.boot-check-box.${targetGroup} i.mdi-check`)
-            .forEach((boxIcon) => {
-                boxIcon.style.display = "inline-block";
-            });
-    });
-});
-
-// 결제 상세 선택 상세 +버튼 리스트
+//  결제 상태 선택 상세 전체 선택
+const checkAll = document.querySelectorAll(".all-check-btn");
 const payList = document.getElementById("collapse_payloading");
 const payFail = document.getElementById("collapse_payFail");
 const payComplete = document.getElementById("collapse_canel");
+const pays = ["collapse_payloading", "collapse_payFail", "collapse_canel"];
+for (let index = 0; index < 3; index++) {
+    checkAll[index].addEventListener("click", (e) => {
+        const iTags = document.querySelectorAll(
+            `#${pays[index]} ul li div div label i`
+        );
+        iTags.forEach((iTag) => {
+            iTag.style.display =
+                iTag.style.display === "none" ? "inline-block" : "none";
+        });
+    });
+}
+
+// 결제 상세 선택 상세 +버튼 리스트
 const payBtnIcons = document.querySelectorAll(".mdi.mdi-plus");
 console.log(payComplete);
 
@@ -144,11 +131,11 @@ payBtnIcons[2].addEventListener("click", (e) => {
     }
 });
 
-// 검색창 돋보기 버튼 클릭이벤트
-const input = document.querySelector("type=[text]");
-const button = document.querySelector(".form-control.flex-grow-1");
+// 검색창 돋보기 버튼 클릭
+// const input = document.querySelector("type=[text]");
+// const button = document.querySelector(".form-control.flex-grow-1");
 
-button.addEventListener("click", (e) => {
-    const value = input.value;
-    console.log("입력값: ", value);
-});
+// button.addEventListener("click", (e) => {
+//     const value = input.value;
+//     console.log(value);
+// });
