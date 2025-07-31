@@ -199,7 +199,7 @@ button {
     overflow: visible;
 }
 
-div.mail-modal {
+div.req-modal {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -208,18 +208,19 @@ div.mail-modal {
     background-color: #fff;
     border: 1px solid #e5e8eb;
 }
-div.mail-title-wrap {
+div.req-title-wrap {
     display: flex;
     gap: 12px;
     flex-direction: column;
 }
-div.mail-title-text {
+div.req-title-text {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 13px;
+    flex-direction: column;
 }
 
-label.mail-title-content {
+label.req-title-content {
     color: #333d4b;
     font-size: 16px;
     font-weight: 700;
@@ -243,10 +244,10 @@ div.main-title-input-wrap,
 div.doctor-search-wrap {
     display: flex;
     gap: 10px;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-input.mail-title-input-content {
+input.req-title-input-content {
     padding-inline: 16px;
     border-radius: 12px;
     border: 1px solid #f2f4f6;
@@ -263,7 +264,7 @@ input.warn {
     border: 1px solid #e42939;
 }
 
-div.mail-modal hr.line-hr {
+div.req-modal hr.line-hr {
     width: 100%;
     height: 1px;
     background: #fff;
@@ -281,16 +282,16 @@ hr.input-btn-list-bottom {
     border: 0;
 }
 
-div.mail-content-container {
+div.req-content-container {
     display: flex;
     flex-direction: column;
 }
-div.mail-content-wrap {
+div.req-content-wrap {
     display: flex;
     gap: 12px;
     flex-direction: column;
 }
-div.mail-content-text {
+div.req-content-text {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -302,12 +303,12 @@ label.content-text {
     line-height: 100%
 }
 
-div.mail-content-input-wrap {
+div.req-content-input-wrap {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-div.mail-content-input-container {
+div.req-content-input-container {
     display: flex;
     flex-direction: column;
     border-radius: 12px;
@@ -337,7 +338,7 @@ button.input-style-button {
 }
 div.input-textarea-container {
     padding: 14px 16px;
-    border-radius: 0 0 12px 12px;
+    border-radius: 12px;
     background-color: #f9fafb;
 }
 div.input-textarea {
@@ -431,7 +432,7 @@ div.search-layout {
     scrollbar-width: none;
     overflow-y: auto;
 }
-ul.mail-search-doctor-name-list {
+ul.req-search-doctor-name-list {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -439,19 +440,19 @@ ul.mail-search-doctor-name-list {
     max-height: 200px;
 }
 
-div.mail-doctor-info span.first {
+div.req-doctor-info span.first {
     margin-left: 10px;
     font-weight: 900;
     cursor: unset;
 }
 
-div.mail-doctor-info span.second {
+div.req-doctor-info span.second {
     font-size: 15px;
     font-weight: 400;
     cursor: unset;
 }
 
-ul.mail-search-doctor-name-list li a.link-click div.content-info {
+ul.req-search-doctor-name-list li a.link-click div.content-info {
     height: 53px;
     padding: 11px 40px 14px 32px;
     z-index: 1000;
@@ -459,10 +460,10 @@ ul.mail-search-doctor-name-list li a.link-click div.content-info {
 }
 
 
-div.mail-doctor-search-wrap {
+div.req-doctor-search-wrap {
     position: relative;
 }
-div.mail-doctor-search-wrap button {
+div.req-doctor-search-wrap button {
     position: absolute;
     display: none;
     top: -6px;
@@ -499,15 +500,15 @@ hr.btn-hr {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-div.mail-send-cancle {
+div.req-send-cancle {
     display: flex;
     justify-content: center;
 }
 
-button.mail-send-cancle-btn.btnshape {
+button.req-send-cancle-btn.btnshape {
     background-color: #ff4d4d;
 }
-button.mail-send-btn-check:disabled {
+button.req-send-btn-check:disabled {
     background-color: #b0b8f5;
     cursor: pointer;
 }
@@ -548,52 +549,53 @@ label.checkbox-label {
 .checkbox-check.inactive {
     display: none;
 }
-textarea.mail-content {
+textarea.req-content {
     width: 100%;
+    height: 100px;
     resize: none;
 }
-textarea.mail-content:focus {
+textarea.req-content:focus {
     outline: none;
     box-shadow: none;
 }
 
-div.post-header-container {
+div.request-header-container {
     display: flex;
     align-items: end;
     justify-content: space-between;
     gap: 16px;
 }
-div.post-header-wrap {
+div.request-header-wrap {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-div.post-header-content {
+div.request-header-content {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-div.post-header-title {
+div.request-header-title {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-div.post-header-title-wrap {
+div.request-header-title-wrap {
     display: flex;
 }
-h1.post-header-title-text {
+h1.request-header-title-text {
     color: #333d4b;
     font-size: 32px;
     font-weight: 700;
     line-height: 100%;
 }
 
-div.post-side-bar-wrap {
+div.request-side-bar-wrap {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-button.post-reg-btn {
+button.request-reg-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -605,27 +607,27 @@ button.post-reg-btn {
     gap: 4px;
     color: #fff;
 }
-div.post-main-container {
+div.request-main-container {
     display: flex;
     gap: 20px;
 }
-div.post-tag-btn-container {
+div.request-tag-btn-container {
     display: flex;
     flex-direction: column;
     gap: 12;
 }
-div.post-tag-header-wrap {
+div.request-tag-header-wrap {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-span.post-tag-department {
+span.request-tag-department {
     color: #333d4b;
     font-size: 16px;
     font-weight: 700;
     line-height: 100%;
 }
-button.post-tag-add-btn {
+button.request-tag-add-btn {
     padding: 16px 20px;
     display: flex;
     justify-content: space-between;
@@ -633,7 +635,7 @@ button.post-tag-add-btn {
     border-radius: 10px;
     border: 1px solid #e5e8eb;
 }
-span.post-tag-text {
+span.request-tag-text {
     color: #8b95a1;
     font-size: 15px;
     font-weight: 500;
@@ -862,7 +864,6 @@ button.category-fix-btn span {
 
 button.category-btn.checked {
     color: rgb(86, 130, 239);
-    border: 1px solid rgb(86, 130, 239);
 }
 /* /카테고리 모달 부분 */
 
@@ -922,7 +923,7 @@ div.department-list-container {
     display: none;
 }
 
-div.post-reg-warn-container {
+div.request-reg-warn-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -930,42 +931,141 @@ div.post-reg-warn-container {
     border-radius: 14px;
     background-color: #fff;
 }
-div.post-reg-warn-wrap {
+div.request-reg-warn-wrap {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-div.post-wran-text-wrap {
+div.request-wran-text-wrap {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-div.wran-text{
+div.wran-text {
     color: #6b7684;
     font-size: 14px;
     font-weight: 600;
     line-height: 100%;
 }
 
-ul.wran-text-list{
+ul.wran-text-list {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
-div.wran-text-item{
+div.wran-text-item {
     display: flex;
     gap: 6px;
 }
-span.wran-content{
+span.wran-content {
     color: #00132b94;
     font-size: 13px;
     font-weight: 500;
     line-height: 150%
 }
 
-div.wran-text-item::before{
+div.wran-text-item::before {
     content: '•';
     position: relative;
     top: -2px;
     color: #4e5968;
+}
+
+
+span.essential {
+    color: rgb(37, 83, 229);
+}
+
+div.select ,div.option{
+    padding-inline: 16px;
+    border-radius: 12px;
+    border: 1px solid #f2f4f6;
+    background-color: #d8d8d8;
+    color: #333d4b;
+    min-height: 48px;
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    line-height: 48px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    
+
+}
+div.phone-number-container, div.date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+div.split {
+    font-size: 30px;
+}
+img.arrow{
+    position: absolute;
+    top: 34%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    right: 18px;   
+}
+div.option{
+    
+    border: 1px solid #333d4b;
+    background-color: #f0f6fb;
+    position: absolute;
+    left: 0px;
+    transition: top 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
+    top : 0;
+    z-index: 1000;
+
+}
+
+div.show{
+    opacity: 1;
+    pointer-events : auto;
+}
+div.option-item-one.show{
+    top: 60px;
+    
+}
+div.option-item-two.show{
+    top: 120px;
+}
+
+
+
+hr.address-hr {
+    margin-top: 10px;
+}
+
+div.warn-text.address{
+    width: 100%;
+}
+
+span.pain-level{
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(107, 118, 132);
+}
+
+
+div.address-search{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+div.address-search input[type="text"].req-input{
+    width: 50%;
+}
+
+div.address-search button[type="button"]{
+    width: 17%;
+}
+
+input[type="text"].warn{
+    border: 1px solid red;
 }

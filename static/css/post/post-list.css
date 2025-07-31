@@ -204,7 +204,12 @@ ul.category-list-wrap {
 header.coach-mark-wrapper {
     gap :19px;
     display: flex;
+    cursor: unset;
     align-items: center;
+}
+
+header.coach-mark-wrapper ul.coach-mark-container li button {
+    cursor: unset;
 }
 
 

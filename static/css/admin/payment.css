@@ -62,7 +62,7 @@ script {
     display: none;
 }
 
-body #bootpay {
+body,#bootpay {
     height: 100%;
 }
 
@@ -519,6 +519,9 @@ a:-webkit-any-link {
     flex: 0 0 auto;
     max-width: 100%;
     width: auto;
+}
+
+.col-auto {
     position: relative;
 }
 
@@ -546,6 +549,7 @@ a:-webkit-any-link {
 .badge-label{
     border-radius: 4px;
     text-align: center;
+    display: inline-block;
 }
 
 .text-primary {
@@ -852,9 +856,6 @@ button {
     padding-right: 2px;
 }
 
-.receipt-index .page-content .table-layout .filter-section .row .col-auto .filter-wrapper{
-    margin-bottom: 12px;
-}
 
 .receipt-index .page-content .table-layout .filter-section .filter-wrapper button {
     font-size: 13px;
@@ -879,7 +880,6 @@ button {
 }
 
 .bt-pop-menu .bt-pop-menu-back {
-    display: none;
     height: 100px;
     left: 0;
     position: fixed;
@@ -1152,12 +1152,17 @@ element.style {
     margin-left: .25rem !important;
 }
 
+
+
 .receipt-index .page-content .table-layout .filter-section .filter-wrapper.filter-search .input-group{
     display: inline-block;
     position: relative;
+    border: 1px solid #ededed;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
-.input-group{
+.input-group {
     align-items: stretch;
     width: 100%;
 }
@@ -1170,6 +1175,10 @@ element.style {
     padding-right: 44px;
     text-align: left;
     width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 38px;
 }
 
 .input-group>.form-control{
@@ -1241,6 +1250,7 @@ input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" 
     line-height: 30px;
     padding-bottom: 0;
     padding-top: 0;
+    background-color: #fff;
 }
 
 .input-group-append .btn{
@@ -1801,6 +1811,116 @@ element.style {
   #filterBox.show {
     display: block;
   }
-  
 
 
+
+.receipt-index .page-content .table-layout table.receipt-table td.td-name {
+    max-width: 400px;
+    min-width: 200px;
+}
+
+.receipt-index .page-content .table-layout table.receipt-table td.td-name .receipt-id {
+    color: #8b9298;
+    font-size: 12px;
+    margin-top: 4px;
+}
+ 
+.receipt-index .page-content .table-layout table.receipt-table td.td-name .receipt-id:before {
+    background-color: #292929;
+    border-radius: 2px;
+    color: #fff;
+    content: "ID";
+    font-size: 10px;
+    font-weight: 700;
+    margin-right: 5px;
+    padding: 2px 2px 1px;
+}
+
+.receipt-index .page-content .table-layout table.receipt-table td.td-amount {
+    color: #507cf3;
+    max-width: 180px;
+    white-space: nowrap;
+}
+
+.receipt-index .page-content .table-layout table.receipt-table tr td {
+    transition: background-color .2s;
+}
+
+
+.receipt-index .page-content .table-layout table.receipt-table td {
+    border-bottom: 1px solid #ededed;
+    padding: 18px 12px;
+}
+
+.receipt-index .page-content .table-layout table.receipt-table td.td-method{
+    color: #292929;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.receipt-index .page-content .table-layout table.receipt-table tr td {
+    transition: background-color .2s;
+}
+
+.receipt-index .page-content .table-layout table.receipt-table td.td-method .pg {
+    color: #8b9298;
+    font-size: 12px;
+}
+
+.receipt-index .page-content .table-layout table.receipt-table td .api-version span {
+    border: 1px solid #d6d6d6;
+    border-radius: 2px;
+    color: #292929;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 10px;
+    padding: 2px 4px;
+}
+
+.receipt-index .page-content .table-layout table.receipt-table td.td-status span.badge-label {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 10px;
+}
+
+.badge-label.text-dark {
+    background-color: rgba(78, 93, 108, .102);
+    background-image: radial-gradient(hsla(210, 9%, 93%, .371), rgba(78, 93, 108, .102));
+}
+
+.receipt-index .page-content .table-layout table.receipt-table td.td-at{
+    color: #afb7ba;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.text-dark {
+    color: #4e5d6c !important;
+}
+
+.receipt-index .page-content .table-layout table.receipt-table td.td-notify {
+    color: #afb7ba;
+    font-size: 13px;
+    text-align: center;
+}
+
+.receipt-index .page-content .table-layout table.receipt-table td.td-buyer {
+    font-size: 13px;
+}
+
+.fs-1 {
+    font-size: .5rem !important;
+}
+.receipt-index .page-content .table-layout table.receipt-table td.td-platform {
+    font-size: 11px;
+}
+
+.mdi-apple:before {
+    content: "\F0035";
+}
+
+.ml-1 {
+    margin-left: .25rem !important;
+}

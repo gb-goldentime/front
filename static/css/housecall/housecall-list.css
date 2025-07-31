@@ -112,6 +112,7 @@ ul.coach-mark-container,ul.category-list-wrap{
 header.coach-mark-wrapper{
     display: flex;
     justify-content: space-between;
+    cursor: unset;
 }
 
 
@@ -148,7 +149,9 @@ ul.content-list{
     max-width: 804px;
 }
 
-
+header.coach-mark-wrapper ul.coach-mark-container li button {
+    cursor: unset;
+}
 div.content-info{
     display: flex;
     gap: 16px;
@@ -480,3 +483,9 @@ span.pain{
 div.tell-date{
     cursor: unset;
 }
+span.remain-time-span{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
