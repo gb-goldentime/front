@@ -248,6 +248,7 @@ div.doctor-search-wrap {
 }
 
 input.req-title-input-content {
+    width: 58%;
     padding-inline: 16px;
     border-radius: 12px;
     border: 1px solid #f2f4f6;
@@ -976,7 +977,9 @@ span.essential {
     color: rgb(37, 83, 229);
 }
 
-div.select ,div.option{
+div.select,
+div.option {
+    width: 116.59px;
     padding-inline: 16px;
     border-radius: 12px;
     border: 1px solid #f2f4f6;
@@ -987,85 +990,169 @@ div.select ,div.option{
     font-weight: 400;
     outline: none;
     line-height: 48px;
-    width: 200px;
     text-align: center;
     position: relative;
     
 
+
 }
-div.phone-number-container, div.date-container {
+div.phone-number-container,
+div.date-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     font-size: 20px;
 }
 div.split {
     font-size: 30px;
 }
-img.arrow{
+img.arrow {
     position: absolute;
     top: 34%;
     width: 15px;
     height: 15px;
     cursor: pointer;
-    right: 18px;   
+    right: 9px;
 }
-div.option{
-    
+div.option {
+
     border: 1px solid #333d4b;
     background-color: #f0f6fb;
     position: absolute;
-    left: 0px;
-    transition: top 0.3s ease;
+    left: 0;
     pointer-events: none;
     opacity: 0;
-    top : 0;
+    top: 0;
     z-index: 1000;
-
-}
-
-div.show{
-    opacity: 1;
-    pointer-events : auto;
-}
-div.option-item-one.show{
-    top: 60px;
     
-}
-div.option-item-two.show{
-    top: 120px;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.25s ease;
 }
 
+div.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+div.option-item-one.show {
+    top: 70px;
+
+}
+div.option-item-two.show {
+    top: 130px;
+}
 
 
 hr.address-hr {
     margin-top: 10px;
 }
 
-div.warn-text.address{
+div.warn-text.address {
     width: 100%;
 }
 
-span.pain-level{
+span.pain-level {
     font-size: 15px;
     font-weight: 700;
     color: rgb(107, 118, 132);
 }
 
 
-div.address-search{
+div.address-search {
     display: flex;
     width: 100%;
     gap: 30px;
 }
-div.address-search input[type="text"].req-input{
+div.address-search input[type="text"].req-input {
     width: 50%;
 }
 
-div.address-search button[type="button"]{
+div.address-search button[type="button"] {
     width: 17%;
 }
 
-input[type="text"].warn{
+input[type="text"].warn {
     border: 1px solid red;
+}
+
+div.date-container {
+    display: flex;
+    position: relative;
+}
+div.drop-down-div {
+    position: absolute;
+    padding-inline: 16px;
+    border-radius: 12px;
+    border: 1px solid #333d4b;
+    background-color: #f9fafb;
+    z-index: 2000;
+    top: 61px;
+    right: -37px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    table-layout: fixed;
+    width: 400px;
+}
+
+tr td {
+    border: 0.5px solid black;
+    text-align: center;
+    border-radius: 10px;
+    width: 16.66%;
+    padding: 2px;
+    box-sizing: border-box;
+    background-color: #d8d8d8;
+    
+}
+
+div.drop-down-div.year table {
+    width: 84px;
+}
+
+div.drop-down-div.year {
+    right: 40px;
+}
+
+
+div.year,
+div.month,
+div.day {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+
+div.drop-down-div.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+div.date-container input[type="text"].req-input {
+    cursor: pointer;
+}
+
+td.active{
+    background-color: #f9fafb;
+}
+input.req-input.req-title-input-content.req-address{
+    width: 70%;
+}
+div.req-title-text.warn-text.header{
+    align-items: center;
+    text-align: left;
+}
+
+div.req-title-text.warn-text.header label{
+    text-align: left;
+    width: 100%;
+}
+
+div.phone-number-container input.req-input.req-title-input-content{
+    width: 16%;
 }
