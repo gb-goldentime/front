@@ -27,19 +27,19 @@
                 <div class="req-title-wrap">
                     <!-- input 이벤트 -->
                     <div class="main-title-input-wrap">
-                        <div class="req-title-text warn-text">
-                            <label class="req-title-content">환자이름 <span class="essential">*</span></label>
-                            <input type="text" class="req-input req-title-input-content" maxlength="7" placeholder="이름을 작성해 주세요." form="reqForm" name="temp1">
+                        <div class="req-title-text warn-text header">
+                            <label class="req-title-content">환자성함 <span class="essential">*</span></label>
+                            <input type="text" class="req-input req-title-input-content" maxlength="7" placeholder="성함" form="reqForm" name="temp1">
                         </div>
                         <!-- <div class="req-title-text warn-text">
                             <label class="req-title-content"></label>
                             <input type="text" class="req-input req-title-input-content" maxlength="7" placeholder="제목을 작성해 주세요." form="reqForm" name="requestTitle">
                         </div> -->
-                        <div class="req-title-text warn-text">  
+                        <div class="req-title-text warn-text header">  
                             <label class="req-title-content">아픈 부위</label>
-                            <input type="text" class="req-input req-title-input-content" maxlength="7" placeholder="아픈 부위를 작성해 주세요." form="reqForm" name="temp2">
+                            <input type="text" class="req-input req-title-input-content" maxlength="7" placeholder="아픈 부위" form="reqForm" name="temp2">
                         </div>
-                        <div class="req-title-text warn-text">
+                        <div class="req-title-text warn-text header">
                             <label class="req-title-content">아픔 정도
                                 <span class="pain-level">1~5</span>
                             </label>
@@ -88,11 +88,17 @@
                             <!-- <input type="text" class="req-input req-title-input-content" maxlength="7" placeholder="" form="reqForm" name="requestTitle"> -->
                             <!-- 정규식 처리 필요 -->
                             <div class="date-container">
-                                <input type="text" class="req-input req-title-input-content" id="year" maxlength="2" placeholder="연도 예: 25" form="reqForm" name="temp6">
+                                <div class="date-container">
+                                    <input type="text" class="req-input req-title-input-content date" id="year" maxlength="2" placeholder="연도" form="reqForm" name="temp6">
+                                </div>
                                 <div class="split">/</div>
-                                <input type="text" class="req-input req-title-input-content" id="month" maxlength="2" placeholder="월" form="reqForm" name="temp7">
+                                <div class="date-container">
+                                    <input type="text" class="req-input req-title-input-content date" id="month" maxlength="2" placeholder="월" form="reqForm" name="temp7">
+                                </div>
                                 <div class="split">/</div>
-                                <input type="text" class="req-input req-title-input-content" id="day" maxlength="2" placeholder="일" form="reqForm" name="temp8">
+                                <div class="date-container">
+                                    <input type="text" class="req-input req-title-input-content date" id="day" maxlength="2" placeholder="일" form="reqForm" name="temp8">
+                                </div>
                             </div>
                             <!-- /정규식 처리 필요 -->
                         </div>
@@ -121,7 +127,7 @@
                     <!-- input 이벤트 -->
                     <div class="main-title-input-wrap">
                         <div class="req-title-text warn-text">
-                            <input type="text" class="req-input req-title-input-content" maxlength="7" placeholder="상세 주소" form="reqForm" name="temp10">
+                            <input type="text" class="req-input req-title-input-content req-address" maxlength="7" placeholder="상세 주소" form="reqForm" name="temp10">
                         </div>
                     </div>
                     <!-- /input 이벤트 -->
