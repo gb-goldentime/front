@@ -27,8 +27,8 @@ options.forEach((option) => {
 // 전화번호 앞자리 선택 클릭 부분 //
 
 // 인풋에다가 포커스 블러 처리 해주기 //
-const inputTags = document.querySelectorAll("input[type=text]");
-
+const inputTags = document.querySelectorAll("input[type=text].reg");
+const textArea = document.querySelector("textarea");
 inputTags.forEach((inputTag) => {
     inputTag.addEventListener("focus", (e) => {
         inputTag.style.border = "1px solid #333d4b";
@@ -37,6 +37,14 @@ inputTags.forEach((inputTag) => {
     inputTag.addEventListener("blur", (e) => {
         inputTag.removeAttribute("style");
     });
+});
+
+textArea.addEventListener("focus", (e) => {
+    textArea.parentElement.style.border = "1px solid #333d4b";
+});
+
+textArea.addEventListener("blur", (e) => {
+    textArea.parentElement.removeAttribute("style");
 });
 // 인풋에다가 포커스 블러 처리 해주기 //
 
@@ -54,10 +62,28 @@ painLevel.addEventListener("input", (e) => {
     }
 });
 
+//  성별 체크
+const genderCheck = document.querySelectorAll(".gender");
+let checkedGender = document.querySelector(".gender.checked");
+genderCheck.forEach((gender) => {
+    gender.addEventListener("click", (e) => {
+        console.log(gender);
+        if (gender !== checkedGender) {
+            checkedGender.classList.remove("checked");
+            gender.classList.add("checked");
+            checkedGender.removeAttribute("name");
+            gender.setAttribute("name", "temp13");
+            checkedGender = gender;
+        }
+    });
+});
+
 //  제출하기 전에 정규식 검사 하기
 //  나중에 휴대폰 번호 이어붙이기
 const tempNames = [
     "temp1",
+    "temp2",
+    "temp3",
     "temp4",
     "temp5",
     "temp6",
@@ -66,6 +92,8 @@ const tempNames = [
     "temp9",
     "temp10",
     "temp11",
+    "temp12",
+    "temp13",
 ];
 const hiddenInput = document.getElementById("phoneHidden");
 const reqForm = document.getElementById("reqForm");
@@ -73,16 +101,21 @@ reqForm.addEventListener("submit", (e) => {
     let checkNull = true;
     const form = e.target;
     e.preventDefault();
-    console.log(form.temp1.value);
+
     tempNames.forEach((name) => {
         const field = form[name];
+        // name === "temp11" && console.log(field.value);
         const value = field?.value ?? field?.textContent;
-
+        let check = name === "temp11";
         if (!value) {
-            field.classList.add("warn");
+            check
+                ? field.parentElement.classList.add("warn")
+                : field.classList.add("warn");
             checkNull = false;
         } else {
-            field.classList.remove("warn");
+            check
+                ? field.parentElement.classList.remove("warn")
+                : field.classList.remove("warn");
         }
     });
     checkNull && e.target.submit();

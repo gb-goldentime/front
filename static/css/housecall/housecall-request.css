@@ -1071,7 +1071,7 @@ div.address-search button[type="button"] {
     width: 17%;
 }
 
-input[type="text"].warn {
+input[type="text"].warn,div.warn{
     border: 1px solid red;
 }
 
@@ -1156,3 +1156,39 @@ div.req-title-text.warn-text.header label{
 div.phone-number-container input.req-input.req-title-input-content{
     width: 16%;
 }
+
+div.age-wrap{
+    display: flex;
+    padding-left: 36px;
+}
+div.req-title-wrap-gener-age{
+    display: flex;
+    
+}
+
+div.gender-wrap{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 23px;
+}
+
+div.gender-wrap > input,div.age-wrap input{
+    width: 137.02px;
+}
+
+input[type="text"]{
+    text-align: center;
+}
+
+div.address-search > input[type="text"],input[type="text"].req-address{
+    text-align: left;
+}
+div.gender-age-wrap{
+    width: 100%;
+}
+
+input[type="text"].gender.checked{
+    border: 1px solid #2553e5;
+    background-color: #f0f6fb;
+}
+
