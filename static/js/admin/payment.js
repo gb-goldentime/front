@@ -53,6 +53,8 @@ selectAllBtn.addEventListener("click", (e) => {
         selectAllBtn.classList.add("active");
         if (checkIcon) {
             checkIcon.style.display = "inline-block";
+
+            box.classList.add("active");
         }
     });
 });
@@ -64,6 +66,8 @@ deselectAllBtn.addEventListener("click", (e) => {
         const checkIcon = box.querySelector("i.mdi-check");
         if (checkIcon) {
             checkIcon.style.display = "none";
+
+            box.classList.remove("active");
         }
     });
 });
@@ -73,11 +77,9 @@ checkBoxes.forEach((box) => {
     box.addEventListener("click", (e) => {
         const checkIcon = box.querySelector("i.mdi-check");
         if (checkIcon) {
-            checkIcon.style.display =
-                checkIcon.style.display === "none" ||
-                checkIcon.style.display === ""
-                    ? "inline-block"
-                    : "none";
+            const isVisible = checkIcon.style.display === "inline-block";
+            checkIcon.style.display = isVisible ? "none" : "inline-block";
+            box.classList.toggle("active", !isVisible);
         }
     });
 });

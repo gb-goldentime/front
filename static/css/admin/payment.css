@@ -1026,15 +1026,6 @@ element.style {
     height: 20px;
 }
 
-.boot-check .boot-check-box {
-    background-color: #fff;
-    border: 1px solid #edeff0;
-    border-radius: 3px;
-    margin-right: 6px;
-    position: relative;
-    text-align: center;
-}
-
 element.style {
     display: none;
 }
@@ -1061,13 +1052,14 @@ element.style {
     padding-left: 18px;
 }
 
-.boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active {
+/* .boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active {
+    color: #56626a;
+} */
+
+.boot-check-box i {
     color: #56626a;
 }
 
-.boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active .boot-check-box i {
-    color: #56626a;
-}
 
 .mdi-check:before {
     content: "\F012C";
@@ -1086,6 +1078,9 @@ element.style {
     background-color: #fff
 }
 
+.boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active .boot-check-box.active {
+    background-color: #507cf3;
+}
 
 .boot-check .boot-check-box {
     background-color: #fff;
@@ -1935,4 +1930,22 @@ button#btn-select-all.active {
     border-color: #507cf3;
     border: 1px solid #507cf3
   }
+
+  .boot-check-box.active i.mdi-check {
+    color: white; /* 또는 #fff */
+  }
+  
+  .boot-check-box.active {
+    background-color: #507cf3;
+}
+.boot-check-box i.mdi-check {
+    display: none;
+    color: white; /* 체크 아이콘 색상 */
+  }
+  
+  .boot-check-box.active i.mdi-check {
+    display: inline-block;
+  }
+  
+
   
