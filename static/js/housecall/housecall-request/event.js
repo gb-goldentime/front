@@ -84,6 +84,6 @@ reqForm.addEventListener("submit", (e) => {
         } else {
             field.classList.remove("warn");
         }
-        checkNull && e.target.submit();
     });
+    checkNull && e.target.submit();
 });
