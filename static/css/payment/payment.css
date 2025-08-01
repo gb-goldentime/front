@@ -270,7 +270,7 @@ div.current-holding-content span.unit {
 div.account-icon {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 7px;
 }
 
 div.payment-history-container {
@@ -398,4 +398,8 @@ span.payment-item-text.add{
 }
 span.payment-item-text.del{
     color: #f04452;
+}
+
+td.vita{
+    text-align: right;
 }
