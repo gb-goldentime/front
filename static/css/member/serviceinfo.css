@@ -1,0 +1,33 @@
+
+
+element.style {
+    width: 400px;
+    height: 640px;
+    overflow: hidden;
+    margin: 0px;
+    outline: none;
+}  
+  
+div.ac3evl {
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    gap: 95px;
+    height: 1000px;
+    background-color: #FFFFFF;
+}
+
+/* 무엇이든 질문하세요 부분 */
+div.rmcoop {
+
+    
+}
+
+
+

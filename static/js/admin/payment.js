@@ -71,16 +71,13 @@ deselectAllBtn.addEventListener("click", (e) => {
         }
     });
 });
-
-// 결제 상세 선택 (전체 선택, 선택 취소 버튼 클릭 이벤트 )
-checkBoxes.forEach((box) => {
-    box.addEventListener("click", (e) => {
-        const checkIcon = box.querySelector("i.mdi-check");
-        if (checkIcon) {
-            const isVisible = checkIcon.style.display === "inline-block";
-            checkIcon.style.display = isVisible ? "none" : "inline-block";
-            box.classList.toggle("active", !isVisible);
-        }
+// 모든 개별 체크박스 클릭 이벤트
+document.querySelectorAll(".boot-check-box").forEach((box) => {
+    box.addEventListener("click", () => {
+        const icon = box.querySelector("i.mdi-check");
+        const isChecked = icon.style.display === "inline-block";
+        icon.style.display = isChecked ? "none" : "inline-block";
+        box.classList.toggle("active", !isChecked);
     });
 });
 
@@ -88,8 +85,8 @@ checkBoxes.forEach((box) => {
 const checkAll = document.querySelectorAll(".all-check-btn");
 const payList = document.getElementById("collapse_payloading");
 const payFail = document.getElementById("collapse_payFail");
-const payComplete = document.getElementById("collapse_canel");
-const pays = ["collapse_payloading", "collapse_payFail", "collapse_canel"];
+const payComplete = document.getElementById("collapse_cancel");
+const pays = ["collapse_payloading", "collapse_payFail", "collapse_cancel"];
 for (let index = 0; index < 3; index++) {
     checkAll[index].addEventListener("click", (e) => {
         const iTags = document.querySelectorAll(
