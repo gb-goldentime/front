@@ -828,6 +828,8 @@ button.btn{
 
 .btn{
     border: 1px solid transparent;
+    background-color: transparent;
+    color: #212529;
     border-radius: .25rem;
     display: inline-block;
     font-weight: 400;
@@ -1122,10 +1124,7 @@ element.style {
     margin-left: -1px;
 }
 
-.btn-outline-primary{
-    border-color: #507cf3;
-    color: #507cf3;
-}
+
 
 .receipt-index .page-content .table-layout .filter-section .filter-wrapper.filter-time{
     display: inline-block;
@@ -1158,9 +1157,6 @@ element.style {
 .receipt-index .page-content .table-layout .filter-section .filter-wrapper.filter-search .input-group{
     display: inline-block;
     position: relative;
-    border: 1px solid #ededed;
-    border-radius: 6px;
-    overflow: hidden;
 }
 
 .input-group {
@@ -1176,10 +1172,20 @@ element.style {
     padding-right: 44px;
     text-align: left;
     width: 100%;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    height: 38px;
+}
+
+transitions style {
+    box-shadow: rgba(0, 123, 255, 0.008) 0px 0px 0px 0.0782483px;
+}
+/*  */
+button.btn.btn-outline-primary {
+    color: #292929;
+    border-color: #ededed;
+}
+
+input.form-control {
+    border: 1px solid #ededed;
+    font-size: 13px;
 }
 
 .input-group>.form-control{
@@ -1188,10 +1194,6 @@ element.style {
     position: relative;
 }
 
-.input.form-control{
-    border: 1px solid #ededed;
-    font-size: 13px;
-}
 
 .form-control{
     background-clip: padding-box;
@@ -1225,8 +1227,6 @@ input[type="text" i]{
     padding-block: 1px;
     padding-inline: 2px;
 }
-input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" i]) {
-}
 
 .receipt-index .page-content .table-layout .filter-section .filter-wrapper.filter-search .input-group .input-group-append{
     display: inline-block;
@@ -1251,7 +1251,6 @@ input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" 
     line-height: 30px;
     padding-bottom: 0;
     padding-top: 0;
-    background-color: #fff;
 }
 
 .input-group-append .btn{
@@ -1275,8 +1274,8 @@ svg {
 }
 
 svg:not(:root){
-    overflow-clip-margin: content-box;
     overflow: hidden;
+    vertical-align: middle;
 }
 
 .receipt-index .page-content .table-layout table.receipt-table{
@@ -1620,8 +1619,9 @@ button:not(:disabled){
     cursor: pointer;
 }
 
-button.btn.btn-outline-filter {
+button.btn.btn-primary {
     border-color: #ededed;
+    color: black;
 }
 
 button.btn {
