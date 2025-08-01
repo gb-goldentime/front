@@ -1928,24 +1928,29 @@ element.style {
 
 .boot-check-box i.mdi-check {
     display: none;
-    color: white; /* 체크 아이콘 색상 */
+    color: white
   }
 
 
-.boot-check-box.active i.mdi-check {
+.boot-check-box.i.mdi-check.active {
     display: inline-block !important;
     color: white !important;
 }
 
-  .boot-check-box i.mdi-check {
+  /* .boot-check-box i.mdi-check {
     display: none;
 }
 
 .boot-check-box.active i.mdi-check {
     display: inline-block;
     color: white;
-}
+} */
 
 .boot-check-box.active {
     background-color: #507cf3;
 }
+
+.boot-check .boot-check-box.active {
+    background-color: #507cf3;
+  }
+  
