@@ -1,5 +1,7 @@
 let modalCheck;
 let buttonsCheck = true;
+
+// 시간 부분
 function timeForToday(datetime) {
     const today = new Date();
     const date = new Date(datetime);
@@ -43,6 +45,7 @@ console.log(document.querySelector(".remain-time-span"));
 document.querySelector(".remain-time-span").innerHTML = `
 <svg fill="none" height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_6147_7791)"><path clip-rule="evenodd" d="M6.99992 13.4167C10.5437 13.4167 13.4166 10.5439 13.4166 7.00004C13.4166 3.45621 10.5437 0.583374 6.99992 0.583374C3.45609 0.583374 0.583252 3.45621 0.583252 7.00004C0.583252 10.5439 3.45609 13.4167 6.99992 13.4167ZM7.75837 4.08338C7.75837 3.66457 7.41885 3.32505 7.00003 3.32505C6.58122 3.32505 6.2417 3.66457 6.2417 4.08338V7.29172C6.2417 7.47274 6.30646 7.64779 6.42426 7.78523L8.17426 9.8269C8.44683 10.1449 8.92556 10.1817 9.24355 9.90915C9.56154 9.63659 9.59836 9.15785 9.3258 8.83987L7.75837 7.01119V4.08338Z" fill="var(--color-gray-600)" fill-rule="evenodd"></path></g><defs><clipPath id="clip0_6147_7791"><rect fill="white" height="14" width="14"></rect></clipPath></defs></svg>
 ${timeForToday("2025-07-29T20:12:00")}`;
+// 시간 부분 //
 
 // 예시
 // posts.forEach((post) => {

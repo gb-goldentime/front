@@ -828,6 +828,8 @@ button.btn{
 
 .btn{
     border: 1px solid transparent;
+    background-color: transparent;
+    color: #212529;
     border-radius: .25rem;
     display: inline-block;
     font-weight: 400;
@@ -1026,15 +1028,6 @@ element.style {
     height: 20px;
 }
 
-.boot-check .boot-check-box {
-    background-color: #fff;
-    border: 1px solid #edeff0;
-    border-radius: 3px;
-    margin-right: 6px;
-    position: relative;
-    text-align: center;
-}
-
 element.style {
     display: none;
 }
@@ -1061,13 +1054,14 @@ element.style {
     padding-left: 18px;
 }
 
-.boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active {
+/* .boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active {
+    color: #56626a;
+} */
+
+.boot-check-box i {
     color: #56626a;
 }
 
-.boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active .boot-check-box i {
-    color: #56626a;
-}
 
 .mdi-check:before {
     content: "\F012C";
@@ -1086,6 +1080,9 @@ element.style {
     background-color: #fff
 }
 
+.boot-pop-checkbox .bt-pop-menu-context ul.list-wrapper li.active .boot-check-box.active {
+    background-color: #507cf3;
+}
 
 .boot-check .boot-check-box {
     background-color: #fff;
@@ -1127,10 +1124,7 @@ element.style {
     margin-left: -1px;
 }
 
-.btn-outline-primary{
-    border-color: #507cf3;
-    color: #507cf3;
-}
+
 
 .receipt-index .page-content .table-layout .filter-section .filter-wrapper.filter-time{
     display: inline-block;
@@ -1163,9 +1157,6 @@ element.style {
 .receipt-index .page-content .table-layout .filter-section .filter-wrapper.filter-search .input-group{
     display: inline-block;
     position: relative;
-    border: 1px solid #ededed;
-    border-radius: 6px;
-    overflow: hidden;
 }
 
 .input-group {
@@ -1181,10 +1172,20 @@ element.style {
     padding-right: 44px;
     text-align: left;
     width: 100%;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    height: 38px;
+}
+
+transitions style {
+    box-shadow: rgba(0, 123, 255, 0.008) 0px 0px 0px 0.0782483px;
+}
+/*  */
+button.btn.btn-outline-primary {
+    color: #292929;
+    border-color: #ededed;
+}
+
+input.form-control {
+    border: 1px solid #ededed;
+    font-size: 13px;
 }
 
 .input-group>.form-control{
@@ -1193,10 +1194,6 @@ element.style {
     position: relative;
 }
 
-.input.form-control{
-    border: 1px solid #ededed;
-    font-size: 13px;
-}
 
 .form-control{
     background-clip: padding-box;
@@ -1230,8 +1227,6 @@ input[type="text" i]{
     padding-block: 1px;
     padding-inline: 2px;
 }
-input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" i]) {
-}
 
 .receipt-index .page-content .table-layout .filter-section .filter-wrapper.filter-search .input-group .input-group-append{
     display: inline-block;
@@ -1256,7 +1251,6 @@ input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" 
     line-height: 30px;
     padding-bottom: 0;
     padding-top: 0;
-    background-color: #fff;
 }
 
 .input-group-append .btn{
@@ -1280,8 +1274,8 @@ svg {
 }
 
 svg:not(:root){
-    overflow-clip-margin: content-box;
     overflow: hidden;
+    vertical-align: middle;
 }
 
 .receipt-index .page-content .table-layout table.receipt-table{
@@ -1625,8 +1619,9 @@ button:not(:disabled){
     cursor: pointer;
 }
 
-button.btn.btn-outline-filter {
+button.btn.btn-primary {
     border-color: #ededed;
+    color: black;
 }
 
 button.btn {
@@ -1931,8 +1926,26 @@ element.style {
     margin-left: .25rem !important;
 }
 
-button#btn-select-all.active {
-    border-color: #507cf3;
-    border: 1px solid #507cf3
+.boot-check-box i.mdi-check {
+    display: none;
+    color: white; /* 체크 아이콘 색상 */
   }
-  
+
+
+.boot-check-box.active i.mdi-check {
+    display: inline-block !important;
+    color: white !important;
+}
+
+  .boot-check-box i.mdi-check {
+    display: none;
+}
+
+.boot-check-box.active i.mdi-check {
+    display: inline-block;
+    color: white;
+}
+
+.boot-check-box.active {
+    background-color: #507cf3;
+}

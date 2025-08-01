@@ -97,7 +97,6 @@ doctorSearchInput.addEventListener("keydown", (e) => {
         e.preventDefault();
         // 나중에 패치
         // let slied = document.querySelector(".search-layout");
-        // 나중에 길이 받아온 배열의 크기 곱하기 53을 하면 된다 현재는 임시로 100px
         slide.style.height = "118px";
         slide.style.opacity = "100%";
         check = false;
