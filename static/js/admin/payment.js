@@ -87,14 +87,48 @@ const payList = document.getElementById("collapse_payloading");
 const payFail = document.getElementById("collapse_payFail");
 const payComplete = document.getElementById("collapse_cancel");
 const pays = ["collapse_payloading", "collapse_payFail", "collapse_cancel"];
+// for (let index = 0; index < 3; index++) {
+//     checkAll[index].addEventListener("click", (e) => {
+//         console.log(1111);
+
+//         const iTags = document.querySelectorAll(
+//             `#${pays[index]} ul li div div label i`
+//         );
+//         console.log(iTags);
+
+//         iTags.forEach((iTag) => {
+//             iTag.style.display =
+//                 iTag.style.display === "none" ? "inline-block" : "none";
+//         });
+//     });
+// }
+
 for (let index = 0; index < 3; index++) {
     checkAll[index].addEventListener("click", (e) => {
+        console.log(1111);
+
         const iTags = document.querySelectorAll(
-            `#${pays[index]} ul li div div label i`
+            `#${pays[index]} ul li div div label i.mdi-check`
         );
+
+        // 부모 요소 중에서 .boot-check-box를 찾아서 처리할 수 있도록 수정
         iTags.forEach((iTag) => {
-            iTag.style.display =
-                iTag.style.display === "none" ? "inline-block" : "none";
+            // iTag는 <i class="mdi-check">임 → 부모를 타고 올라가서 .boot-check-box 찾기
+            const box = iTag.closest(".boot-check-box");
+
+            if (iTag.style.display === "none" || iTag.style.display === "") {
+                // 체크 표시 보이게
+                iTag.style.display = "inline-block";
+
+                // ✅ 배경색 파란색 되도록 .active 클래스 추가
+                box?.classList.add("active");
+            } else {
+                // 체크 표시 숨기기
+                iTag.style.display = "none";
+
+                // ✅ 체크 해제 시 배경색도 원복
+                box?.classList.remove("active");
+            }
         });
     });
 }
