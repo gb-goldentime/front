@@ -689,3 +689,9 @@ div.no-search-payment-wrap img{
     width: 120px;
     height: 120px;
 }
+div.no-search-payment-wrap span{
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    color: rgb(78, 89, 104);
+}
