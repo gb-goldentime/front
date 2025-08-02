@@ -30,12 +30,61 @@
                         <span class="unit">VITA</span>
                     </div>
                 </div>
+                <div class="payment-card-container">
+                    <span>충전해서 원하는 의사에게 쪽지를 보내보세요.</span>
+                    <ul class="payment-account-wrap">
+                        <li>
+                            <div class="paymemt-list-item">
+                                <div class="item-container">
+                                    <span class="item-text">90비타 패키지</span>
+                                    <div class="price-wrap">
+                                        <div class="price">
+                                            <span class="price-content">5,000원</span>
+                                            <span class="vita-point"> / 90비타</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment-account-btn-container">
+                                    <!-- 클릭 이벤트 -->
+                                    <button class="payment-account-button">
+                                        <span>
+                                            결제하기
+                                        </span>
+                                    </button>
+                                    <!-- /클릭 이벤트 -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="paymemt-list-item primary">
+                                <div class="item-container">
+                                    <span class="item-text">50비타 패키지</span>
+                                    <div class="price-wrap">
+                                        <div class="price">
+                                            <span class="price-content">3,000원</span>
+                                            <span class="vita-point"> / 50비타</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment-account-btn-container">
+                                    <!-- 클릭 이벤트 -->
+                                    <button class="payment-account-button primary">
+                                        <span>
+                                            결제하기
+                                        </span>
+                                    </button>
+                                    <!-- /클릭 이벤트 -->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 <div class="payment-history-container">
                     <!-- 클릭 이벤트 -->
                     <div class="payment-history-wrap">
                         <ul class="category-list">
                             <li class="category-item">
-                                <div class="category-text-wrap">
+                                <div class="category-text-wrap" data-cnt="0">
                                     <span class="category-text active">
                                         충전 내역
                                     </span>
@@ -45,7 +94,7 @@
                                 </div>
                             </li>
                             <li class="category-item">
-                                <div class="category-text-wrap">
+                                <div class="category-text-wrap" data-cnt="1">
                                     <span class="category-text">
                                         결제 내역
                                     </span>
@@ -62,7 +111,7 @@
                         <span class="split">
                             •
                         </span>
-                        <span class="date">
+                        <span class="date order">
                             최신순
                         </span>
                         <img class="down-arrow" src="https://media.a-ha.io/aha-qna/images/common/icons/direction/triangle-down.svg">
@@ -85,6 +134,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <!-- 충전 내역 부분 -->
                                     <tr class="table-body-tr">
                                         <td class="payment-item">
                                             <span class="payment-item-text">25.08.01 11:33</span>
@@ -104,25 +154,123 @@
                                             <span class="payment-item-text">25.08.01 10:33</span>
                                         </td>
                                         <td class="payment-item">
-                                            <span class="payment-item-text add">승인</span>
+                                            <span class="payment-item-text add">완료</span>
                                         </td>
                                         <td class="payment-item">
-                                            <span class="payment-item-text">비타 충전</span>
+                                            <span class="payment-item-text">비타 충전 완료</span>
                                         </td>
                                         <td class="payment-item vita">
                                             <span class="payment-item-text add">30</span>
                                         </td>
                                     </tr>
+                                    <!-- /충전 내역 부분 -->
+                                    <!-- 결제 내역 부분 -->
+                                    <tr class="table-body-tr">
+                                        <td class="payment-item">
+                                            <span class="payment-item-text">25.08.01 11:33</span>
+                                        </td>
+                                        <td class="payment-item">
+                                            <span class="payment-item-text del">전송</span>
+                                        </td>
+                                        <td class="payment-item">
+                                            <span class="payment-item-text">쪽지 전송</span>
+                                        </td>
+                                        <td class="payment-item vita">
+                                            <span class="payment-item-text del">-30</span>
+                                        </td>
+                                    </tr>
+                                    <!-- /결제 내역 부분 -->
+            
                                 </tbody>
                             </table>
                         </div>
                     </div>
+
+                    <!-- 내역이 없는 부분 -->
+                    <div class="no-search-payment-container">
+                        <div class="no-search-payment-wrap">
+                            <img src="https://media.a-ha.io/aha-qna/images/common/3D/shy.png" >
+                            <span>현재 내역이 존재하지 않습니다.</span>
+                        </div>
+                    </div>
+                    <!-- /내역이 없는 부분 -->
                 </div>
             </div>
             <div class="current-holding-side">
-
+                <aside class="side-bar-container">
+                    <img src="../../static/images/poster-payment.png" class="vita-img-side">
+                </aside>
+                <div class="side-bar-content-wrap">
+                    <span class="side-bar-text">
+                        비타코인 사용하기
+                    </span>
+                    <span class="side-bar-text-sub">
+                        비타코인으로 쪽지를 보내보세요.
+                    </span>
+                </div>
             </div>
         </div>
     </main>
+    <div class="modal">
+        <div class="warn-modal">
+            <div id="content-wrap">
+                <div class="content-container">
+                    <div class="content-wrap">
+                        <span class="content-search">
+                            조회 기간
+                        </span>
+                        <ul class="select-list date">
+                            <li class="list-item">
+                                <button class="list-btn" data-date="1" data-unit="day">
+                                    <span class="list-text">
+                                        1일
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-item">
+                                <button class="list-btn active" data-date="7" data-unit="day">
+                                    <span class="list-text">
+                                        7일
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-item">
+                                <button class="list-btn" data-date="3" data-unit="month">
+                                    <span class="list-text">
+                                        3개월
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-wrap">
+                        <span class="content-search">
+                            정렬
+                        </span>
+                        <ul class="select-list order">
+                            <li class="list-item">
+                                <button class="list-btn active" data-order="asc">
+                                    <span class="list-text">
+                                        최신순
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-item">
+                                <button class="list-btn" data-order="desc">
+                                    <span class="list-text">
+                                        오래된 순
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="accept-btn">
+                    <span class="list-text">적용</span>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="../../static/js/payment/event.js"></script>
 </html>
