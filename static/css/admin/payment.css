@@ -1928,7 +1928,14 @@ element.style {
 
 .boot-check-box i.mdi-check {
     display: none;
-    color: white
+    font-family: "Material Design Icons";
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    line-height: 1;
+    vertical-align: middle;
   }
 
 
@@ -1939,18 +1946,26 @@ element.style {
 
   /* .boot-check-box i.mdi-check {
     display: none;
-}
+}*/
 
 .boot-check-box.active i.mdi-check {
     display: inline-block;
-    color: white;
-} */
+} 
 
-.boot-check-box.active {
+.boot-check-box.flash {
+    animation: flash-bg 0.4s ease;
+}
+
+@keyframes flash-bg {
+    0% { background-color: #d0e8ff; }
+    100% { background-color: transparent; }
+}
+
+/* .boot-check-box.active {
     background-color: #507cf3;
 }
 
 .boot-check .boot-check-box.active {
     background-color: #507cf3;
-  }
+  } */
   
