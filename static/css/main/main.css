@@ -213,6 +213,7 @@ header.coach-mark-wrapper ul.coach-mark-container li button {
 
 
 li span.btn-content {
+    cursor: pointer;
     font-size: 32px;
     line-height: 130%;
     font-weight: 700;
@@ -220,6 +221,7 @@ li span.btn-content {
 }
 
 li span.active {
+    cursor: pointer;
     font-size: 32px;
     line-height: 130%;
     font-weight: 700;
@@ -227,6 +229,7 @@ li span.active {
 }
 
 div.content-wrapper {
+    cursor: pointer;
     display: flex;
     gap: 16px;
 }
