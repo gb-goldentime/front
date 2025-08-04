@@ -191,6 +191,7 @@ i {
 
 .flex-grow-1 {
     flex-grow: 1 !important;
+    cursor: pointer;
 }
 
 #bootpay>#bootpay-side #side-wrapper>.menu-wrapper>ul.menu-list {
