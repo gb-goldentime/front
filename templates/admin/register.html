@@ -93,7 +93,7 @@
         </aside>
         <div id="bootpay-main" class="has-menu">
             <div id="header-wrapper">
-                <div class="bootpay-header" class="d-flex false">
+                <div id="bootpay-header" class="d-flex false">
                     <div class="flex-grow-1"></div>
                     <div></div>
                 </div>
@@ -107,7 +107,7 @@
                     <div class="tab-view">
                         <div class="tab-view-header">
                             <ul class="tab-switch-row list-unstyled">
-                                <li class="tab-switch tab-project active">회원</li>
+                                <li class="tab-switch tab-project active">회원목록</li>
                             </ul>
                         </div>
                         <div class="tab-view-body">
@@ -116,10 +116,49 @@
                                     <table class="table-roles w-100">
                                         <thead>
                                             <tr>
-                                                <th>팀원</th>
+                                                <th>회원</th>
+                                                <th class="text-center">
+                                                    회원분류
+                                                <span class="icon-wrapper cursor-pointer ml-1 text-primary">
+                                                    <i class="mdi mdi-help-circle-outline"></i>
+                                                </span>
+                                                </th>
+                                                <th class="text-center">승인시간</th>
+                                                <th></th>
                                             </tr>
                                         </thead>
-                                        <tbody></tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td class="td-member">
+                                                    <div class="member-name">
+                                                        <span>김태민</span>
+                                                    </div>
+                                                    <div class="member-email">test@gmail.com</div>
+                                                </td>
+                                                <td class="td-role text-center">
+                                                    <span class="role-badge badge badge-label app-role text-warning undefined">의사회원</span>
+                                                </td>
+                                                <td class="td-time text-center">2025-08-03 20:59:36</td>
+                                                <td class="td-mng text-right"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-member">
+                                                    <div class="member-name">
+                                                        <span>test</span>
+                                                    </div>
+                                                    <div class="member-email">test2@naver.com</div>
+                                                </td>
+                                                <td class="td-role text-center">
+                                                    <span class="role-badge badge badge-label app-role text-success undefined">일반회원</span>
+                                                </td>
+                                                <td class="td-time text-center">2025-08-03 20:59:36</td>
+                                                <td class="td-mng text-right">
+                                                    <button class="btn btn-light-danger btn-sm edit-btn">
+                                                        <i class="mdi mdi-pencil-outline"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </div>
                                 <div></div>
