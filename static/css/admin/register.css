@@ -115,7 +115,7 @@ div {
     display: block;
     unicode-bidi: isolate;
 }
-
+/* 사이드바  */
 element.style {
     width: 0px;
     display: block;

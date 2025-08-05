@@ -34,6 +34,10 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+/* 사이드 바 */
+
+
+/*  */
 *, :after, :before {
     box-sizing: border-box;
 }

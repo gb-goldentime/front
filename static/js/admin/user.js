@@ -1,9 +1,9 @@
-// const homeButton = document.getElementById("menu-home");
-// const sideMenuButtons = document.querySelectorAll(".menu-btn");
-// const sideSubLists = document.querySelectorAll(".menu-sub-list");
-// const sideSubLinks = document.querySelectorAll(".rebound-link");
-// const tabNames = document.querySelectorAll(".tab-name");
-// const icons = document.querySelectorAll(".icon-wrapper i");
+const homeButton = document.getElementById("menu-home");
+const sideMenuButtons = document.querySelectorAll(".menu-btn");
+const sideSubLists = document.querySelectorAll(".menu-sub-list");
+const sideSubLinks = document.querySelectorAll(".rebound-link");
+const tabNames = document.querySelectorAll(".tab-name");
+const icons = document.querySelectorAll(".icon-wrapper i");
 
 // 홈 클릭 이벤트
 homeButton.addEventListener("click", (e) => {
@@ -227,12 +227,12 @@ closeFooterButton.addEventListener("click", (e) => {
         modal.style.display = "none";
     }, 100);
 });
-const homeButton = document.getElementById("menu-home");
-const sideMenuButtons = document.querySelectorAll(".menu-btn");
-const sideSubLists = document.querySelectorAll(".menu-sub-list");
-const sideSubLinks = document.querySelectorAll(".rebound-link");
-const tabNames = document.querySelectorAll(".tab-name");
-const icons = document.querySelectorAll(".icon-wrapper i");
+// const homeButton = document.getElementById("menu-home");
+// const sideMenuButtons = document.querySelectorAll(".menu-btn");
+// const sideSubLists = document.querySelectorAll(".menu-sub-list");
+// const sideSubLinks = document.querySelectorAll(".rebound-link");
+// const tabNames = document.querySelectorAll(".tab-name");
+// const icons = document.querySelectorAll(".icon-wrapper i");
 
 // 홈 클릭 이벤트
 homeButton.addEventListener("click", (e) => {
