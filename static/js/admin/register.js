@@ -23,8 +23,8 @@ const closeFooterButton = document.querySelector(".btn-close");
 
 actionButtons.forEach((actionButton) => {
     actionButton.addEventListener("click", (e) => {
-        modal.style.display = "block";
         console.log(222);
+        modal.style.display = "block";
         setTimeout(() => {
             modal.classList.add("show");
             modal.style.background = "rgba(0,0,0,0.5)";
@@ -62,4 +62,28 @@ closeFooterButton.addEventListener("click", (e) => {
     setTimeout(() => {
         modal.style.display = "none";
     }, 100);
+});
+
+// 승인 버튼
+const acceptBtn = document.querySelectorAll(".accept");
+const refuseBtn = document.querySelectorAll(".refuse");
+
+acceptBtn.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        const tr = e.currentTarget.closest("tr");
+        const status = tr.querySelector(".approval-status");
+        status.textContent = "승인 완료";
+        status.style.color = "green";
+    });
+});
+
+// 거절 버튼
+refuseBtn.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        console.log(222);
+        const tr = e.currentTarget.closest("tr");
+        const status = tr.querySelector(".approval-status");
+        status.textContent = "승인 거절";
+        status.style.color = "red";
+    });
 });
