@@ -1,4 +1,4 @@
-// ✅ 사이드바 메뉴 토글
+// 사이드바 메뉴 토글
 const menuBtns = document.querySelectorAll(".menu-btn");
 const allSubMenus = document.querySelectorAll(".menu-sub-list");
 
@@ -15,7 +15,7 @@ menuBtns.forEach((btn) => {
     });
 });
 
-// ✅ 결제 상태 선택 토글
+// 결제 상태 선택 토글
 const paySelectBtn = document.getElementById("btn-filter-status");
 const paySelect = document.querySelector(".bt-pop-menu-context");
 
@@ -23,7 +23,7 @@ paySelectBtn.addEventListener("click", () => {
     paySelect.classList.toggle("show");
 });
 
-// ✅ 전체 선택 / 전체 해제
+// 전체 선택  전체 해제
 const selectAllBtn = document.getElementById("btn-select-all");
 const deselectAllBtn = document.getElementById("btn-deselect-all");
 const checkBoxes = document.querySelectorAll(".boot-check-box");
@@ -36,8 +36,23 @@ selectAllBtn.addEventListener("click", () => {
             box.classList.add("active");
         }
         box.classList.add("flash");
-        setTimeout(() => box.classList.remove("flash"), 400);
+        box.addEventListener(
+            "animationend",
+            () => {
+                box.classList.remove("flash");
+            },
+            { once: true }
+        );
     });
+    selectAllBtn.classList.add("flash");
+    selectAllBtn.addEventListener(
+        "animationend",
+        () => {
+            selectAllBtn.classList.remove("flash");
+        },
+        { once: true }
+    );
+
     selectAllBtn.classList.add("active");
 });
 
@@ -52,13 +67,13 @@ deselectAllBtn.addEventListener("click", () => {
     selectAllBtn.classList.remove("active");
 });
 
-// ✅ 그룹별 상위 체크박스 관련 변수
+// 그룹별 상위 체크박스 관련 변수
 const checkAll = document.querySelectorAll(".all-check-btn");
 const pays = ["collapse_payloading", "collapse_payFail", "collapse_cancel"];
 
 const paySections = pays.map((id) => document.getElementById(id));
 
-// ✅ 그룹별 전체 선택 버튼 클릭 시
+// 그룹별 전체 선택 버튼 클릭 시
 checkAll.forEach((btn, index) => {
     btn.addEventListener("click", () => {
         const section = paySections[index];
@@ -82,7 +97,7 @@ checkAll.forEach((btn, index) => {
     });
 });
 
-// ✅ 개별 체크박스 클릭 시 - 상위 체크 상태 자동 갱신
+// 개별 체크박스 클릭 시 - 상위 체크 상태 자동 갱신
 document.querySelectorAll(".boot-check-box").forEach((box) => {
     box.addEventListener("click", () => {
         const icon = box.querySelector("i.mdi-check");
@@ -113,7 +128,7 @@ document.querySelectorAll(".boot-check-box").forEach((box) => {
     });
 });
 
-// ✅ 결제 상세 선택 - +버튼 토글
+// 결제 상세 선택 - +버튼 토글
 const payBtnIcons = document.querySelectorAll(".mdi.mdi-plus");
 
 payBtnIcons[0].addEventListener("click", () => {

@@ -191,6 +191,7 @@ i {
 
 .flex-grow-1 {
     flex-grow: 1 !important;
+    cursor: pointer;
 }
 
 #bootpay>#bootpay-side #side-wrapper>.menu-wrapper>ul.menu-list {
@@ -1944,28 +1945,21 @@ element.style {
     color: white !important;
 }
 
-  /* .boot-check-box i.mdi-check {
-    display: none;
-}*/
-
 .boot-check-box.active i.mdi-check {
     display: inline-block;
 } 
 
-.boot-check-box.flash {
-    animation: flash-bg 0.4s ease;
+#btn-select-all.flash {
+    animation: flash-btn 0.4s ease;
 }
 
-@keyframes flash-bg {
-    0% { background-color: #d0e8ff; }
-    100% { background-color: transparent; }
+@keyframes flash-btn {
+    0% {
+        background-color: #d0e8ff;
+        box-shadow: 0 0 5px #91caff;
+    }
+    100% {
+        background-color: transparent;
+        box-shadow: none;
+    }
 }
-
-/* .boot-check-box.active {
-    background-color: #507cf3;
-}
-
-.boot-check .boot-check-box.active {
-    background-color: #507cf3;
-  } */
-  
