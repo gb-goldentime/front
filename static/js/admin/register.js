@@ -24,7 +24,7 @@ const closeFooterButton = document.querySelector(".btn-close");
 actionButtons.forEach((actionButton) => {
     actionButton.addEventListener("click", (e) => {
         modal.style.display = "block";
-
+        console.log(222);
         setTimeout(() => {
             modal.classList.add("show");
             modal.style.background = "rgba(0,0,0,0.5)";

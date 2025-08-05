@@ -351,6 +351,29 @@ ul {
     height: 50px;
 }
 
+.page-content .table-layout table.member-table td.td-action .action-btn:hover {
+    background-color: #8baaff;
+    border-color: #fff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.page-content .table-layout table.member-table td.td-action {
+    width: 80px;
+}
+
+.page-content .table-layout table.member-table td.td-action .action-btn {
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transition: background-color .2s, color .4s, border-color .3s;
+    width: 30px;
+}
+
 .page {
     margin-left: auto;
     margin-right: auto;
@@ -590,8 +613,8 @@ th {
 
 button.btn.btn-light-danger {
     background-color: rgba(254, 101, 126, .07);
-    border: 1px solid #fe657e;
-    color: #fe657e;
+    border: 1px solid #fff;
+    color: black;
 }
 
 button.btn {
@@ -639,10 +662,6 @@ button, input, optgroup, select, textarea {
     font-size: inherit;
     line-height: inherit;
     margin: 0;
-}
-
-.mdi-pencil-outline:before {
-    content: "\F0CB6";
 }
 
 .mdi-set, .mdi:before {
