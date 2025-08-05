@@ -1,7 +1,7 @@
 
 .main-side-container {
     position: sticky;
-    top: 84px;
+    top: 154px;
     width: 100%;
     min-width: 320px;
     max-width: 320px;
@@ -20,12 +20,21 @@
     display: flex;
     justify-content: center;
     width: 100%;
+
 }
 
 .main-side-ad-wrapper {
+    display: flex;
+    align-items: center;
     width: 320px;
     height: 50px;
     height: 100%;
+}
+
+.main-side-ad {
+    cursor: pointer;
+    width: 320px;
+    height: 50px;
 }
 
 .main-side-sparring-wrapper {
@@ -39,6 +48,7 @@
     background-color: var(--color-white);
     gap: 16px;
     padding: 20px 0px;
+    cursor: pointer;
 }
 
 .main-side-sparring-topic-wrapper {
@@ -192,6 +202,7 @@
     -webkit-box-align: center;
     align-items: center;
     gap: 2px;
+    cursor: pointer;
 }
 
 .main-side-popular-topics-title {
@@ -201,12 +212,17 @@
     line-height: 100%;
 }
 
-.main-side-popular-topics-button {
+.main-side-popular-topics-button-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 18px;
     width: 18px;
+}
+
+.main-side-popular-topics-button {
+    width: 100%;
+    height: 100%;
 }
 
 .main-side-popular-topics-base-time {
@@ -235,6 +251,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    cursor: pointer;
 }
 
 .main-side-popular-topic-content-ranking-container {
@@ -266,6 +283,18 @@
     transform: translate(-50%, -50%);
 }
 
+.main-side-popular-topic-content-ranking {
+    color: #333d4b;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+    display: -webkit-box;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
 .main-side-popular-topic-content-ranking-change-icon { 
     display: flex;
     align-items: center;
@@ -284,15 +313,26 @@
 .main-side-footer-wrapper {
     display: flex;
     flex-wrap: wrap;
-    -webkit-box-align: center;
     align-items: center;
     width: 100%;
     column-gap: 8px;
+    margin: 0;     
+    padding: 0;       
+    list-style: none;
 }
 
 .main-side-footer-categories {
+    display: flex;
     font-size: 14px;
     line-height: 150%;
     font-weight: 500;
     color: rgb(176, 184, 193);
+    cursor: pointer;
+}
+
+.main-side-footer-categories-icon {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: rgb(176, 184, 193);
 }
