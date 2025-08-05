@@ -532,8 +532,8 @@ div.payment-card-container{
     flex-direction: column;
     gap: 24px;
     width: 1172px;
-    padding-left: 16px;
-    padding-right: 16px;
+    /* padding-left: 16px; */
+    padding-right: 32px;
     margin-left: auto;
     margin-right: auto;
 }
