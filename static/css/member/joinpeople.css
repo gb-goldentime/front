@@ -114,7 +114,7 @@ div.iprukchang {
     gap: 3px;
  }
 
-div.sub04k008qsemailgulssi {
+div.k008qs {
     display: flex;
  }
 
@@ -148,7 +148,7 @@ div.sbo1gjemailchang {
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: justify;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 0px 0px 0px 0px;
     border-radius: 14px;
     background: rgb(255, 255, 255);
@@ -327,3 +327,62 @@ input.bms9cb.input-filled {
     cursor: pointer;
 }
 
+
+
+/* 인증번호 요청 버튼 스타일 */
+.auth-button {
+    margin-top: 8px;
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.auth-button:hover {
+    background-color: #0056b3;
+}
+
+.auth-button:active {
+    background-color: #003f80;
+}
+
+/* 비밀번호 재설정 버튼 활성화 스타일 */
+#loginBtn.active-button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#loginBtn:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+div.address-search {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+div.iprukchang{
+    gap: 10px;
+}
+
+div.zip{
+    width: 100%;
+    box-shadow: none;
+    gap: 10px;
+}
+button.address-btn{
+    border: 1px solid black;
+}
+input[type="text"].input-address{
+    box-shadow: rgb(229, 232, 235) 0px 0px 0px 1px inset;
+    border-radius: 12px;
+    width: 60%
+}
