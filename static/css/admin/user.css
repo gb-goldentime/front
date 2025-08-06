@@ -1,6 +1,6 @@
 @font-face {
     font-family: Material Design Icons;
-    src: url(/static/fonts/admin-login-fonts/materialdesignicons-webfont-d5cba82059f88bfa469e.woff2);
+    src: url(/static/css/admin/font.css);
 }
 
 :root {
@@ -35,6 +35,7 @@
 }
 
 /* 사이드 바 */
+
 
 
 /*  */
