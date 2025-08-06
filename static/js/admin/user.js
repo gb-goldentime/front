@@ -15,159 +15,12 @@ menuBtns.forEach((btn) => {
     });
 });
 
-//
-
 const homeButton = document.getElementById("menu-home");
 const sideMenuButtons = document.querySelectorAll(".menu-btn");
 const sideSubLists = document.querySelectorAll(".menu-sub-list");
 const sideSubLinks = document.querySelectorAll(".rebound-link");
 const tabNames = document.querySelectorAll(".tab-name");
 const icons = document.querySelectorAll(".icon-wrapper i");
-
-// 사이드 바 메인 메뉴 클릭 시 리스트 열고 닫기 + 아이콘
-// 사이드 바 서브 링크 클릭 시 이벤트 + 다른 리스트 닫기
-// 상단 tab바 이벤트
-
-// 상단 tab-name 활성화
-const linkText = sideSubLink.textContent.trim().replace("-", "").trim();
-// 링크 이름에서 기호(-)랑 공백 제거한 텍스트
-tabNames.forEach((tabName) => tabName.classList.remove("active"));
-tabNames.forEach((tabNameCheck) => {
-    if (tabNameCheck.textContent.trim() === linkText) {
-        tabNameCheck.classList.add("active");
-    }
-});
-
-// 상단 tab-name 누르면 사이드 바 따라가는 이벤트
-tabNames.forEach((headerTabname) => {
-    headerTabname.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        const tabText = headerTabname.textContent.trim();
-
-        // 상단 탭 active 초기화
-        tabNames.forEach((headerTab) => headerTab.classList.remove("active"));
-        headerTabname.classList.add("active");
-
-        // 사이드 링크 active 초기화 + 같은 텍스트만 active
-        sideSubLinks.forEach((subLink) => {
-            const linkText = subLink.textContent.trim().replace("-", "").trim();
-            if (linkText === tabText) {
-                subLink.classList.add("active");
-
-                // 메뉴도 열고 current 붙이기
-                const parentSubLink = subLink.parentElement.parentElement;
-                const parentSubBtton = document.querySelector(
-                    `.menu-btn[aria-controls="${parentSubLink.id}"]`
-                );
-                parentSubBtton.classList.add("current");
-                parentSubLink.classList.add("show");
-
-                const checkSubIcon =
-                    parentSubBtton.querySelector(".icon-wrapper i");
-                checkSubIcon.classList.remove("mdi-chevron-right");
-                checkSubIcon.classList.add("mdi-chevron-down");
-            } else {
-                subLink.classList.remove("active");
-            }
-        });
-    });
-});
-
-// 출력된 리스트 다시 닫기
-const userMenuWrapper = document.querySelector(".user-menu-wrapper");
-const userMenuContent = document.querySelector(".user-menu-content");
-
-userMenuWrapper.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (userMenuContent.classList.contains("show")) {
-        userMenuContent.classList.remove("show");
-    } else {
-        userMenuContent.classList.add("show");
-    }
-});
-
-document.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (
-        // userMenuContent 안넣어주면 안에 걸 눌러도 리스트가 닫힌다.
-        !userMenuWrapper.contains(e.target) &&
-        !userMenuContent.contains(e.target)
-    ) {
-        userMenuContent.classList.remove("show");
-    }
-});
-
-// 페이지 번호 클릭 이벤트
-const pageNums = document.querySelectorAll(".page-num");
-const pageItemNums = document.querySelectorAll(".page-item-num");
-
-pageItemNums.forEach((pageItemNum) => {
-    pageItemNum.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        pageNums.forEach((pageNum) => {
-            pageNum.classList.remove("active");
-        });
-
-        pageItemNum.parentElement.classList.add("active");
-    });
-});
-
-// 일반회원 상세 모달 창 열고 닫는 이벤트
-const modal = document.querySelector(".member-modal");
-const actionButtons = document.querySelectorAll(".action-btn");
-const closeButtons = document.querySelectorAll(".close");
-const closeFooterButton = document.querySelector(".btn-close");
-
-actionButtons.forEach((actionButton) => {
-    actionButton.addEventListener("click", (e) => {
-        modal.style.display = "block";
-
-        setTimeout(() => {
-            modal.classList.add("show");
-            modal.style.background = "rgba(0,0,0,0.5)";
-            document.body.classList.add("modal-open");
-        }, 100);
-    });
-});
-
-closeButtons.forEach((closeButton) => {
-    closeButton.addEventListener("click", (e) => {
-        modal.classList.remove("show");
-        document.body.classList.remove("modal-open");
-
-        setTimeout(() => {
-            modal.style.display = "none";
-        }, 100);
-    });
-});
-
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.classList.remove("show");
-        document.body.classList.remove("modal-open");
-
-        setTimeout(() => {
-            modal.style.display = "none";
-        }, 100);
-    }
-});
-
-closeFooterButton.addEventListener("click", (e) => {
-    modal.classList.remove("show");
-    document.body.classList.remove("modal-open");
-
-    setTimeout(() => {
-        modal.style.display = "none";
-    }, 100);
-});
-// const homeButton = document.getElementById("menu-home");
-// const sideMenuButtons = document.querySelectorAll(".menu-btn");
-// const sideSubLists = document.querySelectorAll(".menu-sub-list");
-// const sideSubLinks = document.querySelectorAll(".rebound-link");
-// const tabNames = document.querySelectorAll(".tab-name");
-// const icons = document.querySelectorAll(".icon-wrapper i");
 
 // 홈 클릭 이벤트
 homeButton.addEventListener("click", (e) => {
@@ -304,8 +157,8 @@ tabNames.forEach((headerTabname) => {
 
 // 상단 오른쪽 관리자 이메일 클릭 시 리스트 출력
 // 출력된 리스트 다시 닫기
-// const userMenuWrapper = document.querySelector(".user-menu-wrapper");
-// const userMenuContent = document.querySelector(".user-menu-content");
+const userMenuWrapper = document.querySelector(".user-menu-wrapper");
+const userMenuContent = document.querySelector(".user-menu-content");
 
 userMenuWrapper.addEventListener("click", (e) => {
     e.preventDefault();
@@ -328,8 +181,8 @@ document.addEventListener("click", (e) => {
 });
 
 // 페이지 번호 클릭 이벤트
-// const pageNums = document.querySelectorAll(".page-num");
-// const pageItemNums = document.querySelectorAll(".page-item-num");
+const pageNums = document.querySelectorAll(".page-num");
+const pageItemNums = document.querySelectorAll(".page-item-num");
 
 pageItemNums.forEach((pageItemNum) => {
     pageItemNum.addEventListener("click", (e) => {
@@ -344,10 +197,10 @@ pageItemNums.forEach((pageItemNum) => {
 });
 
 // 일반회원 상세 모달 창 열고 닫는 이벤트
-// const modal = document.querySelector(".member-modal");
-// const actionButtons = document.querySelectorAll(".action-btn");
-// const closeButtons = document.querySelectorAll(".close");
-// const closeFooterButton = document.querySelector(".btn-close");
+const modal = document.querySelector(".member-modal");
+const actionButtons = document.querySelectorAll(".action-btn");
+const closeButtons = document.querySelectorAll(".close");
+const closeFooterButton = document.querySelector(".btn-close");
 
 actionButtons.forEach((actionButton) => {
     actionButton.addEventListener("click", (e) => {
