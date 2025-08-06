@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Material Design Icons;
+    src: url(/static/css/admin/font.css);
+}
+
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -406,9 +411,9 @@ ul {
 }
 
 .tab-view .tab-view-header .tab-switch-row {
-    border-bottom: 2px solid #ededed;
+    border-bottom: 1px solid #ededed;
     box-shadow: none;
-    margin-bottom: 0;
+    margin-bottom: -1px;
     padding-top: 10px;
     position: relative;
 }
@@ -603,6 +608,22 @@ th {
 
 .project-setting-index .tab-wrapper.tab-project-setting-member table.table-roles td.td-mng button.btn.edit-btn {
     padding: 0 4px;
+}
+
+button.btn.h45 {
+    height: 35px;
+}
+
+.btn-box .btn-primary {
+    background-color: #9caddb;
+    border-color: #9caddb;
+    color: #fff;
+}
+
+.btn-box .accept {
+    background-color: #507cf3;
+    border-color: #507cf3;
+    color: #fff;
 }
 
 .btn:not(:disabled):not(.disabled) {
@@ -899,8 +920,6 @@ input:disabled {
     cursor: default;
 }
 
-input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" i]) {
-}
 
 select.form-control.h45 {
     height: 45px;
@@ -934,31 +953,6 @@ select:not(:-internal-list-box) {
     overflow: visible !important;
 }
 
-select:not(:-internal-list-box):not([multiple]) {
-    text-shadow: -internal-auto-base(none, inherit);
-    text-transform: -internal-auto-base(none, initial);
-    text-rendering: -internal-auto-base(auto, inherit);
-    letter-spacing: -internal-auto-base(normal, inherit);
-    word-spacing: -internal-auto-base(normal, inherit);
-    text-align: -internal-auto-base(start, initial);
-    text-indent: -internal-auto-base(0px, initial);
-    -webkit-rtl-ordering: -internal-auto-base(logical, inherit);
-    cursor: -internal-auto-base(default, inherit);
-    color: -internal-auto-base(FieldText, inherit);
-    background-color: -internal-auto-base(Field, transparent);
-    min-inline-size: -internal-auto-base(auto, calc-size(auto, max(size, 24px)));
-    min-block-size: -internal-auto-base(auto, calc-size(auto, max(size, 24px, 1lh)));
-    display: -internal-auto-base(inline-block, inline-flex);
-    align-items: -internal-auto-base(center, unset);
-    user-select: -internal-auto-base(auto, none);
-    font: -internal-auto-base(-webkit-small-control, inherit);
-    white-space: -internal-auto-base(pre, inherit);
-    border: 1px solid -internal-auto-base(light-dark(#767676, #858585), currentColor);
-    padding-block: -internal-auto-base(0, 0.25em);
-    padding-inline: -internal-auto-base(0, 0.5em);
-    gap: -internal-auto-base(initial, 0.5em);
-    border-radius: -internal-auto-base(0, 0.5em);
-}
 
 select:not(:-internal-list-box):not([multiple]) option {
     min-inline-size: 24px;
@@ -1162,9 +1156,9 @@ button.close {
 }
 
 .modal.member-modal .tab-inner.tab-detail .d-table-cell {
-    max-width: 50%;
-    min-width: 50%;
-    width: 50%;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
 }
 
 table.info-table {
@@ -1240,4 +1234,13 @@ button.btn.btn-outline-filter {
 
 .info-detail:hover {
     color: #007bff;
+}
+
+.approval-status {
+    text-align: center;
+}
+
+
+.flex-column {
+    cursor: pointer;
 }
