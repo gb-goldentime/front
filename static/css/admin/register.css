@@ -414,9 +414,9 @@ ul {
 }
 
 .tab-view .tab-view-header .tab-switch-row {
-    border-bottom: 2px solid #ededed;
+    border-bottom: 1px solid #ededed;
     box-shadow: none;
-    margin-bottom: 0;
+    margin-bottom: -1px;
     padding-top: 10px;
     position: relative;
 }
@@ -1242,3 +1242,7 @@ button.btn.btn-outline-filter {
     text-align: center;
 }
 
+
+.flex-column {
+    cursor: pointer;
+}

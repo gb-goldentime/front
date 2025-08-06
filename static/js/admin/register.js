@@ -64,10 +64,11 @@ closeFooterButton.addEventListener("click", (e) => {
     }, 100);
 });
 
-// 승인 버튼
+// 승인 여부
 const acceptBtn = document.querySelectorAll(".accept");
 const refuseBtn = document.querySelectorAll(".refuse");
 
+// 승인 버튼
 acceptBtn.forEach((btn) => {
     btn.addEventListener("click", (e) => {
         const tr = e.currentTarget.closest("tr");
