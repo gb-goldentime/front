@@ -1,0 +1,10 @@
+.main-side-container {
+    position: sticky;
+    top: 84px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 320px;
+    max-height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
