@@ -22,27 +22,27 @@ const sideSubLinks = document.querySelectorAll(".rebound-link");
 const tabNames = document.querySelectorAll(".tab-name");
 const icons = document.querySelectorAll(".icon-wrapper i");
 
-// 홈 클릭 이벤트
-homeButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    sideMenuButtons.forEach((homeByButton) => {
-        homeByButton.classList.remove("current");
-    });
-    homeButton.classList.add("current");
+// // 홈 클릭 이벤트
+// homeButton.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     sideMenuButtons.forEach((homeByButton) => {
+//         homeByButton.classList.remove("current");
+//     });
+//     homeButton.classList.add("current");
 
-    sideSubLists.forEach((homeByList) => {
-        homeByList.classList.remove("show");
-    });
+//     sideSubLists.forEach((homeByList) => {
+//         homeByList.classList.remove("show");
+//     });
 
-    sideSubLinks.forEach((homeByLink) => {
-        homeByLink.classList.remove("active");
-    });
+//     sideSubLinks.forEach((homeByLink) => {
+//         homeByLink.classList.remove("active");
+//     });
 
-    icons.forEach((homeByIcon) => {
-        homeByIcon.classList.remove("mdi-chevron-down");
-        homeByIcon.classList.add("mdi-chevron-right");
-    });
-});
+//     icons.forEach((homeByIcon) => {
+//         homeByIcon.classList.remove("mdi-chevron-down");
+//         homeByIcon.classList.add("mdi-chevron-right");
+//     });
+// });
 
 // 사이드 바 메인 메뉴 클릭 시 리스트 열고 닫기 + 아이콘
 // 사이드 바 서브 링크 클릭 시 이벤트 + 다른 리스트 닫기
@@ -155,30 +155,30 @@ tabNames.forEach((headerTabname) => {
     });
 });
 
-// 상단 오른쪽 관리자 이메일 클릭 시 리스트 출력
-// 출력된 리스트 다시 닫기
-const userMenuWrapper = document.querySelector(".user-menu-wrapper");
-const userMenuContent = document.querySelector(".user-menu-content");
+// // 상단 오른쪽 관리자 이메일 클릭 시 리스트 출력
+// // 출력된 리스트 다시 닫기
+// const userMenuWrapper = document.querySelector(".user-menu-wrapper");
+// const userMenuContent = document.querySelector(".user-menu-content");
 
-userMenuWrapper.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (userMenuContent.classList.contains("show")) {
-        userMenuContent.classList.remove("show");
-    } else {
-        userMenuContent.classList.add("show");
-    }
-});
+// userMenuWrapper.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     if (userMenuContent.classList.contains("show")) {
+//         userMenuContent.classList.remove("show");
+//     } else {
+//         userMenuContent.classList.add("show");
+//     }
+// });
 
-document.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (
-        // userMenuContent 안넣어주면 안에 걸 눌러도 리스트가 닫힌다.
-        !userMenuWrapper.contains(e.target) &&
-        !userMenuContent.contains(e.target)
-    ) {
-        userMenuContent.classList.remove("show");
-    }
-});
+// document.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     if (
+//         // userMenuContent 안넣어주면 안에 걸 눌러도 리스트가 닫힌다.
+//         !userMenuWrapper.contains(e.target) &&
+//         !userMenuContent.contains(e.target)
+//     ) {
+//         userMenuContent.classList.remove("show");
+//     }
+// });
 
 // 페이지 번호 클릭 이벤트
 const pageNums = document.querySelectorAll(".page-num");
@@ -204,6 +204,7 @@ const closeFooterButton = document.querySelector(".btn-close");
 
 actionButtons.forEach((actionButton) => {
     actionButton.addEventListener("click", (e) => {
+        console.log(222);
         modal.style.display = "block";
 
         setTimeout(() => {
