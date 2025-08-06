@@ -133,26 +133,22 @@
     white-space: pre-wrap;
 }
 
-.mypost-content-body-wrapper {
-    font-size: 14px;
-    line-height: 150%;
-    font-weight: 500;
-    color: rgb(107, 118, 132);
-    max-width: 100%;
-    overflow: hidden;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    white-space: pre-wrap;
-}
-
 .mypost-content-title-q {
     color: rgb(23, 49, 233);
     font-weight: 700;
 }
 
-.mypost-content-body-a {
-    color: rgb(38, 223, 47);
-    font-weight: 700;
+.mypost-content-body {
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 500;
+    color: rgb(107, 118, 132);
+    display: -webkit-box;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
 }
 
 ul {
