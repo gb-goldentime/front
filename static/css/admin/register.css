@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Material Design Icons;
+    src: url(/static/css/admin/font.css);
+}
+
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -348,6 +353,29 @@ ul {
     height: 50px;
 }
 
+.page-content .table-layout table.member-table td.td-action .action-btn:hover {
+    background-color: #8baaff;
+    border-color: #fff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.page-content .table-layout table.member-table td.td-action {
+    width: 80px;
+}
+
+.page-content .table-layout table.member-table td.td-action .action-btn {
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transition: background-color .2s, color .4s, border-color .3s;
+    width: 30px;
+}
+
 .page {
     margin-left: auto;
     margin-right: auto;
@@ -383,9 +411,9 @@ ul {
 }
 
 .tab-view .tab-view-header .tab-switch-row {
-    border-bottom: 2px solid #ededed;
+    border-bottom: 1px solid #ededed;
     box-shadow: none;
-    margin-bottom: 0;
+    margin-bottom: -1px;
     padding-top: 10px;
     position: relative;
 }
@@ -582,14 +610,30 @@ th {
     padding: 0 4px;
 }
 
+button.btn.h45 {
+    height: 35px;
+}
+
+.btn-box .btn-primary {
+    background-color: #9caddb;
+    border-color: #9caddb;
+    color: #fff;
+}
+
+.btn-box .accept {
+    background-color: #507cf3;
+    border-color: #507cf3;
+    color: #fff;
+}
+
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
 }
 
 button.btn.btn-light-danger {
     background-color: rgba(254, 101, 126, .07);
-    border: 1px solid #fe657e;
-    color: #fe657e;
+    border: 1px solid #fff;
+    color: black;
 }
 
 button.btn {
@@ -637,10 +681,6 @@ button, input, optgroup, select, textarea {
     font-size: inherit;
     line-height: inherit;
     margin: 0;
-}
-
-.mdi-pencil-outline:before {
-    content: "\F0CB6";
 }
 
 .mdi-set, .mdi:before {
@@ -880,8 +920,6 @@ input:disabled {
     cursor: default;
 }
 
-input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" i]) {
-}
 
 select.form-control.h45 {
     height: 45px;
@@ -915,31 +953,6 @@ select:not(:-internal-list-box) {
     overflow: visible !important;
 }
 
-select:not(:-internal-list-box):not([multiple]) {
-    text-shadow: -internal-auto-base(none, inherit);
-    text-transform: -internal-auto-base(none, initial);
-    text-rendering: -internal-auto-base(auto, inherit);
-    letter-spacing: -internal-auto-base(normal, inherit);
-    word-spacing: -internal-auto-base(normal, inherit);
-    text-align: -internal-auto-base(start, initial);
-    text-indent: -internal-auto-base(0px, initial);
-    -webkit-rtl-ordering: -internal-auto-base(logical, inherit);
-    cursor: -internal-auto-base(default, inherit);
-    color: -internal-auto-base(FieldText, inherit);
-    background-color: -internal-auto-base(Field, transparent);
-    min-inline-size: -internal-auto-base(auto, calc-size(auto, max(size, 24px)));
-    min-block-size: -internal-auto-base(auto, calc-size(auto, max(size, 24px, 1lh)));
-    display: -internal-auto-base(inline-block, inline-flex);
-    align-items: -internal-auto-base(center, unset);
-    user-select: -internal-auto-base(auto, none);
-    font: -internal-auto-base(-webkit-small-control, inherit);
-    white-space: -internal-auto-base(pre, inherit);
-    border: 1px solid -internal-auto-base(light-dark(#767676, #858585), currentColor);
-    padding-block: -internal-auto-base(0, 0.25em);
-    padding-inline: -internal-auto-base(0, 0.5em);
-    gap: -internal-auto-base(initial, 0.5em);
-    border-radius: -internal-auto-base(0, 0.5em);
-}
 
 select:not(:-internal-list-box):not([multiple]) option {
     min-inline-size: 24px;
@@ -955,4 +968,279 @@ select:not(:-internal-list-box):not([multiple]) option {
 option {
     padding-block-start: 0px;
     white-space: nowrap;
+}
+
+
+ /* 모달 창이 뜨지 않을 때 */
+/* .fade:not(.show) {
+    opacity: 0;
+} */
+
+/* 모달 창이 떠 있을 때
+Body 태그에 class로 추가됌 */
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-dialog {
+    margin: .5rem;
+    pointer-events: none;
+    position: relative;
+    width: auto;
+}
+
+@media (min-width: 800px) {
+    .modal-dialog {
+        margin: 1.75rem auto;
+        max-width: 500px;
+    }
+}
+
+.modal>.modal-dialog {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.modal.member-modal>.modal-dialog {
+    max-width: 880px;
+}
+
+.modal.fade .modal-dialog {
+    transform: translateY(-50px);
+    transition: transform .3s ease-out;
+}
+
+/* 모달 창이 떠 있을 때 */
+.modal.show .modal-dialog {
+    transform: none;
+}
+
+.modal-content {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+    outline: 0;
+    pointer-events: auto;
+    position: relative;
+    width: 100%;
+}
+
+.modal>.modal-dialog>.modal-content {
+    border: 0;
+}
+
+.modal-header {
+    align-items: flex-start;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.modal>.modal-dialog>.modal-content>.modal-header {
+    align-items: center;
+    border-bottom: 0;
+    padding: 24px 30px 20px;
+}
+
+.modal-title {
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.modal>.modal-dialog>.modal-content>.modal-header>.modal-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.modal.member-modal>.modal-dialog>.modal-content>.modal-header .modal-title {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.modal.member-modal span.badge-label {
+    font-size: 13px;
+    margin-left: 5px;
+    padding: 5px 10px;
+}
+
+.close {
+    color: #000;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: .5;
+    text-shadow: 0 1px 0 #fff;
+}
+
+button.close {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.modal-header .close {
+    margin: -1rem -1rem -1rem auto;
+    padding: 1rem;
+}
+
+.modal>.modal-dialog>.modal-content button.close {
+    font-weight: 400;
+}
+
+.modal.member-modal>.modal-dialog>.modal-content>.modal-header button.close {
+    color: #292929;
+    font-size: 22px;
+    opacity: .8;
+}
+
+.modal-body {
+    flex: 1 1 auto;
+    padding: 1rem;
+    position: relative;
+}
+
+.modal.member-modal .modal-body {
+    padding: 0;
+}
+
+.modal>.modal-dialog>.modal-content>.modal-body {
+    border-bottom: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* .tab-view-header 내용 추가 시 삭제해야함. */
+.tab-view .tab-view-header {
+    border-bottom: 2px solid #ededed
+}
+
+.tab-view .tab-view-body {
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    padding: 0 20px;
+}
+
+.modal.member-modal .modal-body .tab-view .tab-view-body {
+    border-radius: 0;
+    min-height: 500px;
+}
+
+.modal.member-modal .tab-inner {
+    font-size: .9rem;
+    min-height: 300px;
+    padding: 18px 28px 0;
+}
+
+.info-layout {
+    margin-bottom: 20px;
+}
+
+.info-layout .info-title {
+    align-items: center;
+    display: flex;
+    padding: 8px 0;
+}
+
+.info-layout .info-title .title {
+    font-size: 1rem;
+    font-weight: bolder;
+    padding-top: 1px;
+}
+
+.modal.member-modal .tab-inner.tab-detail .d-table-cell {
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+}
+
+table.info-table {
+    font-size: 13px;
+    margin: -1px;
+    width: calc(100% + 2px);
+}
+
+.modal.member-modal .tab-inner.tab-detail table.info-table {
+    border-top: 1px solid #ededed;
+}
+
+table.info-table td, table.info-table th {
+    border-bottom: 1px solid hsla(0, 0%, 50%, .102);
+    height: 46px;
+    padding: 0 16px;
+    vertical-align: middle;
+}
+
+table.info-table th {
+    background: #f3f3f7;
+}
+
+.modal.member-modal .tab-inner.tab-detail table.info-table th {
+    max-width: 120px;
+    min-width: 120px;
+    width: 120px;
+}
+
+.modal.member-modal .tab-inner.tab-detail table.info-table td {
+    white-space: pre-line;
+    word-break: break-all;
+}
+
+.modal-footer {
+    align-items: center;
+    border-bottom-left-radius: calc(.3rem - 1px);
+    border-bottom-right-radius: calc(.3rem - 1px);
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: .75rem;
+}
+
+.modal.member-modal .modal-footer {
+    background-color: #fff;
+    padding-top: 10px !important;
+}
+
+.modal>.modal-dialog>.modal-content>.modal-footer {
+    border-top: 0;
+    padding: 30px;
+}
+
+button.btn.btn-outline-filter {
+    border-color: #ededed;
+    color: #292929;
+}
+
+.modal>.modal-dialog>.modal-content>.modal-footer>* {
+    margin: 0;
+}
+
+.modal.member-modal .modal-footer button.btn-close {
+    color: #56626a;
+    padding: 9px 20px;
+}
+
+.modal>.modal-dialog>.modal-content>.modal-footer>button.btn {
+    margin-left: 10px;
+}
+
+.info-detail:hover {
+    color: #007bff;
+}
+
+.approval-status {
+    text-align: center;
+}
+
+
+.flex-column {
+    cursor: pointer;
 }
