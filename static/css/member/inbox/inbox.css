@@ -202,10 +202,14 @@ img {
     align-items: center;
 }
 
-.inbox-checked-message-button.svg {
+.inbox-checked-message-button.img {
     flex-shrink: 0;
 }
 
-.inbox-non-checked-message-button.svg{
+.inbox-non-checked-message-button.img{
     flex-shrink: 0;
+}
+
+.to-white {
+    filter: invert(50%) brightness(100%);
 }
