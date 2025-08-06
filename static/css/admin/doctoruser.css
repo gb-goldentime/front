@@ -1811,3 +1811,8 @@ button.btn.btn-outline-filter {
     padding: 8px 0 8px 24px;
     transition: all .2s;
 }
+
+/* 상단 관리자 이메일 회원정보 이미지 추가 */
+.mdi-account-box-outline:before {
+    content: "\F0007";
+}
