@@ -18,11 +18,11 @@ menuBtns.forEach((btn) => {
 const homeButton = document.getElementById("menu-home");
 const sideMenuButtons = document.querySelectorAll(".menu-btn");
 const sideSubLists = document.querySelectorAll(".menu-sub-list");
-const sideSubLinks = document.querySelectorAll(".rebound-link");
+const sideSubLinks = document.querySelectorAll(".boot-link");
 const tabNames = document.querySelectorAll(".tab-name");
 const icons = document.querySelectorAll(".icon-wrapper i");
 
-// // 홈 클릭 이벤트
+// 홈 클릭 이벤트
 // homeButton.addEventListener("click", (e) => {
 //     e.preventDefault();
 //     sideMenuButtons.forEach((homeByButton) => {
@@ -207,6 +207,7 @@ actionButtons.forEach((actionButton) => {
         console.log(222);
         modal.style.display = "block";
 
+        // 일정 시간이 지난 후 한번만 실행
         setTimeout(() => {
             modal.classList.add("show");
             modal.style.background = "rgba(0,0,0,0.5)";
