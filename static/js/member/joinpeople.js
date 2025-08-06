@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const phone1 = document.getElementById("phone1");
     const phone2 = document.getElementById("phone2");
     const phone3 = document.getElementById("phone3");
-
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
