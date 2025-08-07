@@ -1246,3 +1246,9 @@ button.btn.btn-outline-filter {
 .flex-column {
     cursor: pointer;
 }
+
+.mdi-chevron-down:before{
+    content: "\F0142";
+}
+
+/* 상단 관리자 */
