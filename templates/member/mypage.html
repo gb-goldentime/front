@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>계정 설정 ㅣ 궁금할 땐, 아하!</title>
-    <link rel="stylesheet" href="/static/css/doctor/mypage/mypage.css">
+    <link rel="stylesheet" href="/static/css/member/mypage/mypage/mypage.css">
+    <link rel="stylesheet" href="/static/css/payment/payment.css">
 </head>
 <body>
     <div class="whole-body">
@@ -19,26 +20,57 @@
                     <!-- 카테고리 누르면 해당 페이지로 넘어가면서 카테고리 색 바뀌는 이벤트 -->
                     <aside class="mypage-category-wrapper">
                         <a class ="mypage-category-wrap-black ">
-                            <span class ="mypage-category-black active">계정 관리</span>
+                            <span class ="mypage-category-black active">내 정보 수정</span>
                         </a>
                         <a class = "mypage-category-wrap-black">
-                            <span class = "mypage-category-black" >쪽지함</span>
+                            <span class = "mypage-category-black">내 작성글 목록</span>
                         </a>
                         <a class = "mypage-category-wrap-black">
-                            <span class = "mypage-category-black">내 상담글 목록</span>
+                            <span class = "mypage-category-black">진료 신청 기록</span>
                         </a>
                         <a class = "mypage-category-wrap-black">
-                            <span class = "mypage-category-black">방문 진료 기록</span>
+                            <span class = "mypage-category-black">내 관심 전문가</span>
                         </a>
                         <a class = "mypage-category-wrap-black">
-                            <span class = "mypage-category-black">1:1 문의함</span>
+                            <span class = "mypage-category-black">나의 문의글</span>
                         </a>
                     </aside>
                 </div>
                 <div class ="mypage-main-container">
                     <div class = "mypage-main-wrap">
+                        <span class = "mypage-main-info-title">프로필 정보</span>
+                        <div class="mypage-main-content-wrapper">
+                            <label class="mypage-main-profile-label">
+                                <div class="mypage-main-profile-wrapper">
+                                    <img class="mypage-main-profile-body" alt="프로필 이미지" width="80" height="80" decoding="async" data-nimg="1" src="https://media.a-ha.io/aha-qna/images/common/icons/human/person-filled.svg" style="color: transparent;">
+                                    <img class="mypage-main-profile-plus" alt="plus-circle" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="https://media.a-ha.io/aha-qna/images/common/icons/math/plus-circle-twoToned.svg" style="color: transparent;">
+                                </div>
+                            </label>    
+                        <div class="mypage-main-profile-content-button-wrapper">
+                            <button Id = "change-email-button" class="mypage-main-button" color ="grey" height="54">
+                                <span class="mypage-main-button-name">변경</span>
+                            </button>
+                            <button Id = "change-email-button" class="mypage-main-button" color ="grey" height="54">
+                                <span class="mypage-main-button-name">확인</span>
+                            </button>
+                        </div>
+                        </div>  
+                    </div>
+                    <div class = "mypage-main-wrap">
                         <span class = "mypage-main-info-title">기본 정보</span>
                         <div class="mypage-main-content-container">
+                            <div class="mypage-main-key-container">
+                                <div class="mypage-main-content-wrapper">
+                                    <div class="mypage-main-wrapper-wrapper">
+                                        <div class="mypage-main-key-wrapper">
+                                            <span class="mypage-main-key">이름</span>
+                                        </div>
+                                        <span class="mypage-main-value">김초밥</span>
+                                    </div>
+                                    <!-- 버튼 클릭 시 이메일 변경 창 생성 -->
+                                </div>
+                            </div>
+                            <hr class="mypage-main-content-line">
                             <div class="mypage-main-key-container">
                                 <div class="mypage-main-content-wrapper">
                                     <div class="mypage-main-wrapper-wrapper">
@@ -70,51 +102,30 @@
                             </div>
                         </div>
                     </div>
-                            <div class = "mypage-main-wrap">
-                        <span class = "mypage-main-info-title">기본 정보</span>
+                    <div class = "mypage-main-wrap">
+                        <span class = "mypage-main-info-title">보유 비타</span>
                         <div class="mypage-main-content-container">
                             <div class="mypage-main-key-container">
                                 <div class="mypage-main-content-wrapper">
-                                    <div class="mypage-main-wrapper-wrapper">
-                                        <div class="mypage-main-key-wrapper">
-                                            <span class="mypage-main-key">의사 면허증</span>
-                                        </div>
-                                        <div class="mypage-main-value-wrapper">
-                                            <div class="mypage-main-value-icon-wrapper">
-                                                <img class="mypage-main-value-icon" src="/static/images/license-check.png">
-                                            <span class="mypage-main-value">인증됨</span>
+                                    <div class="current-holding-content">
+                                        <span class="account">
+                                            <div class="account-icon">
+                                                <div>
+                                                    <svg height="24" viewBox="0 0 18 18" width="24" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_10089_10669)"><path clip-rule="evenodd" d="M9 18C13.9706 18 18 13.9706 18 9C18 4.02944 13.9706 0 9 0C4.02944 0 0 4.02944 0 9C0 13.9706 4.02944 18 9 18ZM8.99663 4.90909C11.2541 4.90909 13.0842 6.62749 13.0842 9C13.0842 11.3723 13.0909 9 13.0909 9V11.9932C13.0908 12.1242 13.0649 12.2539 13.0146 12.3749C12.9644 12.4959 12.8909 12.6059 12.7982 12.6984C12.7056 12.791 12.5956 12.8644 12.4746 12.9144C12.3536 12.9644 12.2239 12.9901 12.093 12.99C11.8326 12.99 11.5827 12.888 11.3964 12.706C11.2102 12.524 11.1024 12.2763 11.0962 12.0158V11.9705C10.9973 12.6049 10.1192 13.0909 8.99663 13.0909C6.73917 13.0909 4.90909 11.433 4.90909 9C4.90909 6.56703 6.73917 4.90909 8.99663 4.90909ZM7.79526 10.7995C8.15087 11.0373 8.56895 11.1642 8.99663 11.1642C9.2806 11.1642 9.56179 11.1082 9.82415 10.9995C10.0865 10.8907 10.3249 10.7313 10.5257 10.5303C10.7265 10.3294 10.8858 10.0908 10.9944 9.8282C11.1031 9.56563 11.159 9.28421 11.159 9C11.159 8.57197 11.0322 8.15354 10.7946 7.79764C10.557 7.44174 10.2193 7.16435 9.82415 7.00055C9.42902 6.83675 8.99423 6.79389 8.57477 6.8774C8.1553 6.9609 7.77 7.16702 7.46758 7.46969C7.16516 7.77236 6.95921 8.15798 6.87577 8.57779C6.79234 8.9976 6.83516 9.43275 6.99883 9.8282C7.1625 10.2237 7.43966 10.5617 7.79526 10.7995Z" fill="inherit" fill-rule="evenodd"></path></g><defs><clipPath id="clip0_10089_10669"><rect fill="white" height="18" width="18"></rect></clipPath></defs></svg>
+                                                </div>
+                                                20
                                             </div>
-                                        </div>
-                                        <div class="mypage-main-value-wrapper">
-                                            <div class="mypage-main-value-icon-wrapper">
-                                                <img class="mypage-main-value-icon" src="/static/images/license-warning.png">
-                                            <span class="mypage-main-value">인증이 필요합니다!</span>
-                                            </div>
-                                        </div>
+                                        </span>
+                                        <span class="unit">VITA</span>
                                     </div>
-                                    <button Id="change-phone-button" class="mypage-main-button" color ="grey" height="54">
-                                        <!-- 휴대폰 번호 인증 이벤트 -->
-                                        <span class="mypage-main-button-name">등록</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <hr class="mypage-main-content-line">
-                            <div class="mypage-main-key-container">
-                                <div class="mypage-main-content-wrapper">
-                                    <div class="mypage-main-wrapper-wrapper">
-                                        <div class="mypage-main-key-wrapper">
-                                            <span class="mypage-main-key">병원 정보</span>
-                                        </div>
-                                        <span class="mypage-main-value">강남 병원</span>
-                                    </div>
-                                    <button Id="change-phone-button" class="mypage-main-button" color ="grey" height="54">
-                                        <!-- 휴대폰 번호 인증 이벤트 -->
-                                        <span class="mypage-main-button-name">변경</span>
+                                    <button Id= "change-password-button" class="mypage-main-button" color ="grey" height="54">
+                                        <span class="mypage-main-button-name">충전</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                    </div>   
+                    </div>
+                    <!-- 버튼 클릭 시 이메일 인증 이벤트 -> 확인 시 새로운 비밀번호 입력 -->                           
                     <div class = "mypage-main-wrap">
                         <span class = "mypage-main-info-title">보안 설정</span>
                         <div class="mypage-main-content-container">
@@ -202,6 +213,6 @@
             </div>                                            
         </main>
     </div> 
-    <script src="/static/js/doctor/mypage/event.js"></script>  
+    <script src="/static/js/member/event.js"></script>  
 </body>
 </html>
