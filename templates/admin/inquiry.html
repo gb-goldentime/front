@@ -100,14 +100,6 @@
                     <div class="flex-grow-1"></div>
                     <div>
                         <div class="header-menu-group d-flex">
-                            <a class="boot-link mr-3" target="_blank" href="">
-                                <div class="header-menu-btn" data-for="f93d1e6f-6299-40e1-87f2-df4223e38459" data-toggle="tooltip" data-custom-class title data-original-title="부트페이 개발메뉴얼">
-                                 <i class="mdi mdi-text-box-outline">
-
-                                 </i>    
-
-                                </div>
-                            </a>
                             <a class="boot-link mr-3" href="">
                                 <div class="header-menu-btn " data-for="8598bfd3-1b35-4de3-a48f-9d6654dc0268" data-toggle="tooltip" data-custom-class title="공지사항">
                                     <i class="mdi mdi-bullhorn-variant-outline">
@@ -274,7 +266,7 @@
                             <div class="col-auto">
                                 <div class="filter-wrapper filter-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control flex-grow-1" placeholder="문의번호/구매자">
+                                        <input type="text" class="form-control flex-grow-1" placeholder="문의번호/회원">
                                         <div class="input-group-append">
                                             <button class="btn btn-search">
                                                 <span class="comp-icon icon-magnify" id="icons/ico-search.svg"><svg class="icon-img" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="icon-color fill" d="m13.523 12.463 3.212 3.211-1.06 1.061-3.212-3.212A6.72 6.72 0 0 1 8.25 15 6.752 6.752 0 0 1 1.5 8.25 6.752 6.752 0 0 1 8.25 1.5 6.752 6.752 0 0 1 15 8.25a6.72 6.72 0 0 1-1.477 4.213zm-1.504-.557A5.233 5.233 0 0 0 13.5 8.25C13.5 5.349 11.15 3 8.25 3A5.248 5.248 0 0 0 3 8.25c0 2.9 2.349 5.25 5.25 5.25a5.233 5.233 0 0 0 3.656-1.481l.113-.113z" fill="#292929"></path></svg></span>
@@ -307,21 +299,26 @@
                                     <th class="td-user">답변상태</th>
                                     <th class="td-at">답변시간</th>
                                     <th class="td-action">상세</th>                   
-                                    </tr>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                <td class="text-center font-weight-bold" colspan="5" >문의 내역이 없습니다</td>
-                                <td class="td-action text-center"><div id="modal-open"class="action-btn"><i id="modalbtn" class="mdi mdi-chevron-right"></i></div></td>
+                                <!-- <td class="text-center font-weight-bold" colspan="5" >문의 내역이 없습니다</td> -->
+                                    <td class="text-list">12345678</td>
+                                    <td>안녕하세요</td>
+                                    <td>2025-08-03</td>
+                                    <td>답변완료</td>
+                                    <td>2025-08-04</td>
+                                    <td>-</td>
+                                <td class="td-action text-center">
+                                    <div id="modal-open"class="action-btn">
+                                    <i id="modalbtn" class="mdi mdi-chevron-right"></i></div></td>
                                     
                                 </tr>
                             </tbody>
                         </table>
-
                     </div>
-
                 </div>
-
             </div>
             <div id ="modal"class="modal fade receipt-modal show"aria-modal="true" role="dialog ">
                 <div class="modal-dialog modal-lg">
@@ -331,12 +328,11 @@
                                 문의내역
                                 <span class="badge-label text-danger font-weight-bold ml-2">미답변</span>
                                 
-
                             </div>
-                            <button id="close"class="close"><i class="mdi mdi-close">
-
-                            </i> </button>
-
+                            <button id="close"class="close">
+                                <i class="mdi mdi-close">
+                            </i> 
+                            </button>
                         </div>
                         <div class="modal-body">
                             <div class="divider"></div>
@@ -344,7 +340,6 @@
                                 <div class="tab-view-header">
                                     <div class="tab-switch-row">
                                         <div class="tab-switch active">상세정보</div>
-
                                     </div>
                                 </div>
                                 <div class="tab-view-body">
@@ -354,10 +349,8 @@
                                                 <div class="info-title justify-content-between">
                                                     <div class="flex-left d-flex">
                                                         <div class="title">문의정보</div>
-
                                                     </div>
                                                     <div class="flex-right"></div>
-
                                                 </div>
                                                 <div class="d-table w-100">
                                                     <div class="d-table-cell">
@@ -365,59 +358,53 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <th>문의번호</th>
-                                                                    <td>??</td>
+                                                                    <td>12345678</td>
                                                                 </tr>
-                                                                <tr><th>문의시간</th><td>-</td></tr>
+                                                                <tr>
+                                                                    <th>문의시간</th>
+                                                                    <td>2025-08-03</td>
+                                                                </tr>
                                                                 
                                                             </tbody>
-
                                                         </table>
-
                                                     </div><div class="d-table-cell">
                                                         <table class="info-table">
                                                             <tbody>
-                                                                <tr><th>문의 유형</th><td>-</td></tr>
-                                                                <tr><th>구매자 이름</th><td>-</td></tr>
+                                                                <tr>
+                                                                    <th>문의 유형</th>
+                                                                    <td>Test</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>회원ID</th>
+                                                                    <td>Test</td>
+                                                                </tr>
                                                             </tbody>
-
                                                         </table>
-
                                                     </div>
-
                                                 </div>
-
                                             </div>
                                             <div class="info-layout detail-info">
                                                 <div class="info-title justify-content-between">
                                                     <div class="flex-left d-flex">
                                                         <div class="title">문의내용</div>
-
                                                     </div>
-
                                                 </div>
                                                 <div class="d-table w-100">
                                                     <div class="d-table-cell">
                                                         <table class="info-table"style="height:100px ">
                                                             <tbody>
                                                                 <th>문의내용</th>
-                                                                <td>1234</td>
+                                                                <td>안녕하세요</td>
                                                             </tbody>
-
                                                         </table> 
-
                                                     </div>
-
                                                 </div>
-        
-
                                             </div>
                                             <div class="info-layout payment-info">
                                                 <div class="info-title justify-content-between">
                                                     <div class="flex-left d-flex">
                                                         <div class="title">답변하기</div>
-
                                                     </div>
-
                                                 </div>
                                                 <div class="info-body">
                                                     <div class="table-info row">
@@ -428,7 +415,6 @@
                                                                 display: flex;
                                                                 justify-content: center;
                                                                 align-items: center;">답변내용
-
                                                                 </div>
                                                                 <input type="text" class="col" id=""style="                                                                
                                                                 height: 100px;
@@ -436,7 +422,6 @@
                                                                 align-items: center;
                                                                 border: none;
                                                                 outline: none">
-
                                                             </div>
 
                                                         </div>
