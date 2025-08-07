@@ -155,3 +155,28 @@ menuBtns.forEach((btn) => {
         if (targetMenu) targetMenu.style.display = "block";
     });
 });
+
+// 상단 오른쪽 관리자 이메일 클릭 시 리스트 출력
+// 출력된 리스트 다시 닫기
+const userMenuWrapper = document.querySelector(".user-menu-wrapper");
+const userMenuContent = document.querySelector(".user-menu-content");
+
+userMenuWrapper.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (userMenuContent.classList.contains("show")) {
+        userMenuContent.classList.remove("show");
+    } else {
+        userMenuContent.classList.add("show");
+    }
+});
+
+document.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (
+        // userMenuContent 안넣어주면 안에 걸 눌러도 리스트가 닫힌다.
+        !userMenuWrapper.contains(e.target) &&
+        !userMenuContent.contains(e.target)
+    ) {
+        userMenuContent.classList.remove("show");
+    }
+});
