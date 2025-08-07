@@ -4,41 +4,12 @@ let modalCheck;
 let buttonsCheck = true;
 // 관심 추가 버튼
 const buttons = document.querySelectorAll("button.interest-btn");
-// 의사 찾기 인풋
-const doctorSearchInput = document.querySelector(".doctor-input-content");
-// 메일 작성하기위한 인풋 태그들
-const mailModalInput = document.querySelectorAll("input[type=text].mail-input");
-// 의사 찾기하면 의사들 나올 공간
-const slide = document.querySelector(".search-layout");
-// 의사 추가하고 나서 다른 의사 선택하기 위해 먼저 x버튼
-const doctorRemoveBtn = document.querySelector(
-    "div.mail-doctor-search-wrap button"
-);
-// 의사 추가 버튼
-const doctorAddBtns = document.getElementsByClassName(
-    "mail-search-doctor-name-list"
-)[0];
 
 //숨겨진 input
 const hiddenIuput = document.querySelector(".hidden-input");
 
 const listLayout = document.getElementById("intersectionObserver");
 
-// 이미지 파일 연달아 붙이는 공간
-const ulTag = document.getElementById("file-img-list");
-// 쪽지 작성 모달 띄우기 버튼
-const mailSendBtns = document.getElementsByClassName("mail-send-btn");
-
-// 이미지 파일 버튼
-const inputFileBtn = document.getElementById("create-question-image");
-
-// 체크박스 영역
-const checkBoxDiv = document.querySelector(".label-check-box");
-// 쪽지 작성 모달 영역
-const mailSendModal = document.querySelector(".mail-send-modal");
-
-// 포인트차감 동의할 지 버튼
-const mailSendCancleBtn = document.querySelector(".mail-send-cancle-btn");
 // 체크박스 영역 부분
 const label = document.querySelector(".checkbox-label");
 // 체크시 이미지 부분
@@ -91,189 +62,13 @@ document.querySelector("div.modal").addEventListener("click", (e) => {
 
 /********************************************************************************/
 
-// 의사 검색창에서의 동작
-doctorSearchInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" && !check) {
-        e.preventDefault();
-        // 나중에 패치
-        // let slied = document.querySelector(".search-layout");
-        slide.style.height = "118px";
-        slide.style.opacity = "100%";
-        check = false;
-
-        return;
-    } else if (e.target.value === "A") {
-        // 예시 사용하는 부분 나중에 지우기
-        e.target.style.borderColor = "red";
-    } else {
-        e.target.style.borderColor = "black";
-    }
-});
-
-// 인풋에서 포커스 유무에 따른 스타일변화
-mailModalInput.forEach((mailInput) => {
-    mailInput.addEventListener("focus", (e) => {
-        if (e.target.style.borderColor !== "red") {
-            e.target.style.borderColor = "black";
-            return;
-        }
-    });
-    mailInput.addEventListener("blur", (e) => {
-        if (e.target.style.borderColor !== "red") {
-            e.target.removeAttribute("style");
-            // slide.style.height = "0";
-            // slide.style.opacity = "0";
-            return;
-        }
-    });
-});
-
-const textarea = document.querySelector("#mailContent");
-textarea.addEventListener("input", (e) => {
-    textWarnCheck(textarea, true);
-});
-
-// 임시로 특정 단어 입력 임시입니다.
-mailModalInput[0].addEventListener("input", (e) => {
-    if (e.target.value === "A") {
-        e.target.style.borderColor = "red";
-    } else {
-        e.target.style.borderColor = "black";
-    }
-    textWarnCheck(mailModalInput[0]);
-});
-
-// 의사 추가 버튼들 슬라이드 열리면 좀 기달려 주기
-doctorAddBtns.addEventListener("click", (e) => {
-    console.log(e.target);
-    const aTag = e.target.closest(".link-click");
-    if (aTag) {
-        console.log(123);
-        doctorSearchInput.value = "의사이름";
-        doctorSearchInput.disabled = true;
-        doctorRemoveBtn.style.display = "block";
-        slide.style.transition = "height 0.3s ease";
-        slide.style.height = "0px";
-        slide.style.opacity = "0";
-    }
-});
-
-// 의사 이름 선택했으면 엑스표시 삭제 해주기
-doctorRemoveBtn.addEventListener("click", (e) => {
-    doctorSearchInput.value = "";
-    doctorSearchInput.disabled = false;
-    doctorRemoveBtn.style.display = "none";
-});
-
-/**
- *  이미지 파일 부분입니다.
- * 이미지 파일 지우고 넣고 최대 일단 3개까지만 들어가도록 설정
- * 나중에 수정 필요 나중에는 fileImgList, fileCheck로 체크해서
- * 서버 넣겨주기
- *
- */
-FileList.prototype.forEach = Array.prototype.forEach;
-// 이미지 정보들이 들어가는 자리
-const fileImgList = new Array();
-// 어떤 이미지가 삭제되었는지 체크
-const fileCheck = new Array(3).fill(false);
-// 이미지 버튼 클릭하면 아예 초기화
-inputFileBtn.addEventListener("click", (e) => {
-    fileImgList.length = 0;
-    fileCheck.fill(false);
-    const lis = Array.from(
-        document.getElementsByClassName("thumbnail-list-content")
-    );
-    lis.forEach((li) => {
-        li.remove();
-    });
-});
-
-inputFileBtn.addEventListener("change", (e) => {
-    const files = e.target.files;
-    let cnt = 0;
-    files.forEach((file) => {
-        const reader = new FileReader();
-        const imgTag = document.createElement("img");
-        const divBtn = document.createElement("div");
-        const liTag = document.createElement("li");
-        const divTag = document.createElement("div");
-        reader.readAsDataURL(file);
-        divBtn.id = "file-cancel-btn";
-        liTag.classList.add("thumbnail-list-content");
-        divBtn.dataset.position = cnt;
-        imgTag.classList.add("thumbnail");
-        divTag.classList.add(`cancel-btn-${cnt++}`);
-        divTag.classList.add("cancle");
-        reader.addEventListener("load", (e) => {
-            const path = e.target.result;
-            if (fileImgList.length > 2) {
-                return;
-            } else {
-                fileImgList.push(path);
-            }
-            if (path.includes("image")) {
-                imgTag.style.backgroundImage = `url(${path})`;
-                ulTag.appendChild(liTag);
-                liTag.appendChild(imgTag);
-                liTag.appendChild(divTag);
-                divTag.appendChild(divBtn);
-            }
-            divTag.style.display = "block";
-
-            // 취소 버튼 누르면 썸네일 삭제하기
-            divTag.addEventListener("click", (e) => {
-                console.log(e.target.parentElement.parentElement);
-                fileCheck[e.target.dataset.position] = true;
-                e.target.parentElement.parentElement.remove();
-            });
-        });
-    });
-    inputFileBtn.value = "";
-});
-
-// 체크 박스 클릭 시 보내기 버튼 스타일 변환
-checkBoxDiv.addEventListener("click", (e) => {
-    if (svg.classList[2]) {
-        svg.classList.remove("inactive");
-        label.classList.add("inactive");
-        checkBoxDiv.style.boxShadow =
-            "rgb(126, 165, 242) 0px 0px 0px 2px inset";
-        sendBtn.disabled = false;
-    } else {
-        label.classList.remove("inactive");
-        svg.classList.add("inactive");
-        checkBoxDiv.removeAttribute("style");
-        sendBtn.disabled = true;
-    }
-});
-
-// 쪽지 보내기 취소할 때 안에 있던 값들 초기화
-mailSendCancleBtn.addEventListener("click", (e) => {
-    mailSendModal.style.display = "none";
-    mailModalInput.value = "";
-    doctorSearchInput.value = "";
-    doctorSearchInput.disabled = false;
-    fileImgList.length = 0;
-    fileCheck.fill(false);
-    if (label.classList[2]) {
-        label.classList.remove("inactive");
-        svg.classList.add("inactive");
-        checkBoxDiv.removeAttribute("style");
-        sendBtn.disabled = true;
-    }
-    doctorRemoveBtn.style.display = "none";
-    inputFileBtn.value = "";
-    document.getElementById("file-img-list").innerHTML = "";
-});
-
 // 무한 스크롤리여서 이벤트를 동적 처리를 위한 부분
 listLayout.addEventListener("click", (e) => {
     const mailBtn = e.target.closest(".mail-send-btn");
     const interestBtn = e.target.closest(".interest-btn");
     const divTag = e.target.closest(".content-info");
     const heartImg = divTag.querySelector(".docterinfo-favorite-wrapper");
-    const people = heartImg.querySelector(".doctorinfo-favoriteCount");
+    const people = heartImg?.querySelector(".doctorinfo-favoriteCount");
     const addressKakao = e.target.closest(".hospital-info");
     // 모달 전에 쪽지 보내기 누르면 모달이 보이게 하기
     if (mailBtn) {
@@ -435,16 +230,6 @@ const categoryModalOpenBtn = document.querySelector(
 );
 categoryModalOpenBtn.addEventListener("click", (e) => {
     categoryModal.style.display = "flex";
-});
-
-// 쪽지 작성부분 텍스트 영역 포커스
-const textareaTag = document.getElementById("mailContent");
-const textareaTagWrap = document.querySelector(".mail-content-input-container");
-textareaTag.addEventListener("focus", (e) => {
-    textareaTagWrap.style.borderColor = "black";
-});
-textareaTag.addEventListener("blur", (e) => {
-    textareaTagWrap.style.borderColor = "#f2f4f6";
 });
 
 /**************** */

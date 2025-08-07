@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>골든타임</title>
     <link rel="stylesheet" href="../../static/css/fonts.css">
     <link rel="stylesheet" href="../../static/css/post/post-reg.css">
+    <link rel="shortcut icon" href="../../static/images/golden-time-favicon.png" type="image/x-icon">
 </head>
 <body>
     <div class="main-wrap">
@@ -84,7 +85,7 @@
                 </div>
             </div>
         <div class="post-side-bar-wrap">
-            <button type="submit"class="post-reg-btn" form="postForm" name="postBtn" id="postBtn">질문하기</button>
+            <button type="submit"class="post-reg-btn" form="postForm" name="postBtn" id="postBtn" disabled>질문하기</button>
             <div class="post-reg-warn-container">
                 <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM11 7.5C11 6.94772 11.4477 6.5 12 6.5C12.5523 6.5 13 6.94772 13 7.5V13.5C13 14.0523 12.5523 14.5 12 14.5C11.4477 14.5 11 14.0523 11 13.5V7.5ZM13 16.5C13 17.0523 12.5523 17.5 12 17.5C11.4477 17.5 11 17.0523 11 16.5C11 15.9477 11.4477 15.5 12 15.5C12.5523 15.5 13 15.9477 13 16.5Z" fill="#6b7684" fill-rule="evenodd"></path></svg>
                 <div class="post-reg-warn-wrap">
@@ -108,6 +109,23 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="label-check-box">
+                <span class="checkbox-span-wrap">
+                    <span>쪽지 발송 시 포인트 10점이 차감됩니다.<br> 계속 진행하시겠습니까?</span>
+                    <label for="checkbox-agree" class="checkbox-label checkbox-check"></label>
+                    <svg class="checkbox-svg checkbox-check inactive" fill="none" height="24" viewBox="-1 -1 26 26" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_453_7698)">
+                            <circle cx="12" cy="12.5" fill="#2553E5" r="11.5" stroke="#1731E9" stroke-linejoin="round"></circle>
+                            <path clip-rule="evenodd" d="M6.7071 10.8639C6.31658 11.2545 6.31658 11.8876 6.7071 12.2781L10.9497 16.5208L10.9498 16.5208L10.9498 16.5208L17.3137 10.1568C17.7042 9.76631 17.7042 9.13314 17.3137 8.74262C16.9232 8.3521 16.29 8.3521 15.8995 8.74262L10.9497 13.6924L8.12131 10.8639C7.73079 10.4734 7.09763 10.4734 6.7071 10.8639Z" fill="white" fill-rule="evenodd"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_453_7698">
+                                <rect fill="white" height="24" rx="4" width="24" y="0.5"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </span>
             </div>
         </div>
         </div>
@@ -311,7 +329,25 @@
         </div>
     </div>
 </div>
-
+<div class="modal">
+    <div class="warn-modal">
+        <div id="content-wrap">
+            <div class="point-low">포인트가 부족해요.<br>충전 후 다시 이용해 주세요.</div>
+            <div class="btn-wrap">
+                <a href="">
+                    <button class="btnshape">
+                        <span>충전하러가기</span>
+                    </button>
+                </a>
+                <!-- /쪽지 클릭 이벤트 -->
+                <!-- 관심 추가 클릭 이벤트 -->
+                <button class="btnshape cancle-btn">
+                    <span>취소</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 <form id="postForm" name="postForm" style="display: none;"></form>
 </body>
 <script src="../../static/js/post/post-reg/event.js"></script>
