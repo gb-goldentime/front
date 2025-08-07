@@ -1,17 +1,42 @@
-// 사이드바 메뉴 토글
-const menuBtns = document.querySelectorAll(".menu-btn");
-const allSubMenus = document.querySelectorAll(".menu-sub-list");
+// 메뉴 버튼 이벤트
+if (menubtn1) {
+    menubtn1.addEventListener("click", (e) => {
+        sublist1?.classList.toggle("show");
+        e.preventDefault();
+    });
+}
+if (menubtn2) {
+    menubtn2.addEventListener("click", (e) => {
+        sublist2?.classList.toggle("show");
+        e.preventDefault();
+    });
+}
+if (menubtn3) {
+    menubtn3.addEventListener("click", (e) => {
+        sublist3?.classList.toggle("show");
+        e.preventDefault();
+    });
+}
+if (menubtn4) {
+    menubtn4.addEventListener("click", (e) => {
+        sublist4?.classList.toggle("show");
+        e.preventDefault();
+    });
+}
 
-menuBtns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-        allSubMenus.forEach((submenu) => (submenu.style.display = "none"));
-        menuBtns.forEach((b) => b.classList.remove("active"));
+// 유저 메뉴 버튼
+if (usermenubtn && usermenu) {
+    usermenubtn.addEventListener("click", (e) => {
+        usermenu.classList.toggle("show");
+    });
+}
 
-        this.classList.add("active");
-
-        const targetId = this.getAttribute("aria-controls");
-        const targetMenu = document.getElementById(targetId);
-        if (targetMenu) targetMenu.style.display = "block";
+// 서브메뉴 active 토글
+submenus.forEach((submenu) => {
+    submenu.addEventListener("click", (e) => {
+        e.preventDefault();
+        submenus.forEach((active) => active.classList.remove("active"));
+        submenu.classList.add("active");
     });
 });
 
@@ -139,4 +164,29 @@ payBtnIcons[1].addEventListener("click", () => {
 });
 payBtnIcons[2].addEventListener("click", () => {
     paySections[2].classList.toggle("show");
+});
+
+// 상단 오른쪽 관리자 이메일 클릭 시 리스트 출력
+// 출력된 리스트 다시 닫기
+const userMenuWrapper = document.querySelector(".user-menu-wrapper");
+const userMenuContent = document.querySelector(".user-menu-content");
+
+userMenuWrapper.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (userMenuContent.classList.contains("show")) {
+        userMenuContent.classList.remove("show");
+    } else {
+        userMenuContent.classList.add("show");
+    }
+});
+
+document.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (
+        // userMenuContent 안넣어주면 안에 걸 눌러도 리스트가 닫힌다.
+        !userMenuWrapper.contains(e.target) &&
+        !userMenuContent.contains(e.target)
+    ) {
+        userMenuContent.classList.remove("show");
+    }
 });
