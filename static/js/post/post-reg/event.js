@@ -202,3 +202,27 @@ inputFileBtn.addEventListener("change", (e) => {
     });
     inputFileBtn.value = "";
 });
+
+// 체크박스 영역
+const checkBoxDiv = document.querySelector(".label-check-box");
+// 체크박스 영역 부분
+const label = document.querySelector(".checkbox-label");
+// 체크시 이미지 부분
+const svg = document.querySelector(".checkbox-svg");
+// 전송 버튼
+const regBtn = document.querySelector("button.post-reg-btn");
+// 체크 박스 클릭 시 보내기 버튼 스타일 변환
+checkBoxDiv.addEventListener("click", (e) => {
+    if (svg.classList[2]) {
+        svg.classList.remove("inactive");
+        label.classList.add("inactive");
+        checkBoxDiv.style.boxShadow =
+            "rgb(126, 165, 242) 0px 0px 0px 2px inset";
+        regBtn.disabled = false;
+    } else {
+        label.classList.remove("inactive");
+        svg.classList.add("inactive");
+        checkBoxDiv.removeAttribute("style");
+        regBtn.disabled = true;
+    }
+});
