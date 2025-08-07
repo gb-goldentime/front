@@ -2029,3 +2029,7 @@ element.style {
     z-index: 1000;
 }
 
+.label-form {
+    text-align: center;
+}
+
