@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>계정 설정 ㅣ 궁금할 땐, 아하!</title>
+    <title>골든타임</title>
     <link rel="stylesheet" href="/static/css/doctor/mypage/mypage.css">
+    <link rel="stylesheet" href="/static/css/member/mypage/mypage/mypage.css">
+    <link rel="shortcut icon" href="/static/images/golden-time-favicon.png" type="image/x-icon" data-next-head="">
 </head>
 <body>
     <div class="whole-body">
@@ -19,26 +21,57 @@
                     <!-- 카테고리 누르면 해당 페이지로 넘어가면서 카테고리 색 바뀌는 이벤트 -->
                     <aside class="mypage-category-wrapper">
                         <a class ="mypage-category-wrap-black ">
-                            <span class ="mypage-category-black active">계정 관리</span>
+                            <span class ="mypage-category-black active">내 정보 수정</span>
                         </a>
                         <a class = "mypage-category-wrap-black">
-                            <span class = "mypage-category-black" >쪽지함</span>
+                            <span class = "mypage-category-black">내 작성글 목록</span>
                         </a>
                         <a class = "mypage-category-wrap-black">
-                            <span class = "mypage-category-black">내 상담글 목록</span>
+                            <span class = "mypage-category-black">진료 신청 기록</span>
                         </a>
                         <a class = "mypage-category-wrap-black">
-                            <span class = "mypage-category-black">방문 진료 기록</span>
+                            <span class = "mypage-category-black">내 관심 전문가</span>
                         </a>
                         <a class = "mypage-category-wrap-black">
-                            <span class = "mypage-category-black">1:1 문의함</span>
+                            <span class = "mypage-category-black">나의 문의글</span>
                         </a>
                     </aside>
                 </div>
                 <div class ="mypage-main-container">
                     <div class = "mypage-main-wrap">
+                        <span class = "mypage-main-info-title">프로필 정보</span>
+                        <div class="mypage-main-content-wrapper">
+                            <label class="mypage-main-profile-label">
+                                <div class="mypage-main-profile-wrapper">
+                                    <img class="mypage-main-profile-body" alt="프로필 이미지" width="80" height="80" decoding="async" data-nimg="1" src="https://media.a-ha.io/aha-qna/images/common/icons/human/person-filled.svg" style="color: transparent;">
+                                    <img class="mypage-main-profile-plus" alt="plus-circle" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" src="https://media.a-ha.io/aha-qna/images/common/icons/math/plus-circle-twoToned.svg" style="color: transparent;">
+                                </div>
+                            </label>    
+                        <div class="mypage-main-profile-content-button-wrapper">
+                            <button Id = "change-email-button" class="mypage-main-button" color ="grey" height="54">
+                                <span class="mypage-main-button-name">변경</span>
+                            </button>
+                            <button Id = "change-email-button" class="mypage-main-button" color ="grey" height="54">
+                                <span class="mypage-main-button-name">확인</span>
+                            </button>
+                        </div>
+                        </div>  
+                    </div>
+                    <div class = "mypage-main-wrap">
                         <span class = "mypage-main-info-title">기본 정보</span>
                         <div class="mypage-main-content-container">
+                            <div class="mypage-main-key-container">
+                                <div class="mypage-main-content-wrapper">
+                                    <div class="mypage-main-wrapper-wrapper">
+                                        <div class="mypage-main-key-wrapper">
+                                            <span class="mypage-main-key">이름</span>
+                                        </div>
+                                        <span class="mypage-main-value">김초밥</span>
+                                    </div>
+                                    <!-- 버튼 클릭 시 이메일 변경 창 생성 -->
+                                </div>
+                            </div>
+                            <hr class="mypage-main-content-line">
                             <div class="mypage-main-key-container">
                                 <div class="mypage-main-content-wrapper">
                                     <div class="mypage-main-wrapper-wrapper">
@@ -71,7 +104,7 @@
                         </div>
                     </div>
                             <div class = "mypage-main-wrap">
-                        <span class = "mypage-main-info-title">기본 정보</span>
+                        <span class = "mypage-main-info-title">전문가 정보</span>
                         <div class="mypage-main-content-container">
                             <div class="mypage-main-key-container">
                                 <div class="mypage-main-content-wrapper">
