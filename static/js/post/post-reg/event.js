@@ -31,14 +31,11 @@ const categorySelectCancleAll = document.querySelector(
 categorySelectCancleAll.addEventListener("click", (e) => {
     departmentListWrap.innerHTML = "";
     categoryListBtns.forEach((categoryListBtn) => {
-        let text = null;
         if (categoryListBtn.classList[1]) {
-            text = categoryListBtn.firstElementChild.textContent;
             categoryListBtn.classList.remove("checked");
-            // 해당 부분에서 배열 원소 값 삭제
-            categoryList.splice(categoryList.indexOf(text));
         }
     });
+    categoryList.length = 0;
 });
 
 // 선택한 카테고리들로 보여주도록 하고 모달 창 닫기
@@ -225,4 +222,32 @@ checkBoxDiv.addEventListener("click", (e) => {
         checkBoxDiv.removeAttribute("style");
         regBtn.disabled = true;
     }
+});
+
+let modalCheck;
+const showModal = () => {
+    modalCheck = false;
+    document.querySelector("div.warn-modal").style.animation = "popUp 0.5s";
+    document.querySelector("div.modal").style.display = "flex";
+    setTimeout(() => {
+        modalCheck = true;
+    }, 500);
+};
+
+document.querySelector("div.modal").addEventListener("click", (e) => {
+    if (modalCheck) {
+        document.querySelector("div.warn-modal").style.animation =
+            "popDown 0.5s";
+        setTimeout(() => {
+            document.querySelector("div.modal").style.display = "none";
+        }, 450);
+    }
+});
+
+const postRegCancleBtn = document.querySelector("button.btnshape.cancle-btn");
+postRegCancleBtn.addEventListener("click", (e) => {
+    document.querySelector("div.warn-modal").style.animation = "popDown 0.5s";
+    setTimeout(() => {
+        document.querySelector("div.modal").style.display = "none";
+    }, 450);
 });

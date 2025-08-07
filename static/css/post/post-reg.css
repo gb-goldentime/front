@@ -974,3 +974,76 @@ div.wran-text-item::before{
     top: -2px;
     color: #4e5968;
 }
+@keyframes popUp {
+    from {scale: 0;}
+    to {scale: 1;}
+}
+
+@keyframes popDown {
+    from {scale: 1;}
+    to {scale: 0;}
+}
+
+
+
+div.modal{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    inset: 0px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #8586898a;
+}
+div.warn-modal {
+    box-sizing: border-box;
+    position: unset;
+    width: 288px;
+    margin: 20vh 0px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(33 35 41 / 12%) 0px 2px 12px;
+    border-radius: 8px;
+}
+
+div.warn-modal {
+    padding: 24px;
+}
+
+div.warn-modal {
+    box-sizing: border-box;
+    position: unset;
+    width: 288px;
+    margin: 20vh 0px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(33 35 41 / 12%) 0px 2px 12px;
+    border-radius: 8px;
+}
+
+div.btn-wrap{
+    display: flex;
+    justify-content: space-evenly;
+}
+div.point-low{
+    margin-bottom: 20px;
+}
+
+button.btnshape{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 42px;
+    padding: 0 10px;
+    border-radius: 8px;
+    background-color: #1731e9;
+    gap: 4px;
+    color: #fff;
+    width: 109px;
+}
+
+button.cancle-btn{
+    background-color : rgb(242, 244, 246);
+    color : #333D4B;
+}
