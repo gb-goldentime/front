@@ -1,7 +1,4 @@
-@font-face {
-    font-family: Material Design Icons;
-    src: url(../../../fonts/icons/materialdesignicons-webfont-d5cba82059f88bfa469e.woff2);
-}
+
 
 :root {
     --blue: #007bff;
@@ -518,7 +515,7 @@ address, dl, ol, ul {
     line-height: 38px;
 }
 .mdi-check-all:before {
-    content: "\F012D";
+    content: "\F012C";
 }
 .receipt-index .pill-row .pill-box .pill-value {
     font-size: 20px;
@@ -531,7 +528,7 @@ address, dl, ol, ul {
     margin-left: 5px;
 }
 .mdi-clock-alert-outline:before {
-    content: "\F05CE";
+    content: "\F0156";
 }
 .text-danger {
     color: #fe657e !important;
@@ -1412,4 +1409,8 @@ table.info-table td, table.info-table th {
     }
     .user-menu {
         position: relative;
+    }
+
+    .mdi-check-all :before {
+        content: "\F012C";
     }
