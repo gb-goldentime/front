@@ -987,7 +987,7 @@ div.wran-text-item::before{
 
 
 div.modal{
-    display: flex;
+    display: none;
     position: fixed;
     flex-direction: column;
     inset: 0px;
