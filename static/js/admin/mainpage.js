@@ -11,9 +11,7 @@ menuBtns.forEach((btn) => {
 
         const targetId = this.getAttribute("aria-controls");
         const targetMenu = document.getElementById(targetId);
-        if (targetMenu) {
-            targetMenu.style.display = "block";
-        }
+        if (targetMenu) targetMenu.style.display = "block";
     });
 });
 
