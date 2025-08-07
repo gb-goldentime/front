@@ -97,6 +97,14 @@ ul {
     padding: 4px;
 }
 
+.main-header-main-category-content-wrapper.doctor {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    padding: 4px;
+}
+
 .main-header-main-category-content.active {
     display: flex;
     color: #191f28;
