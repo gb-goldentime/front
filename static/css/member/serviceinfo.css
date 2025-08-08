@@ -31,9 +31,12 @@ div.rmcoop {
 }
 
 /* 모든 의학정보는 골든타임에 물어보세요 */
-span.n4isnw [
-
-]
+span.n4isnw {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    color: #4E5968;
+}
 
 
 
