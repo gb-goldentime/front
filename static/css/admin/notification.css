@@ -576,13 +576,14 @@ button:not(:disabled) {
     text-align: center !important;
 }
 
-/* 모달 창 일반,멘토,구독 회원 표시 */
+/* 모달 창 표시  */
 /* .text-dark {
     color: #4e5d6c !important;
 } */
 
+/* 의사회원 표시  */
 .text-danger {
-    color: #40c8bc !important;
+    color: #f93 !important;
 }
 
 .ml-1, .mr-1, .mx-1 {
@@ -1811,107 +1812,7 @@ button.btn.btn-outline-filter {
     transition: all .2s;
 }
 
-
-.user-menu {
-    position: relative; 
-}
-
-.user-menu .user-menu-content {
-    background-color: #fff;
-    border-radius: 6px;
-    box-shadow: 0 0 20px rgba(89, 102, 122, .15);
-    color: #4e5d6c;
-    font-size: .9rem;
-    min-width: 180px;
-    overflow: hidden;
-    padding: 0 5px;
-}
-
-.dropdown-menu {
-    background-clip: padding-box;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: .25rem;
-    color: #212529;
-    display: none;
-    float: left;
-    font-size: 1rem;
-    left: 0;
-    list-style: none;
-    margin: .125rem 0 0;
-    min-width: 10rem;
-    padding: .5rem 0;
-    position: absolute;
-    text-align: left;
-    top: 100%;
-    z-index: 1000;
-}
-
-.dropdown-menu-right {
-    left: auto;
-    right: 0;
-}
-
-.dropdown-menu.show {
-    display: block;
-}
-
-.dropdown-menu[x-placement^=bottom] {
-    bottom: auto;
-    right: auto;
-}
-
-.user-menu .user-menu-content ul.menu-body {
-    margin-bottom: 0;
-}
-
-.user-menu .user-menu-content ul.menu-body li {
-    align-items: center;
-    border-bottom: 1px solid #f9f9f9;
-    display: flex;
-    font-weight: 500;
-    padding: 0;
-    position: relative;
-}
-
-.user-menu .user-menu-content ul.menu-body li a {
-    padding: 10px 20px;
-    width: 100%;
-}
-
-.user-menu .user-menu-content ul.menu-body li:hover a {
-    color: #507cf3 !important;
-}
-
-.mdi-bullhorn-variant-outline:before {
-    content: "\F196F";
-}
-
-element.style {
-    position: absolute;
-    transform: translate3d(1488px, 58px, 0px);
-    top: 0px;
-    left: 0px;
-    will-change: transform;
-}
-
-.text-dark {
-    color: #4e5d6c !important;
-}
-
-.d-block {
-    display: block !important;
-}
-
-.mr-2, .mx-2 {
-    margin-right: .5rem 8px !important;
-}
-
-.mdi-18px.mdi-set, .mdi-18px.mdi:before {
-    font-size: 18px;
-}
-
-
-#bootpay-header .header-menu-group {
-    padding: 20px 30px 0 0;
+/* 상단 관리자 이메일 회원정보 이미지 추가 */
+.mdi-account-box-outline:before {
+    content: "\F0007";
 }
