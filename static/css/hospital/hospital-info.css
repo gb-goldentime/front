@@ -191,7 +191,7 @@ button.mail-send-btn img, button.mail-send-btn-check img{
 
 div.kakao-map{
     width: 100%;
-    background-image: url("../../images/temp.png");
+    background-image: url("/images/temp.png");
     height: 300px;
     border-radius: 12px 12px 0 0;
     object-fit: cover;

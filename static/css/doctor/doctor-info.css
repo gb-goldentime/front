@@ -198,7 +198,7 @@ button.mail-send-btn img, button.mail-send-btn-check img{
 
 div.kakao-map{
     width: 100%;
-    background-image: url("../../images/temp.png");
+    background-image: url("/images/temp.png");
     height: 300px;
     border-radius: 12px 12px 0 0;
     object-fit: cover;
@@ -669,7 +669,7 @@ div.thumbnail-wrap ul li{
 
 div#file-cancel-btn{
     cursor: pointer;
-    background-image: url(../../images/cancel.png);
+    background-image: url(/images/cancel.png);
     background-size: 100% 100%;
     width: 16px;
     height: 16px;

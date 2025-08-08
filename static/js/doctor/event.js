@@ -89,16 +89,16 @@ interestBtn.addEventListener("click", (e) => {
     if (button.classList[2] === "active") {
         message = `나의 관심 의사에서 취소했습니다.`;
         interestBtn.classList.remove("active");
-        interestBtn.lastElementChild.src = "../../static/images/plus.png";
+        interestBtn.lastElementChild.src = "/images/plus.png";
         interestBtn.firstElementChild.textContent = "관심 추가";
-        heartImg.src = "../../static/images/heart-empty.png";
+        heartImg.src = "/images/heart-empty.png";
         people.textContent--;
         showWarnModal(message);
     } else {
         message = `해당 의사를 나의 관심 의사로 <br>등록 했습니다.`;
         interestBtn.classList.add("active");
-        interestBtn.lastElementChild.src = "../../static/images/check.png";
-        heartImg.src = "../../static/images/heart.png";
+        interestBtn.lastElementChild.src = "/images/check.png";
+        heartImg.src = "/images/heart.png";
         people.textContent++;
         interestBtn.firstElementChild.textContent = "관심 중";
         showWarnModal(message);
@@ -254,7 +254,7 @@ reviewStarBtns.forEach((reviewStarBtn) => {
 //                     </div>
 //                     <div class="icon-btn-wrap">
 //                         <div class="icon-container">
-//                             <img src="../../static/images/DrIcon-Photoroom.png" with="35" height="35" alt="">
+//                             <img src="/images/DrIcon-Photoroom.png" with="35" height="35" alt="">
 //                             <span class="greeting">
 //                                 <strong>최선</strong>을 다하겠습니다.</span>
 //                         </div>
@@ -263,7 +263,7 @@ reviewStarBtns.forEach((reviewStarBtn) => {
 //                                 class="btn-wrap">
 //                                 <!-- 쪽지 클릭 이벤트 -->
 //                                 <button class="btnshape mail-send-btn">
-//                                     <img src="../../static/images/email.png">
+//                                     <img src="/images/email.png">
 //                                     <span>쪽지 보내기</span>
 //                                 </button>
 //                                 <!-- /쪽지 클릭 이벤트 -->
@@ -271,7 +271,7 @@ reviewStarBtns.forEach((reviewStarBtn) => {
 //                                 <button class="btnshape interest-btn active">
 //                                     <span>관심 중
 //                                     </span>
-//                                     <img src="../../static/images/check.png">
+//                                     <img src="/images/check.png">
 //                                 </button>
 //                                 <!-- /관심 추가 클릭 이벤트 -->
 //                             </div>

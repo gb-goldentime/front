@@ -155,7 +155,7 @@ cardListOrderBtn.addEventListener("click", (e) => {
 //                     </div>
 //                     <div class="icon-btn-wrap">
 //                         <div class="icon-container">
-//                             <img src="../../static/images/DrIcon-Photoroom.png" with="35" height="35" alt="">
+//                             <img src="/images/DrIcon-Photoroom.png" with="35" height="35" alt="">
 //                             <span class="greeting">
 //                                 <strong>최선</strong>을 다하겠습니다.</span>
 //                         </div>
@@ -164,7 +164,7 @@ cardListOrderBtn.addEventListener("click", (e) => {
 //                                 class="btn-wrap">
 //                                 <!-- 쪽지 클릭 이벤트 -->
 //                                 <button class="btnshape mail-send-btn">
-//                                     <img src="../../static/images/email.png">
+//                                     <img src="/images/email.png">
 //                                     <span>쪽지 보내기</span>
 //                                 </button>
 //                                 <!-- /쪽지 클릭 이벤트 -->
@@ -172,7 +172,7 @@ cardListOrderBtn.addEventListener("click", (e) => {
 //                                 <button class="btnshape interest-btn active">
 //                                     <span>관심 중
 //                                     </span>
-//                                     <img src="../../static/images/check.png">
+//                                     <img src="/images/check.png">
 //                                 </button>
 //                                 <!-- /관심 추가 클릭 이벤트 -->
 //                             </div>
