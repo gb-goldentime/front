@@ -154,6 +154,75 @@ span.active {
     gap: 32px;
 }
 
+.mypage-main-profile-container {
+    display: flex;
+    gap: 20px;
+}
+
+.mypage-main-profile-label {
+    width: auto;
+    cursor: pointer;
+}
+
+.mypage-main-profile-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 40px;
+    background-color: rgb(249, 250, 251);
+}
+
+.mypage-main-profile-body {
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.mypage-main-profile-plus {
+    position: absolute;
+    right: 25px;
+    bottom: 35px;
+}
+
+.mypage-main-profile {
+    border: 1px solid rgb(242, 244, 246);
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.mypage-main-profile-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.mypage-main-profile-content-wrapper {
+    display: flex;
+}
+
+.mypage-main-profile-content-name-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.mypage-main-profile-content-name {
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 700;
+}
+
+.mypage-main-profile-content-button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
 .mypage-main-info-title {
     font-size: 20px;
     line-height: 150%;
@@ -216,7 +285,6 @@ span.active {
     display: flex;
     gap: 8px;
     align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
     height: 54px;
     min-height: 54px;
@@ -227,6 +295,7 @@ span.active {
     min-width: 100px;
     padding: 0 36px;
     transition: color 0.2s ease;
+    flex-direction: column;
 }
 
 .mypage-main-button:hover {

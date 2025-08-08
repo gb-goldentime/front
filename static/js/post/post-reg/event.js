@@ -31,14 +31,11 @@ const categorySelectCancleAll = document.querySelector(
 categorySelectCancleAll.addEventListener("click", (e) => {
     departmentListWrap.innerHTML = "";
     categoryListBtns.forEach((categoryListBtn) => {
-        let text = null;
         if (categoryListBtn.classList[1]) {
-            text = categoryListBtn.firstElementChild.textContent;
             categoryListBtn.classList.remove("checked");
-            // 해당 부분에서 배열 원소 값 삭제
-            categoryList.splice(categoryList.indexOf(text));
         }
     });
+    categoryList.length = 0;
 });
 
 // 선택한 카테고리들로 보여주도록 하고 모달 창 닫기
@@ -201,4 +198,56 @@ inputFileBtn.addEventListener("change", (e) => {
         });
     });
     inputFileBtn.value = "";
+});
+
+// 체크박스 영역
+const checkBoxDiv = document.querySelector(".label-check-box");
+// 체크박스 영역 부분
+const label = document.querySelector(".checkbox-label");
+// 체크시 이미지 부분
+const svg = document.querySelector(".checkbox-svg");
+// 전송 버튼
+const regBtn = document.querySelector("button.post-reg-btn");
+// 체크 박스 클릭 시 보내기 버튼 스타일 변환
+checkBoxDiv.addEventListener("click", (e) => {
+    if (svg.classList[2]) {
+        svg.classList.remove("inactive");
+        label.classList.add("inactive");
+        checkBoxDiv.style.boxShadow =
+            "rgb(126, 165, 242) 0px 0px 0px 2px inset";
+        regBtn.disabled = false;
+    } else {
+        label.classList.remove("inactive");
+        svg.classList.add("inactive");
+        checkBoxDiv.removeAttribute("style");
+        regBtn.disabled = true;
+    }
+});
+
+let modalCheck;
+const showModal = () => {
+    modalCheck = false;
+    document.querySelector("div.warn-modal").style.animation = "popUp 0.5s";
+    document.querySelector("div.modal").style.display = "flex";
+    setTimeout(() => {
+        modalCheck = true;
+    }, 500);
+};
+
+document.querySelector("div.modal").addEventListener("click", (e) => {
+    if (modalCheck) {
+        document.querySelector("div.warn-modal").style.animation =
+            "popDown 0.5s";
+        setTimeout(() => {
+            document.querySelector("div.modal").style.display = "none";
+        }, 450);
+    }
+});
+
+const postRegCancleBtn = document.querySelector("button.btnshape.cancle-btn");
+postRegCancleBtn.addEventListener("click", (e) => {
+    document.querySelector("div.warn-modal").style.animation = "popDown 0.5s";
+    setTimeout(() => {
+        document.querySelector("div.modal").style.display = "none";
+    }, 450);
 });
