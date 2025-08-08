@@ -331,7 +331,7 @@ div.side-bar-container{
 div.kakao-map{
     width: 100%;
     margin-top: 62px;
-    background-image: url("../../images/temp.png");
+    background-image: url("/images/temp.png");
     height: calc(100% - 62px);
 }
 
@@ -685,7 +685,7 @@ div.thumbnail-wrap ul li{
 
 div#file-cancel-btn{
     cursor: pointer;
-    background-image: url(../../images/cancel.png);
+    background-image: url(/images/cancel.png);
     background-size: 100% 100%;
     width: 16px;
     height: 16px;

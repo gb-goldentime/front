@@ -92,10 +92,9 @@ listLayout.addEventListener("click", (e) => {
         if (interestBtn.classList[2] === "active") {
             console.log(e.target);
             interestBtn.classList.remove("active");
-            heartImg.firstElementChild.src =
-                "../../static/images/heart-empty.png";
+            heartImg.firstElementChild.src = "/images/heart-empty.png";
             people.textContent--;
-            interestBtn.lastElementChild.src = "../../static/images/plus.png";
+            interestBtn.lastElementChild.src = "/images/plus.png";
             interestBtn.firstElementChild.textContent = "관심 추가";
             message = `나의 관심 의사에서 취소했습니다.`;
             showWarnModal(message);
@@ -103,8 +102,8 @@ listLayout.addEventListener("click", (e) => {
             console.log(e.target);
 
             message = `해당 의사를 나의 관심 의사로 <br>등록 했습니다.`;
-            interestBtn.lastElementChild.src = "../../static/images/check.png";
-            heartImg.firstElementChild.src = "../../static/images/heart.png";
+            interestBtn.lastElementChild.src = "/images/check.png";
+            heartImg.firstElementChild.src = "/images/heart.png";
             people.textContent++;
             console.log(heartImg.lastElementChild.textContent);
             interestBtn.classList.add("active");
@@ -294,7 +293,7 @@ categoryModalOpenBtn.addEventListener("click", (e) => {
 //                     </div>
 //                     <div class="icon-btn-wrap">
 //                         <div class="icon-container">
-//                             <img src="../../static/images/DrIcon-Photoroom.png" with="35" height="35" alt="">
+//                             <img src="/images/DrIcon-Photoroom.png" with="35" height="35" alt="">
 //                             <span class="greeting">
 //                                 <strong>최선</strong>을 다하겠습니다.</span>
 //                         </div>
@@ -303,7 +302,7 @@ categoryModalOpenBtn.addEventListener("click", (e) => {
 //                                 class="btn-wrap">
 //                                 <!-- 쪽지 클릭 이벤트 -->
 //                                 <button class="btnshape mail-send-btn">
-//                                     <img src="../../static/images/email.png">
+//                                     <img src="/images/email.png">
 //                                     <span>쪽지 보내기</span>
 //                                 </button>
 //                                 <!-- /쪽지 클릭 이벤트 -->
@@ -311,7 +310,7 @@ categoryModalOpenBtn.addEventListener("click", (e) => {
 //                                 <button class="btnshape interest-btn active">
 //                                     <span>관심 중
 //                                     </span>
-//                                     <img src="../../static/images/check.png">
+//                                     <img src="/images/check.png">
 //                                 </button>
 //                                 <!-- /관심 추가 클릭 이벤트 -->
 //                             </div>

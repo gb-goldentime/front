@@ -423,7 +423,7 @@ div.thumbnail-wrap ul li {
 
 div#file-cancel-btn {
     cursor: pointer;
-    background-image: url('../../images/cancel.png');
+    background-image: url('/images/cancel.png');
     background-size: 100% 100%;
     width: 25px;
     height: 25px;
@@ -687,11 +687,11 @@ div.toggle-img {
     width: 30px;
     height: 30px;
     background-size: cover;
-    background-image: url("../../images/unaccepted.png");
+    background-image: url("/images/unaccepted.png");
 }
 
 div.toggle-img.accepted {
-    background-image: url("../../images/accepted.png");
+    background-image: url("/images/accepted.png");
 }
 
 
